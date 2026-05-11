@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "/blog"
+  to = "https://erenkumcuoglublog.netlify.app/blog/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/blog/*"
+  to = "https://erenkumcuoglublog.netlify.app/blog/:splat"
+  status = 200
+  force = true
