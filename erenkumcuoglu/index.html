@@ -1577,7 +1577,7 @@
 
     .personal-card {
       aspect-ratio: 1/1;
-      min-height: 88px;
+      min-height: 108px;
       background: var(--p800);
       border: 1px solid var(--p700);
       border-radius: 8px;
@@ -1585,7 +1585,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 10px;
       cursor: default;
       transition: background 200ms var(--ease), border-color 200ms var(--ease);
     }
@@ -1596,12 +1596,12 @@
     }
 
     .personal-icon {
-      font-size: 1.5rem;
+      font-size: 2.2rem;
     }
 
     .personal-label {
       font-family: var(--fm);
-      font-size: 0.6rem;
+      font-size: 0.7rem;
       letter-spacing: 0.09em;
       text-transform: uppercase;
       color: var(--n400);
@@ -1746,6 +1746,116 @@
     .footer-link:hover {
       color: var(--n200);
     }
+    /* ─────────────────────────────────────────────────────────────────────
+       CAREER POPUP MODAL
+    ───────────────────────────────────────────────────────────────────── */
+    .career-modal-overlay {
+      position: fixed; inset: 0; z-index: 200;
+      background: rgba(10, 9, 9, 0.72);
+      backdrop-filter: blur(4px);
+      opacity: 0; pointer-events: none;
+      transition: opacity 300ms var(--ease);
+      display: flex; align-items: center; justify-content: center;
+      padding: 20px;
+    }
+    .career-modal-overlay.open {
+      opacity: 1; pointer-events: auto;
+    }
+
+    .career-modal {
+      background: var(--p900);
+      border: 1px solid var(--p700);
+      border-radius: 12px;
+      width: 100%; max-width: 580px;
+      max-height: 88vh;
+      overflow-y: auto;
+      position: relative;
+      transform: translateY(16px) scale(0.97);
+      transition: transform 300ms var(--ease);
+      scrollbar-width: thin;
+      scrollbar-color: var(--p700) transparent;
+    }
+    .career-modal-overlay.open .career-modal {
+      transform: none;
+    }
+
+    .career-modal-header {
+      padding: 28px 28px 0;
+      position: relative;
+    }
+    .career-modal-period {
+      font-family: var(--fm); font-size: 0.6rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--n500); margin-bottom: 12px;
+    }
+    .career-modal-company {
+      font-family: var(--fd); font-weight: 300; font-size: clamp(2rem, 6vw, 2.8rem);
+      letter-spacing: -0.02em; color: var(--n0); line-height: 1.05; margin-bottom: 4px;
+    }
+    .career-modal-role {
+      font-family: var(--fb); font-size: 0.85rem; font-weight: 300;
+      color: var(--n500); margin-bottom: 16px;
+    }
+    .career-modal-sector {
+      display: inline-block;
+      font-family: var(--fm); font-size: 0.58rem; letter-spacing: 0.09em;
+      text-transform: uppercase; color: var(--a400);
+      border: 1px solid var(--a600); padding: 3px 10px; border-radius: 3px;
+      margin-bottom: 24px;
+    }
+    .career-modal-divider {
+      height: 1px; background: var(--p700); margin-bottom: 24px;
+    }
+
+    .career-modal-body { padding: 0 28px 28px; }
+
+    .career-modal-metric-strip {
+      display: flex; gap: 0; flex-wrap: wrap;
+      background: var(--p800); border: 1px solid var(--p700);
+      border-radius: 8px; padding: 16px 20px;
+      margin-bottom: 24px;
+      align-items: center; gap: 24px;
+    }
+    .cm-metric {
+      display: flex; flex-direction: column; gap: 3px;
+    }
+    .cm-metric-val {
+      font-family: var(--fd); font-weight: 400; font-size: 1.4rem;
+      letter-spacing: -0.02em; line-height: 1; color: var(--a400);
+    }
+    .cm-metric-lbl {
+      font-family: var(--fb); font-size: 0.75rem; color: var(--n500);
+    }
+
+    .career-modal-section-title {
+      font-family: var(--fm); font-size: 0.58rem; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--n600); margin-bottom: 10px;
+    }
+
+    .career-modal-bullets {
+      list-style: none; display: flex; flex-direction: column; gap: 10px;
+      margin-bottom: 24px;
+    }
+    .career-modal-bullets li {
+      display: flex; gap: 12px; align-items: flex-start;
+      font-family: var(--fb); font-size: 0.85rem; font-weight: 300;
+      color: var(--n400); line-height: 1.6;
+    }
+    .career-modal-bullets li::before {
+      content: '→'; color: var(--a700); flex-shrink: 0; margin-top: 1px;
+      font-size: 0.8rem;
+    }
+
+    .career-modal-close {
+      position: absolute; top: 20px; right: 20px;
+      width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%; background: var(--p800); border: 1px solid var(--p700);
+      color: var(--n500); font-size: 1.1rem; cursor: pointer;
+      transition: background 200ms var(--ease), color 200ms var(--ease);
+      line-height: 1;
+    }
+    .career-modal-close:hover { background: var(--p700); color: var(--n200); }
+    .career-modal-close:focus-visible { outline: 2px solid var(--a400); outline-offset: 2px; }
   </style>
 </head>
 
@@ -2016,8 +2126,7 @@
             <p class="eyebrow eyebrow-muted">Proven at Scale · Results That Compound</p>
             <h2 class="section-headline">Not Promises.<em>Track Record.</em></h2>
           </div>
-          <button class="btn btn-ghost btn-md reveal" style="transition-delay:100ms">See the full case history
-            →</button>
+          <a href="/professional-milestones" class="btn btn-accent btn-md reveal" style="transition-delay:100ms">View Full Honor Gallery →</a>
         </div>
 
         <p class="ach-lede reveal">
@@ -2290,14 +2399,35 @@
 
   </main>
 
+  <!-- ── CAREER POPUP MODAL ────────────────────────────────────────────── -->
+  <div class="career-modal-overlay" id="career-modal-overlay" role="dialog" aria-modal="true" aria-label="Career details" aria-hidden="true">
+    <div class="career-modal" id="career-modal" tabindex="-1">
+      <div class="career-modal-header">
+        <p class="career-modal-period" id="cm-period"></p>
+        <p class="career-modal-company" id="cm-company"></p>
+        <p class="career-modal-role" id="cm-role"></p>
+        <span class="career-modal-sector" id="cm-sector"></span>
+        <button class="career-modal-close" id="career-modal-close" aria-label="Close">✕</button>
+        <div class="career-modal-divider"></div>
+      </div>
+      <div class="career-modal-body">
+        <div class="career-modal-metric-strip" id="cm-metrics"></div>
+        <p class="career-modal-section-title">What I did</p>
+        <ul class="career-modal-bullets" id="cm-bullets"></ul>
+      </div>
+    </div>
+  </div>
+
   <!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
   <footer class="footer" role="contentinfo">
     <p class="footer-copy">© 2026 Eren Kumcuoglu. All rights reserved.</p>
     <nav aria-label="Footer navigation">
       <ul class="footer-links" role="list">
         <li><a class="footer-link" href="#about">About</a></li>
+        <li><a class="footer-link" href="/eren-kumcuoglu">Full Bio</a></li>
         <li><a class="footer-link" href="#career">Career</a></li>
         <li><a class="footer-link" href="#achievements">Achievements</a></li>
+        <li><a class="footer-link" href="/professional-milestones">Milestones</a></li>
         <li><a class="footer-link" href="#skills">Skills</a></li>
         <li><a class="footer-link" href="#contact">Contact</a></li>
       </ul>
@@ -2436,6 +2566,213 @@
 
       document.querySelectorAll('.reveal, .reveal-x, .reveal-scale').forEach(el => revealObs.observe(el));
     }
+    /* ── CAREER POPUP ────────────────────────────────────────────────────── */
+    const careerData = {
+      ozan: {
+        period: '2021 – 2026',
+        company: 'Ozan',
+        role: 'Chief Operating Officer / Chairman of the Board',
+        sector: 'Fintech',
+        metrics: [
+          { val: '₺20B+/mo', lbl: 'Transaction volume' },
+          { val: '#2', lbl: 'Acquirer ranking' },
+        ],
+        bullets: [
+          'Led full operational restructuring across product, compliance, sales, and people — aligning all functions to a single growth strategy.',
+          'Drove Ozan from Issuer #22 to #5 and Acquirer #12 to #2 within Turkey through data-driven channel expansion and partner ecosystem development.',
+          'Established Pazar POS partnership generating incremental ₺500M monthly TPV in the untapped taxi and street merchant segment.',
+          'Restructured PSP economics, converting the payments function from a cost centre into a profit-generating infrastructure.',
+          'Served concurrently as Chairman of the Board — designed governance frameworks, committee structures, and reporting cadences for institutional-grade oversight.',
+          'Led the company through Visa, Mastercard, TCMB, and MASAK audits — passing all cleanly.',
+        ]
+      },
+      bitci: {
+        period: '2021',
+        company: 'Bitci',
+        role: 'Chief Marketing Officer / Acting COO',
+        sector: 'Cryptocurrency',
+        metrics: [
+          { val: '€55M+', lbl: 'Fan tokens raised' },
+          { val: '19 min', lbl: 'Fastest raise ever' },
+        ],
+        bullets: [
+          'Designed and executed the Brazil National Team Fan Token offering end-to-end — closed €15M in 19 minutes, at the time the fastest fan token raise ever recorded.',
+          'Repeated the playbook for Spain National Team Fan Token — €12.5M raised in 4 hours, proving the model scales across geographies and sports.',
+          'Built a multi-federation fan token framework deployed across 6+ sports organisations, creating a repeatable and compliant commercial model.',
+          'Assumed Acting COO responsibilities mid-scale — imposed operational discipline, team structure, and reporting rigour during a period of hypergrowth.',
+          'Managed relationships with major sports federations and regulatory bodies across multiple jurisdictions.',
+        ]
+      },
+      marti: {
+        period: '2020 – 2021',
+        company: 'Martı',
+        role: 'VP of Growth & Marketing',
+        sector: 'Micromobility',
+        metrics: [
+          { val: '+20%', lbl: 'Incremental turnover via PSP' },
+        ],
+        bullets: [
+          'Identified and restructured payment service provider framework, generating a 20% incremental turnover improvement without additional marketing spend.',
+          'Led multi-city geographic expansion during COVID — built unit economics models for each new market before committing capital.',
+          'Scaled growth and marketing function across performance, brand, and community channels.',
+          'Managed the marketing P&L and adapted acquisition strategy to the dramatic shifts in mobility behaviour during the pandemic period.',
+        ]
+      },
+      ingame: {
+        period: '2019 – 2020',
+        company: 'InGame Group',
+        role: 'Marketing & Business Development Director',
+        sector: 'Gaming',
+        metrics: [
+          { val: '#1', lbl: 'App Store — all platforms' },
+          { val: '35M+', lbl: 'Total users — Zula' },
+        ],
+        bullets: [
+          'Architected Zula Mobile\'s go-to-market strategy months before launch — executed precisely enough to hit #1 across all major app store charts within 24 hours.',
+          'Scaled Zula\'s registered user base to 35M+ through combined performance marketing, community, and partnership channels.',
+          'Closed multi-brand commercial partnerships with FMCG companies, telcos, and gaming peripheral brands — creating non-dilutive revenue streams.',
+          'Managed both marketing and business development functions simultaneously, bridging product positioning with commercial deal-making.',
+        ]
+      },
+      pure: {
+        period: '2017 – 2019',
+        company: 'Pure',
+        role: 'Managing Director',
+        sector: 'Marcom Agency',
+        metrics: [
+          { val: '2.8%→32%', lbl: 'Huawei market share' },
+          { val: 'Gold', lbl: 'Effie Award' },
+        ],
+        bullets: [
+          'Directed the Huawei Turkey account — brand went from near-invisibility to 32% smartphone market share in 18 months.',
+          'Campaign recognised with a Gold Effie Award — the most rigorous effectiveness award in marketing, judged purely on measurable commercial results.',
+          'Scaled agency revenue and account portfolio while maintaining margin discipline across all client engagements.',
+          'Managed cross-functional teams across strategy, creative, media, and performance — maintaining senior client relationships at board level.',
+        ]
+      },
+      ininal: {
+        period: '2016 – 2017',
+        company: 'Ininal',
+        role: 'Chief Marketing Officer',
+        sector: 'Fintech',
+        metrics: [
+          { val: '600K→1.2M', lbl: 'KYC users' },
+          { val: '4×', lbl: 'Merchant revenue growth' },
+        ],
+        bullets: [
+          'Doubled Ininal\'s KYC-verified user base from 600K to 1.2M while simultaneously cutting customer acquisition cost by 50%.',
+          'Quadrupled on-us merchant revenues — transforming the merchant network from a feature into a primary commercial engine.',
+          'Redesigned the full acquisition funnel end-to-end, optimising every stage from awareness through to KYC completion.',
+          'Managed marketing P&L under the regulatory constraints of a licensed e-money institution.',
+        ]
+      },
+      philips: {
+        period: '2014 – 2016',
+        company: 'Philips',
+        role: 'Digital Marketing & CRM Manager',
+        sector: 'Consumer Electronics',
+        metrics: [
+          { val: '€200K', lbl: 'Quarterly budget savings' },
+        ],
+        bullets: [
+          'Identified systematic inefficiencies across digital channels — restructured spend to deliver €200K in quarterly savings without performance loss.',
+          'Designed and deployed Philips Turkey\'s first structured CRM programme — segmentation, communication cadences, and retention infrastructure.',
+          'Transformed customer data from a passive asset into an active commercial tool with measurable LTV impact.',
+          'Managed agency relationships and digital media buying across all Philips product categories.',
+        ]
+      },
+      samsung: {
+        period: '2009 – 2014',
+        company: 'Samsung',
+        role: 'Head of Digital',
+        sector: 'Consumer Electronics',
+        metrics: [
+          { val: '$3B+', lbl: 'Annual turnover (at exit)' },
+        ],
+        bullets: [
+          'Built Samsung Turkey\'s entire digital marketing capability from zero — team, technology stack, content, and performance frameworks.',
+          'Led digital function through Samsung\'s most consequential five-year growth arc in Turkey, from negligible to $3B+ annual turnover.',
+          'Developed and managed digital campaigns across the full Samsung product portfolio — mobile, TV, home appliances, and beyond.',
+          'One of the first digital marketing practitioners at a major consumer electronics brand in Turkey — built the playbook that others later followed.',
+        ]
+      },
+      ulker: {
+        period: '2007 – 2009',
+        company: 'Ülker',
+        role: 'PR & Digital Marketing Specialist',
+        sector: 'FMCG',
+        metrics: [
+          { val: '120', lbl: 'Brand ambassadors acquired' },
+        ],
+        bullets: [
+          'Built Ülker\'s first structured brand ambassador programme — identified, recruited, and activated 120 representatives across key demographic segments.',
+          'Among the first digital marketing practitioners at a major Turkish FMCG brand — learned by doing at the frontier of the discipline in 2007.',
+          'Managed PR and digital communications across Ülker\'s product portfolio during the early era of social media marketing.',
+        ]
+      },
+    };
+
+    // Map aria-label prefix to data key
+    const labelMap = {
+      'Ozan': 'ozan', 'Bitci': 'bitci', 'Martı': 'marti', 'InGame': 'ingame',
+      'Pure': 'pure', 'Ininal': 'ininal', 'Philips': 'philips', 'Samsung': 'samsung', 'Ülker': 'ulker'
+    };
+
+    const careerOverlay = document.getElementById('career-modal-overlay');
+    const modal = document.getElementById('career-modal');
+    const closeBtn = document.getElementById('career-modal-close');
+    let modalTrigger = null;
+
+    function openCareerModal(key) {
+      const d = careerData[key];
+      if (!d) return;
+
+      document.getElementById('cm-period').textContent = d.period;
+      document.getElementById('cm-company').textContent = d.company;
+      document.getElementById('cm-role').textContent = d.role;
+      document.getElementById('cm-sector').textContent = d.sector;
+
+      const metricsEl = document.getElementById('cm-metrics');
+      metricsEl.innerHTML = d.metrics.map(m =>
+        `<div class="cm-metric"><span class="cm-metric-val">${m.val}</span><span class="cm-metric-lbl">${m.lbl}</span></div>`
+      ).join('');
+
+      const bulletsEl = document.getElementById('cm-bullets');
+      bulletsEl.innerHTML = d.bullets.map(b => `<li>${b}</li>`).join('');
+
+      careerOverlay.setAttribute('aria-hidden', 'false');
+      careerOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      modal.focus();
+    }
+
+    function closeCareerModal() {
+      careerOverlay.classList.remove('open');
+      careerOverlay.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      if (modalTrigger) { modalTrigger.focus(); modalTrigger = null; }
+    }
+
+    // Attach click to career cards
+    document.querySelectorAll('.career-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const label = card.getAttribute('aria-label') || '';
+        const company = label.split('—')[0].trim();
+        const key = labelMap[company];
+        modalTrigger = card;
+        if (key) openCareerModal(key);
+      });
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.click();
+        }
+      });
+    });
+
+    closeBtn.addEventListener('click', closeCareerModal);
+    careerOverlay.addEventListener('click', e => { if (e.target === careerOverlay) closeCareerModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && careerOverlay.classList.contains('open')) closeCareerModal(); });
   </script>
 
 </body>
