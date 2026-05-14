@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Eren Kumcuoglu — The person behind the title. Leadership philosophy, character, and what drives a C-level executive who has spent 19 years building things that matter." />
+  <title>Eren Kumcuoglu — The Person</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://erenkumcuoglu.com/eren-kumcuoglu" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Geist+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* ─────────────────────────────────────────────────────────────────────
+       DESIGN TOKENS — identical to index
+    ───────────────────────────────────────────────────────────────────── */
+    :root {
+      --p950: #0A0909;
+      --p900: #111010;
+      --p800: #1C1B1B;
+      --p700: #2E2C2C;
+      --p600: #413E3E;
+      --p500: #5C5858;
+      --s100: #F7F6F3;
+      --s200: #EDEBE5;
+      --s300: #DDD9D0;
+      --a400: #C9A84C;
+      --a500: #B8922E;
+      --a600: #9E7A1A;
+      --a700: #816418;
+      --n0: #FFFFFF;
+      --n100: #F4F3F0;
+      --n200: #E8E6E1;
+      --n300: #D2CFC8;
+      --n400: #B0ABA2;
+      --n500: #888380;
+      --n600: #605D59;
+      --n700: #3E3C39;
+      --n800: #252320;
+      --fd: "Cormorant Garamond", Georgia, serif;
+      --fb: "Outfit", sans-serif;
+      --fm: "Geist Mono", monospace;
+      --ease: cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: var(--fb); background: var(--s100); color: var(--p900); -webkit-font-smoothing: antialiased; }
+    ul { list-style: none; }
+    a { text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes expandLine {
+      from { transform: scaleX(0); transform-origin: left; }
+      to { transform: scaleX(1); transform-origin: left; }
+    }
+    @keyframes slowDrift {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(8px, -10px); }
+    }
+
+    /* ── REVEAL ── */
+    .reveal {
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 700ms var(--ease), transform 700ms var(--ease);
+    }
+    .reveal.revealed { opacity: 1; transform: none; }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       NAVBAR
+    ───────────────────────────────────────────────────────────────────── */
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 68px;
+      background: rgba(247, 246, 243, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--n200);
+      transition: box-shadow 300ms var(--ease);
+    }
+    .nav.scrolled { box-shadow: 0 2px 16px rgba(10,9,9,0.08); }
+
+    .nav-brand {
+      position: relative;
+      font-family: var(--fm); font-size: 0.64rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--p900);
+      transition: color 300ms var(--ease);
+    }
+    .nav-brand::after {
+      content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 1px;
+      background: var(--a700); transform: scaleX(0); transform-origin: left;
+      transition: transform 300ms var(--ease);
+    }
+    .nav-brand:hover { color: var(--a700); }
+    .nav-brand:hover::after { transform: scaleX(1); }
+
+    .nav-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--fm); font-size: 0.64rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--n600);
+      transition: color 300ms var(--ease);
+    }
+    .nav-back:hover { color: var(--a700); }
+    .nav-back svg { width: 14px; height: 14px; }
+
+    @media (max-width: 768px) {
+      .nav { padding: 0 20px; height: 60px; }
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       HERO — editorial, with portrait slot
+    ───────────────────────────────────────────────────────────────────── */
+    .page-hero {
+      background: var(--p900);
+      color: var(--n0);
+      padding: 64px 20px 56px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (min-width: 900px) {
+      .page-hero { padding: 96px 48px 80px; }
+    }
+
+    .page-hero-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      position: relative; z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    @media (min-width: 900px) {
+      .page-hero-inner {
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+        gap: 72px;
+      }
+    }
+
+    .page-hero-eyebrow {
+      font-family: var(--fm); font-size: 0.64rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--n500); margin-bottom: 20px;
+      animation: fadeUp 0.8s var(--ease) 0.2s both;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .page-hero-eyebrow::before {
+      content: ''; width: 24px; height: 1px; background: var(--a600);
+    }
+
+    .page-hero-title {
+      font-family: var(--fd); font-weight: 300; letter-spacing: -0.02em;
+      line-height: 1.02; font-size: clamp(2.6rem, 7vw, 4.6rem);
+      color: var(--n0); margin-bottom: 28px;
+      animation: fadeUp 0.8s var(--ease) 0.35s both;
+    }
+    .page-hero-title em { font-style: italic; color: var(--a400); }
+
+    .page-hero-lead {
+      font-family: var(--fb); font-weight: 300; font-size: clamp(1rem, 1.5vw, 1.1rem);
+      line-height: 1.7; color: var(--n400); max-width: 540px;
+      animation: fadeUp 0.8s var(--ease) 0.5s both;
+    }
+
+    .page-hero-divider {
+      width: 32px; height: 1px; background: var(--n600);
+      margin: 28px 0;
+      animation: expandLine 1s var(--ease) 0.7s both;
+    }
+
+    /* Hero portrait */
+    .hero-portrait-wrap {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      width: 100%;
+      max-width: 460px;
+      justify-self: center;
+      animation: fadeIn 1.2s var(--ease) 0.6s both;
+    }
+    @media (min-width: 900px) {
+      .hero-portrait-wrap { justify-self: end; }
+    }
+    .hero-portrait-frame {
+      position: absolute; inset: 0;
+      border: 1px solid var(--p700);
+      transform: translate(14px, 14px);
+      pointer-events: none;
+    }
+    .hero-portrait-frame::after {
+      content: ''; position: absolute; inset: -1px;
+      border-top: 1px solid var(--a600); border-left: 1px solid var(--a600);
+      width: 28px; height: 28px;
+    }
+    .hero-portrait-slot {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      background: var(--p800);
+      object-fit: cover;
+      object-position: 50% 25%;
+      filter: contrast(1.04) saturate(0.92);
+    }
+    .hero-portrait-tag {
+      position: absolute; bottom: -28px; left: 0;
+      font-family: var(--fm); font-size: 0.62rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--n500);
+    }
+
+    /* Decorative grid lines */
+    .hero-grid-lines {
+      position: absolute; inset: 0; pointer-events: none; opacity: 0.04;
+      background-image: linear-gradient(var(--n0) 1px, transparent 1px),
+                        linear-gradient(90deg, var(--n0) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       STATS STRIP — animated counters
+    ───────────────────────────────────────────────────────────────────── */
+    .stats-strip {
+      background: var(--p950);
+      border-top: 1px solid var(--p800);
+      border-bottom: 1px solid var(--p800);
+      padding: 28px 20px;
+    }
+    @media (min-width: 768px) { .stats-strip { padding: 32px 48px; } }
+    .stats-inner {
+      max-width: 1240px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 24px 32px;
+    }
+    @media (min-width: 768px) {
+      .stats-inner { grid-template-columns: repeat(4, 1fr); }
+    }
+    .stat-item {
+      display: flex; flex-direction: column; gap: 6px;
+      border-left: 1px solid var(--p700);
+      padding-left: 16px;
+    }
+    .stat-num {
+      font-family: var(--fd); font-weight: 300;
+      font-size: clamp(2.2rem, 4vw, 2.8rem);
+      color: var(--a400); line-height: 1;
+      letter-spacing: -0.02em;
+      display: inline-flex; align-items: baseline; gap: 4px;
+    }
+    .stat-num .unit { font-size: 0.5em; color: var(--n400); }
+    .stat-label {
+      font-family: var(--fm); font-size: 0.62rem; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--n500);
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       CONTENT LAYOUT
+    ───────────────────────────────────────────────────────────────────── */
+    .content-section {
+      padding: 64px 20px;
+      border-bottom: 1px solid var(--n200);
+    }
+    @media (min-width: 768px) {
+      .content-section { padding: 88px 48px; }
+    }
+
+    .content-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Two-col layout for some sections */
+    .two-col {
+      display: grid; grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    @media (min-width: 768px) {
+      .two-col { grid-template-columns: 280px 1fr; gap: 80px; }
+    }
+
+    .section-label {
+      font-family: var(--fm); font-size: 0.64rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--n500); margin-bottom: 16px;
+      display: inline-flex; align-items: center; gap: 12px;
+    }
+    .section-label::before {
+      content: ''; width: 24px; height: 1px; background: var(--a700);
+    }
+
+    .section-heading {
+      font-family: var(--fd); font-weight: 300; letter-spacing: -0.02em;
+      line-height: 1.1; font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+      color: var(--p900); margin-bottom: 28px;
+    }
+    .section-heading em { font-style: italic; color: var(--a700); }
+
+    .body-text {
+      font-family: var(--fb); font-size: clamp(0.98rem, 1.4vw, 1.05rem);
+      font-weight: 300; line-height: 1.7; color: var(--n600);
+    }
+    .body-text + .body-text { margin-top: 18px; }
+    .body-text strong { font-weight: 500; color: var(--p900); }
+    .body-text em { font-style: italic; color: var(--p900); }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 2px solid var(--a700);
+      padding-left: 28px;
+      margin: 36px 0 0;
+    }
+    .pull-quote p {
+      font-family: var(--fd); font-style: italic; font-weight: 300;
+      font-size: clamp(1.2rem, 2.4vw, 1.55rem); line-height: 1.4;
+      color: var(--p900);
+    }
+    .pull-quote cite {
+      display: block; margin-top: 12px;
+      font-family: var(--fm); font-size: 0.62rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--n500); font-style: normal;
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       TRAIT CARDS — flip / hover reveal
+    ───────────────────────────────────────────────────────────────────── */
+    .traits-grid {
+      display: grid; grid-template-columns: 1fr;
+      gap: 14px; margin-top: 36px;
+    }
+    @media (min-width: 576px) {
+      .traits-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 900px) {
+      .traits-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .trait-card {
+      position: relative;
+      background: var(--n0); border: 1px solid var(--n200); border-radius: 8px;
+      padding: 22px 22px 24px;
+      min-height: 168px;
+      cursor: pointer;
+      overflow: hidden;
+      transition: box-shadow 300ms var(--ease), transform 300ms var(--ease), border-color 300ms var(--ease);
+    }
+    .trait-card:hover, .trait-card.active {
+      box-shadow: 0 8px 32px rgba(10,9,9,0.09);
+      transform: translateY(-2px);
+      border-color: var(--a700);
+    }
+    .trait-card .trait-front,
+    .trait-card .trait-back {
+      transition: opacity 280ms var(--ease), transform 280ms var(--ease);
+    }
+    .trait-card .trait-back {
+      position: absolute; inset: 22px;
+      opacity: 0; transform: translateY(8px);
+      pointer-events: none;
+    }
+    .trait-card:hover .trait-front,
+    .trait-card.active .trait-front {
+      opacity: 0; transform: translateY(-8px);
+    }
+    .trait-card:hover .trait-back,
+    .trait-card.active .trait-back {
+      opacity: 1; transform: translateY(0);
+    }
+
+    .trait-num {
+      font-family: var(--fm); font-size: 0.62rem; letter-spacing: 0.18em;
+      color: var(--a700); margin-bottom: 22px;
+      display: block;
+    }
+    .trait-title {
+      font-family: var(--fd); font-weight: 400;
+      font-size: 1.4rem; line-height: 1.15;
+      color: var(--p900); letter-spacing: -0.01em;
+    }
+    .trait-title em { font-style: italic; color: var(--a700); }
+    .trait-desc {
+      font-family: var(--fb); font-size: 0.85rem; font-weight: 300;
+      color: var(--n600); line-height: 1.6;
+    }
+    .trait-prompt {
+      position: absolute; bottom: 18px; right: 22px;
+      font-family: var(--fm); font-size: 0.58rem; letter-spacing: 0.18em;
+      color: var(--n400); text-transform: uppercase;
+      transition: opacity 240ms var(--ease);
+    }
+    .trait-card:hover .trait-prompt,
+    .trait-card.active .trait-prompt { opacity: 0; }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       BELIEFS — interactive stepper / tabs
+    ───────────────────────────────────────────────────────────────────── */
+    .beliefs-wrap {
+      display: grid; grid-template-columns: 1fr; gap: 32px;
+      margin-top: 36px;
+    }
+    @media (min-width: 900px) {
+      .beliefs-wrap { grid-template-columns: 240px 1fr; gap: 64px; align-items: start; }
+    }
+
+    .beliefs-tabs {
+      display: flex; flex-direction: row; gap: 4px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: none;
+    }
+    .beliefs-tabs::-webkit-scrollbar { display: none; }
+    @media (min-width: 900px) {
+      .beliefs-tabs {
+        flex-direction: column; gap: 2px;
+        position: sticky; top: 84px;
+      }
+    }
+
+    .belief-tab {
+      flex-shrink: 0;
+      display: flex; align-items: center; gap: 14px;
+      padding: 14px 16px;
+      text-align: left;
+      border-left: 2px solid transparent;
+      transition: all 240ms var(--ease);
+      color: var(--n500);
+      min-width: 120px;
+    }
+    @media (max-width: 899px) {
+      .belief-tab { flex-direction: column; align-items: flex-start; gap: 6px; padding: 10px 14px; border-left: none; border-top: 2px solid transparent; }
+    }
+    .belief-tab:hover { color: var(--p900); }
+    .belief-tab.active {
+      color: var(--p900);
+      border-left-color: var(--a700);
+      background: var(--n0);
+    }
+    @media (max-width: 899px) {
+      .belief-tab.active { border-top-color: var(--a700); border-left-color: transparent; }
+    }
+
+    .belief-tab .tab-num {
+      font-family: var(--fd); font-weight: 300;
+      font-size: 1.4rem; line-height: 1; flex-shrink: 0;
+      color: inherit; opacity: 0.6;
+      transition: opacity 240ms var(--ease);
+    }
+    .belief-tab.active .tab-num { color: var(--a700); opacity: 1; }
+    .belief-tab .tab-label {
+      font-family: var(--fm); font-size: 0.6rem; letter-spacing: 0.14em;
+      text-transform: uppercase; line-height: 1.3;
+    }
+
+    .beliefs-stage {
+      position: relative;
+      min-height: 280px;
+    }
+    .belief-panel {
+      position: absolute; inset: 0;
+      opacity: 0; pointer-events: none;
+      transition: opacity 380ms var(--ease), transform 380ms var(--ease);
+      transform: translateY(8px);
+    }
+    .belief-panel.active {
+      position: relative;
+      opacity: 1; pointer-events: auto;
+      transform: none;
+    }
+    .belief-panel-num {
+      font-family: var(--fd); font-weight: 300;
+      font-size: clamp(3rem, 8vw, 5rem); line-height: 0.9;
+      color: var(--s300); letter-spacing: -0.04em;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .belief-panel-title {
+      font-family: var(--fd); font-weight: 400;
+      font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.2;
+      color: var(--p900); letter-spacing: -0.01em;
+      margin-bottom: 18px;
+    }
+    .belief-panel-title em { font-style: italic; color: var(--a700); }
+    .belief-panel-text {
+      font-family: var(--fb); font-size: clamp(0.95rem, 1.3vw, 1.02rem);
+      font-weight: 300; line-height: 1.7; color: var(--n600);
+      max-width: 620px;
+    }
+
+    .beliefs-progress {
+      margin-top: 28px;
+      display: flex; align-items: center; gap: 14px;
+      font-family: var(--fm); font-size: 0.62rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--n500);
+    }
+    .beliefs-progress .bar {
+      flex: 1; max-width: 200px; height: 1px; background: var(--n300);
+      position: relative; overflow: hidden;
+    }
+    .beliefs-progress .bar::after {
+      content: ''; position: absolute; inset: 0;
+      background: var(--a700);
+      transform-origin: left;
+      transform: scaleX(var(--p, 0.2));
+      transition: transform 380ms var(--ease);
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       OUTSIDE WORK — dark section, tighter
+    ───────────────────────────────────────────────────────────────────── */
+    .dark-section {
+      background: var(--p900);
+      padding: 64px 20px;
+      border-bottom: 1px solid var(--p800);
+      position: relative;
+      overflow: hidden;
+    }
+    @media (min-width: 768px) {
+      .dark-section { padding: 88px 48px; }
+    }
+
+    .dark-section .section-label { color: var(--n500); }
+    .dark-section .section-label::before { background: var(--a500); }
+    .dark-section .section-heading { color: var(--n0); }
+    .dark-section .section-heading em { color: var(--a400); }
+    .dark-section .body-text { color: var(--n400); }
+    .dark-section .body-text strong { color: var(--n200); }
+
+    .life-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 8px; margin-top: 36px;
+    }
+    @media (min-width: 600px) { .life-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 900px) { .life-grid { grid-template-columns: repeat(6, 1fr); } }
+
+    .life-card {
+      position: relative;
+      background: var(--p800); border: 1px solid var(--p700); border-radius: 6px;
+      padding: 20px 16px 18px;
+      aspect-ratio: 1 / 1;
+      display: flex; flex-direction: column; justify-content: space-between;
+      cursor: pointer; overflow: hidden;
+      transition: background 240ms var(--ease), border-color 240ms var(--ease), transform 240ms var(--ease);
+    }
+    .life-card:hover {
+      background: var(--p700); border-color: var(--a600);
+      transform: translateY(-3px);
+    }
+    .life-card .life-num {
+      font-family: var(--fm); font-size: 0.58rem; letter-spacing: 0.18em;
+      color: var(--n500);
+    }
+    .life-title {
+      font-family: var(--fd); font-weight: 400; font-style: italic;
+      font-size: 1.25rem; line-height: 1.15;
+      color: var(--n0);
+    }
+    .life-card .life-detail {
+      position: absolute; inset: 0;
+      background: var(--p700);
+      padding: 18px 16px;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      gap: 8px;
+      opacity: 0; pointer-events: none;
+      transition: opacity 240ms var(--ease);
+    }
+    .life-card:hover .life-detail { opacity: 1; }
+    .life-detail .life-detail-title {
+      font-family: var(--fd); font-style: italic; font-size: 1.1rem;
+      color: var(--a400); line-height: 1.1;
+    }
+    .life-detail .life-detail-text {
+      font-family: var(--fb); font-size: 0.74rem; font-weight: 300;
+      color: var(--n300); line-height: 1.55;
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       CLOSING CTA
+    ───────────────────────────────────────────────────────────────────── */
+    .closing {
+      background: var(--s200); border-top: 1px solid var(--n200);
+      padding: 64px 20px;
+    }
+    @media (min-width: 768px) { .closing { padding: 88px 48px; } }
+
+    .closing-inner {
+      max-width: 680px; margin: 0 auto; text-align: center;
+    }
+    .closing-headline {
+      font-family: var(--fd); font-weight: 300; letter-spacing: -0.02em;
+      line-height: 1.1; font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--p900); margin-bottom: 18px;
+    }
+    .closing-headline em { font-style: italic; color: var(--a700); }
+    .closing-sub {
+      font-family: var(--fb); font-size: 1rem; font-weight: 300;
+      color: var(--n600); line-height: 1.65; margin-bottom: 36px;
+    }
+    .btn-row {
+      display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       BUTTONS (same as index)
+    ───────────────────────────────────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      font-family: var(--fb); font-weight: 500; letter-spacing: 0.06em;
+      text-transform: uppercase; white-space: nowrap;
+      border: 1px solid; border-radius: 3px; cursor: pointer;
+      transition: all 300ms var(--ease);
+    }
+    .btn-md { padding: 0 24px; height: 48px; font-size: 0.8rem; }
+    .btn-lg { padding: 0 32px; height: 54px; font-size: 0.8rem; }
+    .btn-accent { background: var(--a700); color: var(--n0); border-color: var(--a700); }
+    .btn-accent:hover { background: var(--a600); border-color: var(--a600); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(129,100,24,0.30); }
+    .btn-secondary { background: transparent; color: var(--p900); border-color: var(--p900); }
+    .btn-secondary:hover { background: var(--p900); color: var(--n0); transform: translateY(-1px); }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────────────────────────────────────── */
+    .footer {
+      background: var(--p900); border-top: 1px solid var(--p800);
+      padding: 24px 20px;
+      display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-between; gap: 20px;
+    }
+    @media (min-width: 768px) { .footer { padding: 24px 48px; } }
+    .footer-copy {
+      font-family: var(--fm); font-size: 0.64rem; letter-spacing: 0.09em; color: var(--n400);
+    }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+    .footer-link {
+      font-family: var(--fm); font-size: 0.64rem; letter-spacing: 0.09em;
+      text-transform: uppercase; color: var(--n400);
+      min-height: 44px; display: inline-flex; align-items: center;
+      transition: color 200ms var(--ease);
+    }
+    .footer-link:hover { color: var(--n200); }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── NAVBAR ──────────────────────────────────────────────────────────── -->
+  <nav class="nav" id="main-nav" aria-label="Main navigation">
+    <a href="/" class="nav-brand" aria-label="Eren Kumcuoglu — home">Eren Kumcuoglu</a>
+    <a href="/" class="nav-back" aria-label="Back to main site">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M10 12L6 8l4-4"></path>
+      </svg>
+      Back to main site
+    </a>
+  </nav>
+
+  <!-- ── MAIN ──────────────────────────────────────────────────────────────── -->
+  <main id="main-content" tabindex="-1">
+
+    <!-- HERO ──────────────────────────────────────────────────────────────── -->
+    <section class="page-hero" aria-label="About Eren" data-screen-label="01 Hero">
+      <div class="hero-grid-lines" aria-hidden="true"></div>
+      <div class="page-hero-inner">
+        <div>
+          <p class="page-hero-eyebrow">The Person Behind the Title</p>
+          <h1 class="page-hero-title">
+            I'm <em>Eren.</em><br>
+            Here's who I<br>actually am.
+          </h1>
+          <div class="page-hero-divider" aria-hidden="true"></div>
+          <p class="page-hero-lead">
+            My CV lists companies, titles, and metrics. This page is different — how I think,
+            what I believe about leadership, and the executive I've become over nineteen years.
+          </p>
+        </div>
+        <div class="hero-portrait-wrap">
+          <div class="hero-portrait-frame" aria-hidden="true"></div>
+          <img
+            src="eren-portrait.png?v=2"
+            alt="Eren Kumcuoglu, portrait"
+            class="hero-portrait-slot"
+            width="1000"
+            height="1250" />
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS STRIP ───────────────────────────────────────────────────────── -->
+    <section class="stats-strip" aria-label="By the numbers">
+      <div class="stats-inner">
+        <div class="stat-item">
+          <span class="stat-num"><span class="counter" data-to="19">0</span><span class="unit">yrs</span></span>
+          <span class="stat-label">In digital economy</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num"><span class="counter" data-to="4">0</span></span>
+          <span class="stat-label">Regulated industries</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num"><span class="counter" data-to="5">0</span></span>
+          <span class="stat-label">C-level mandates</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">1<span class="unit">city</span></span>
+          <span class="stat-label">Istanbul, always</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1 — Opening / who I am ──────────────────────────────────── -->
+    <section class="content-section" style="background: var(--s100);" aria-label="Who I am" data-screen-label="02 Who I am">
+      <div class="content-inner">
+        <div class="two-col">
+          <div class="reveal">
+            <p class="section-label">In my own words</p>
+            <h2 class="section-heading">A builder who<br>happens to<br><em>run businesses.</em></h2>
+          </div>
+          <div class="reveal" style="transition-delay:150ms">
+            <p class="body-text">
+              I grew up professionally in the trenches of marketing and growth — which means I learned early
+              that titles mean nothing without results. Every role I've held, I've treated as a mandate:
+              a specific set of problems to solve, in a specific window of time.
+            </p>
+            <p class="body-text">
+              Istanbul-based and Turkish, my career has been almost entirely in the digital economy —
+              fintech, crypto, gaming, consumer electronics. What connects the work isn't the sector;
+              it's the pattern. Fast-moving companies with enormous ambitions and structural gaps
+              preventing them. <strong>I close those gaps.</strong>
+            </p>
+            <p class="body-text">
+              My operating theory: <em>most business failures aren't strategic failures — they're
+              alignment failures.</em> Strategy, operations, compliance, and people pulling in different
+              directions. I've spent nineteen years learning to pull all four the same way.
+            </p>
+
+            <div class="pull-quote">
+              <p>"The rarest executive capability isn't specialisation. It's the ability to hold strategy
+              and execution in the same hand, simultaneously."</p>
+              <cite>— How I think about leadership</cite>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 — Character / how I lead ──────────────────────────────── -->
+    <section class="content-section" style="background: var(--n0);" aria-label="How I lead" data-screen-label="03 How I lead">
+      <div class="content-inner">
+        <div class="reveal">
+          <p class="section-label">How I actually lead</p>
+          <h2 class="section-heading">Six patterns that<br>define <em>my day-to-day.</em></h2>
+        </div>
+
+        <div class="traits-grid" id="traits-grid">
+          <article class="trait-card" tabindex="0">
+            <div class="trait-front">
+              <span class="trait-num">01 / Time</span>
+              <h3 class="trait-title">Long-horizon <em>thinking.</em></h3>
+            </div>
+            <div class="trait-back">
+              <p class="trait-desc">Suspicious of quick wins that create future problems. I decide with a 3–5 year frame in mind — even when the board only wants to see next quarter.</p>
+            </div>
+            <span class="trait-prompt">Hover →</span>
+          </article>
+
+          <article class="trait-card" tabindex="0">
+            <div class="trait-front">
+              <span class="trait-num">02 / Method</span>
+              <h3 class="trait-title">Systems over <em>heroics.</em></h3>
+            </div>
+            <div class="trait-back">
+              <p class="trait-desc">I don't believe in executives who save the day. I build systems that don't need saving. If I'm indispensable, I've failed.</p>
+            </div>
+            <span class="trait-prompt">Hover →</span>
+          </article>
+
+          <article class="trait-card" tabindex="0">
+            <div class="trait-front">
+              <span class="trait-num">03 / Clarity</span>
+              <h3 class="trait-title">Radical <em>clarity.</em></h3>
+            </div>
+            <div class="trait-back">
+              <p class="trait-desc">Ambiguity is expensive. I drive meetings to decisions, not discussions. Everyone leaves knowing what was decided, who owns it, by when.</p>
+            </div>
+            <span class="trait-prompt">Hover →</span>
+          </article>
+
+          <article class="trait-card" tabindex="0">
+            <div class="trait-front">
+              <span class="trait-num">04 / People</span>
+              <h3 class="trait-title">People-first, not <em>people-pleasing.</em></h3>
+            </div>
+            <div class="trait-back">
+              <p class="trait-desc">I invest heavily in the humans I work with — but won't confuse investment with avoidance. Honest feedback and accountability are forms of respect.</p>
+            </div>
+            <span class="trait-prompt">Hover →</span>
+          </article>
+
+          <article class="trait-card" tabindex="0">
+            <div class="trait-front">
+              <span class="trait-num">05 / Signal</span>
+              <h3 class="trait-title">Data pressure-tests <em>intuition.</em></h3>
+            </div>
+            <div class="trait-back">
+              <p class="trait-desc">I have strong intuitions and I trust them. But every major call gets pressure-tested against numbers. Intuition tells me where to look; data tells me whether to move.</p>
+            </div>
+            <span class="trait-prompt">Hover →</span>
+          </article>
+
+          <article class="trait-card" tabindex="0">
+            <div class="trait-front">
+              <span class="trait-num">06 / Pace</span>
+              <h3 class="trait-title">Velocity with <em>discipline.</em></h3>
+            </div>
+            <div class="trait-back">
+              <p class="trait-desc">Fast companies can move in the wrong direction efficiently. I push for speed — but insist on knowing exactly where we're going before we accelerate.</p>
+            </div>
+            <span class="trait-prompt">Hover →</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 — Beliefs (interactive stepper) ──────────────────────── -->
+    <section class="content-section" style="background: var(--s200); border-top: 1px solid var(--n200);" aria-label="What I believe" data-screen-label="04 What I believe">
+      <div class="content-inner">
+        <div class="reveal">
+          <p class="section-label">What I believe</p>
+          <h2 class="section-heading">Five things I've<br>learned the <em>hard way.</em></h2>
+        </div>
+
+        <div class="beliefs-wrap" id="beliefs">
+          <nav class="beliefs-tabs" role="tablist" aria-label="Beliefs">
+            <button class="belief-tab active" role="tab" aria-selected="true" data-idx="0">
+              <span class="tab-num">01</span><span class="tab-label">Culture</span>
+            </button>
+            <button class="belief-tab" role="tab" aria-selected="false" data-idx="1">
+              <span class="tab-num">02</span><span class="tab-label">Compliance</span>
+            </button>
+            <button class="belief-tab" role="tab" aria-selected="false" data-idx="2">
+              <span class="tab-num">03</span><span class="tab-label">Growth</span>
+            </button>
+            <button class="belief-tab" role="tab" aria-selected="false" data-idx="3">
+              <span class="tab-num">04</span><span class="tab-label">Boards</span>
+            </button>
+            <button class="belief-tab" role="tab" aria-selected="false" data-idx="4">
+              <span class="tab-num">05</span><span class="tab-label">Hiring</span>
+            </button>
+          </nav>
+
+          <div class="beliefs-stage" id="beliefs-stage">
+            <article class="belief-panel active" role="tabpanel">
+              <span class="belief-panel-num">01</span>
+              <h3 class="belief-panel-title">Culture is an <em>operating system,</em> not a poster.</h3>
+              <p class="belief-panel-text">People don't read the values deck — they watch what gets rewarded and what gets tolerated. Every day, culture is either built or eroded by decisions at the top. The difference between healthy and broken cultures is whether leadership genuinely models what it asks of others.</p>
+            </article>
+            <article class="belief-panel" role="tabpanel">
+              <span class="belief-panel-num">02</span>
+              <h3 class="belief-panel-title">Compliance is a <em>competitive advantage,</em> not a tax.</h3>
+              <p class="belief-panel-text">In payments, fintech, and crypto, most operators treat compliance as cost. Companies that genuinely internalise regulatory frameworks build institutional trust competitors can't replicate overnight. Passing audits cleanly isn't luck — it's infrastructure built over years.</p>
+            </article>
+            <article class="belief-panel" role="tabpanel">
+              <span class="belief-panel-num">03</span>
+              <h3 class="belief-panel-title">Growth without margin is <em>revenue with extra steps.</em></h3>
+              <p class="belief-panel-text">I'm allergic to "growth at all costs." Too many companies hit impressive revenue on the way to bankruptcy. If unit economics aren't improving as you scale, you're building a louder problem — not a better business.</p>
+            </article>
+            <article class="belief-panel" role="tabpanel">
+              <span class="belief-panel-num">04</span>
+              <h3 class="belief-panel-title">The best board members ask <em>questions,</em> not for credit.</h3>
+              <p class="belief-panel-text">I've served as both executive and board member. The most valuable board contributions aren't strategic pronouncements — they're probing questions that force management to think harder. "I don't know, but here's how we'll find out" is a complete answer.</p>
+            </article>
+            <article class="belief-panel" role="tabpanel">
+              <span class="belief-panel-num">05</span>
+              <h3 class="belief-panel-title">Hire for character — and <em>for skill.</em></h3>
+              <p class="belief-panel-text">"Hire for attitude" gets misapplied constantly. Character is non-negotiable and non-trainable. But in payments infrastructure, compliance, or product architecture, you can't coach your way to competence fast enough. The best teams I've built had both.</p>
+            </article>
+
+            <div class="beliefs-progress" aria-hidden="true">
+              <span id="belief-counter">01 / 05</span>
+              <div class="bar" id="belief-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 — Outside work ──────────────────────────────────────────── -->
+    <section class="dark-section" aria-label="Outside of work" data-screen-label="05 Outside work">
+      <div class="content-inner">
+        <div class="reveal">
+          <p class="section-label">Outside the office</p>
+          <h2 class="section-heading">Things that<br>keep me <em>whole.</em></h2>
+          <p class="body-text" style="max-width:540px; margin-bottom:0">
+            Executives with no life outside work eventually stop being effective inside it.
+            Six things that recharge me — and keep my judgment fresh.
+          </p>
+        </div>
+
+        <div class="life-grid">
+          <article class="life-card" tabindex="0">
+            <span class="life-num">01</span>
+            <span class="life-title">Family.</span>
+            <div class="life-detail">
+              <span class="life-detail-title">Family.</span>
+              <p class="life-detail-text">Non-negotiable. Being present as a father and partner shapes everything else — my north star and constant reality check.</p>
+            </div>
+          </article>
+          <article class="life-card" tabindex="0">
+            <span class="life-num">02</span>
+            <span class="life-title">Gym.</span>
+            <div class="life-detail">
+              <span class="life-detail-title">Gym.</span>
+              <p class="life-detail-text">Where I do my clearest thinking. Physical effort sharpens focus and manages stress in ways nothing else does.</p>
+            </div>
+          </article>
+          <article class="life-card" tabindex="0">
+            <span class="life-num">03</span>
+            <span class="life-title">Motorbike.</span>
+            <div class="life-detail">
+              <span class="life-detail-title">Motorbiking.</span>
+              <p class="life-detail-text">You can't multitask on a bike. Enforced presence is the most effective reset I know — and Istanbul traffic is best on two wheels.</p>
+            </div>
+          </article>
+          <article class="life-card" tabindex="0">
+            <span class="life-num">04</span>
+            <span class="life-title">Camping.</span>
+            <div class="life-detail">
+              <span class="life-detail-title">Camping.</span>
+              <p class="life-detail-text">Distance from screens and schedules resets my sense of proportion. Most "urgent" problems turn out to be merely loud.</p>
+            </div>
+          </article>
+          <article class="life-card" tabindex="0">
+            <span class="life-num">05</span>
+            <span class="life-title">Travel.</span>
+            <div class="life-detail">
+              <span class="life-detail-title">Travel.</span>
+              <p class="life-detail-text">Exposure to different markets and ways of doing business is the most underrated form of executive education.</p>
+            </div>
+          </article>
+          <article class="life-card" tabindex="0">
+            <span class="life-num">06</span>
+            <span class="life-title">DIY.</span>
+            <div class="life-detail">
+              <span class="life-detail-title">DIY Projects.</span>
+              <p class="life-detail-text">Fixing or building with your hands is grounding — a reminder that most problems, given the right tools, are solvable.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5 — What I'm looking for ─────────────────────────────────── -->
+    <section class="content-section" style="background: var(--s100);" aria-label="What I look for" data-screen-label="06 Mandates">
+      <div class="content-inner">
+        <div class="two-col">
+          <div class="reveal">
+            <p class="section-label">What I'm drawn to</p>
+            <h2 class="section-heading">The mandates I<br>find <em>energising.</em></h2>
+          </div>
+          <div class="reveal" style="transition-delay:150ms">
+            <p class="body-text">
+              I do my best work where the company has proven something and now needs to scale it; where
+              leadership is aligned and just needs operational firepower; and where there's a real
+              appetite for honest feedback, not validation.
+            </p>
+            <p class="body-text">
+              I'm particularly energised by <strong>regulated industries</strong> where compliance and
+              commercial growth are seen as opposing forces — because they don't have to be. Most of
+              my career has been proving they reinforce each other.
+            </p>
+            <p class="body-text">
+              I'm honest about fit: if a company needs someone to maintain the status quo, I'm not it.
+              If they need someone to build the next version of it — that's exactly what I do.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING CTA ──────────────────────────────────────────────────────── -->
+    <section class="closing" aria-label="Get in touch" data-screen-label="07 Contact">
+      <div class="closing-inner reveal">
+        <p class="section-label" style="margin-bottom:16px">Start a conversation</p>
+        <h2 class="closing-headline">If this resonates,<br>let's <em>talk.</em></h2>
+        <p class="closing-sub">
+          C-level hire, board seat, or a hard organisational problem to think through —
+          I'm genuinely happy to have the conversation.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-accent btn-lg" href="/cdn-cgi/l/email-protection#1e7b6c7b70756b737d6b7179726b5e79737f7772307d7173">Send a Message</a>
+          <a class="btn btn-secondary btn-lg" href="/">View Full Profile</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <p class="footer-copy">© 2026 Eren Kumcuoglu. All rights reserved.</p>
+    <nav aria-label="Footer navigation">
+      <ul class="footer-links" role="list">
+        <li><a class="footer-link" href="/">Home</a></li>
+        <li><a class="footer-link" href="/#career">Career</a></li>
+        <li><a class="footer-link" href="/#achievements">Achievements</a></li>
+        <li><a class="footer-link" href="/professional-milestones">Milestones</a></li>
+        <li><a class="footer-link" href="/cdn-cgi/l/email-protection#f09582959e9b859d93859f979c85b0979d91999cde939f9d">Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <!-- ── JAVASCRIPT ─────────────────────────────────────────────────────── -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    'use strict';
+
+    /* nav scroll state */
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* reveal-on-scroll */
+    if (prefersReduced) {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('revealed'));
+    } else {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    }
+
+    /* animated counters */
+    const counters = document.querySelectorAll('.counter');
+    const animateCount = (el) => {
+      const to = parseInt(el.dataset.to, 10);
+      if (prefersReduced) { el.textContent = to; return; }
+      const dur = 1100;
+      const start = performance.now();
+      const step = (now) => {
+        const t = Math.min((now - start) / dur, 1);
+        const eased = 1 - Math.pow(1 - t, 3);
+        el.textContent = Math.round(to * eased);
+        if (t < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    const countObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { animateCount(e.target); countObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.4 });
+    counters.forEach(c => countObs.observe(c));
+
+    /* trait cards — tap-to-activate on touch / click toggle */
+    document.querySelectorAll('.trait-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        // Only activate sticky state on touch-ish interactions
+        card.classList.toggle('active');
+      });
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.classList.toggle('active');
+        }
+      });
+    });
+
+    /* beliefs stepper */
+    (function beliefs() {
+      const tabs = document.querySelectorAll('.belief-tab');
+      const panels = document.querySelectorAll('.belief-panel');
+      const counter = document.getElementById('belief-counter');
+      const bar = document.getElementById('belief-bar');
+      const total = tabs.length;
+
+      const setActive = (idx) => {
+        tabs.forEach((t, i) => {
+          const on = i === idx;
+          t.classList.toggle('active', on);
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        panels.forEach((p, i) => p.classList.toggle('active', i === idx));
+        if (counter) counter.textContent = `${String(idx+1).padStart(2,'0')} / ${String(total).padStart(2,'0')}`;
+        if (bar) bar.style.setProperty('--p', (idx + 1) / total);
+      };
+
+      tabs.forEach((tab, i) => {
+        tab.addEventListener('click', () => setActive(i));
+        tab.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+            e.preventDefault();
+            const next = (i + 1) % total;
+            tabs[next].focus(); setActive(next);
+          } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+            e.preventDefault();
+            const prev = (i - 1 + total) % total;
+            tabs[prev].focus(); setActive(prev);
+          }
+        });
+      });
+
+      // initial state
+      setActive(0);
+
+      // auto-advance until user interacts
+      let userInteracted = false;
+      const markInteracted = () => { userInteracted = true; };
+      tabs.forEach(t => t.addEventListener('click', markInteracted, { once: true }));
+
+      let idx = 0;
+      const beliefsEl = document.getElementById('beliefs');
+      let timer = null;
+      const startAuto = () => {
+        if (prefersReduced || userInteracted) return;
+        clearInterval(timer);
+        timer = setInterval(() => {
+          if (userInteracted) { clearInterval(timer); return; }
+          idx = (idx + 1) % total;
+          setActive(idx);
+        }, 5200);
+      };
+      const stopAuto = () => clearInterval(timer);
+
+      const visObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => e.isIntersecting ? startAuto() : stopAuto());
+      }, { threshold: 0.35 });
+      visObs.observe(beliefsEl);
+    })();
+  </script>
+
+</body>
+</html>
