@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Eren Kumcuoglu — Professional Milestones. A comprehensive record of verified outcomes, landmark achievements, and impact across fintech, crypto, gaming, and consumer markets." />
+  <title>Professional Milestones — Eren Kumcuoglu</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://erenkumcuoglu.com/professional-milestones" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Geist+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    :root {
+      --p950: #0A0909;
+      --p900: #111010;
+      --p800: #1C1B1B;
+      --p700: #2E2C2C;
+      --p600: #413E3E;
+      --p500: #5C5858;
+      --s100: #F7F6F3;
+      --s200: #EDEBE5;
+      --a400: #C9A84C;
+      --a500: #B8922E;
+      --a600: #9E7A1A;
+      --a700: #816418;
+      --n0: #FFFFFF;
+      --n100: #F4F3F0;
+      --n200: #E8E6E1;
+      --n300: #D2CFC8;
+      --n400: #B0ABA2;
+      --n500: #888380;
+      --n600: #605D59;
+      --n700: #3E3C39;
+      --n800: #252320;
+      --fd: "Cormorant Garamond", Georgia, serif;
+      --fb: "Outfit", sans-serif;
+      --fm: "Geist Mono", monospace;
+      --ease: cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: var(--fb); background: var(--s100); color: var(--p900); -webkit-font-smoothing: antialiased; }
+    ul { list-style: none; }
+    a { text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes expandLine {
+      from { transform: scaleX(0); transform-origin: left; }
+      to { transform: scaleX(1); transform-origin: left; }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.10; }
+      50% { opacity: 0.20; }
+    }
+
+    .reveal {
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 700ms var(--ease), transform 700ms var(--ease);
+    }
+    .reveal.revealed { opacity: 1; transform: none; }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       NAVBAR
+    ───────────────────────────────────────────────────────────────────── */
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 68px;
+      background: rgba(247, 246, 243, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--n200);
+      transition: box-shadow 300ms var(--ease);
+    }
+    .nav.scrolled { box-shadow: 0 2px 16px rgba(10,9,9,0.08); }
+
+    .nav-brand {
+      font-family: var(--fm); font-size: 0.64rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--p900);
+      transition: color 300ms var(--ease);
+    }
+    .nav-brand:hover { color: var(--a700); }
+
+    .nav-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--fm); font-size: 0.64rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--n600);
+      transition: color 300ms var(--ease);
+    }
+    .nav-back:hover { color: var(--a700); }
+    .nav-back svg { width: 14px; height: 14px; }
+
+    @media (max-width: 768px) { .nav { padding: 0 20px; height: 60px; } }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       HERO
+    ───────────────────────────────────────────────────────────────────── */
+    .page-hero {
+      background: var(--p950); color: var(--n0);
+      padding: 80px 20px 64px;
+      position: relative; overflow: hidden;
+    }
+    @media (min-width: 768px) { .page-hero { padding: 120px 48px 80px; } }
+
+    .page-hero-inner { max-width: 1280px; margin: 0 auto; position: relative; z-index: 1; }
+
+    .hero-glow {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px; height: 400px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,76,0.10) 0%, transparent 70%);
+      animation: pulseGlow 5s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .page-hero-eyebrow {
+      font-family: var(--fm); font-size: 0.64rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--n500); margin-bottom: 20px;
+      animation: fadeUp 0.8s var(--ease) 0.2s both;
+    }
+
+    .page-hero-title {
+      font-family: var(--fd); font-weight: 300; letter-spacing: -0.02em;
+      line-height: 1.05; font-size: clamp(2.8rem, 9vw, 5rem);
+      color: var(--n0); margin-bottom: 28px;
+      animation: fadeUp 0.8s var(--ease) 0.35s both;
+    }
+    .page-hero-title em { font-style: italic; color: var(--a400); }
+
+    .page-hero-lead {
+      font-family: var(--fb); font-weight: 300; font-size: clamp(1rem, 1.8vw, 1.125rem);
+      line-height: 1.75; color: var(--n400); max-width: 680px;
+      animation: fadeUp 0.8s var(--ease) 0.5s both;
+    }
+
+    /* Hero stats strip */
+    .hero-stats {
+      display: flex; flex-wrap: wrap; gap: 0;
+      margin-top: 56px; border-top: 1px solid var(--p700);
+      animation: fadeUp 0.8s var(--ease) 0.65s both;
+    }
+    .hero-stat {
+      padding: 24px 32px 24px 0;
+      border-right: 1px solid var(--p700);
+      margin-right: 32px;
+    }
+    .hero-stat:last-child { border-right: none; margin-right: 0; }
+    .hero-stat-val {
+      font-family: var(--fd); font-weight: 300; font-size: clamp(1.6rem, 4vw, 2.4rem);
+      letter-spacing: -0.02em; line-height: 1; color: var(--a400); margin-bottom: 6px;
+    }
+    .hero-stat-lbl {
+      font-family: var(--fm); font-size: 0.6rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--n600);
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       FILTER BAR
+    ───────────────────────────────────────────────────────────────────── */
+    .filter-bar {
+      background: var(--n0); border-bottom: 1px solid var(--n200);
+      position: sticky; top: 68px; z-index: 40;
+      padding: 0 20px;
+      overflow-x: auto; scrollbar-width: none;
+    }
+    .filter-bar::-webkit-scrollbar { display: none; }
+    @media (min-width: 768px) { .filter-bar { padding: 0 48px; top: 68px; } }
+
+    .filter-inner {
+      max-width: 1280px; margin: 0 auto;
+      display: flex; gap: 0; align-items: stretch;
+    }
+
+    .filter-btn {
+      flex-shrink: 0;
+      padding: 0 20px; height: 52px;
+      font-family: var(--fm); font-size: 0.6rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--n500);
+      border-bottom: 2px solid transparent;
+      transition: color 200ms var(--ease), border-color 200ms var(--ease);
+      cursor: pointer; background: none; border-top: none; border-left: none; border-right: none;
+      white-space: nowrap;
+    }
+    .filter-btn:hover { color: var(--p900); }
+    .filter-btn.active {
+      color: var(--a700);
+      border-bottom-color: var(--a700);
+      font-weight: 500;
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       GALLERY GRID
+    ───────────────────────────────────────────────────────────────────── */
+    .gallery {
+      padding: 48px 20px 80px;
+    }
+    @media (min-width: 768px) { .gallery { padding: 64px 48px 96px; } }
+
+    .gallery-inner { max-width: 1280px; margin: 0 auto; }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 576px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 900px) {
+      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* milestone card */
+    .m-card {
+      background: var(--n0); border: 1px solid var(--n200); border-radius: 8px;
+      padding: 28px; position: relative; overflow: hidden;
+      transition: box-shadow 300ms var(--ease), transform 300ms var(--ease), border-color 300ms var(--ease);
+    }
+    .m-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: var(--a500); transform: scaleX(0); transform-origin: left;
+      transition: transform 300ms var(--ease);
+    }
+    .m-card:hover {
+      box-shadow: 0 8px 32px rgba(10,9,9,0.10);
+      transform: translateY(-3px);
+      border-color: var(--n300);
+    }
+    .m-card:hover::before { transform: scaleX(1); }
+
+    /* featured card (dark) */
+    .m-card.feat {
+      background: var(--p900); border-color: var(--p800);
+    }
+    .m-card.feat:hover { border-color: var(--p600); }
+    .m-card.feat::before { background: var(--a400); }
+
+    /* span 2 cols on medium+ */
+    .m-card.wide { }
+    @media (min-width: 900px) {
+      .m-card.wide { grid-column: span 2; }
+    }
+
+    .m-tag {
+      font-family: var(--fm); font-size: 0.58rem; letter-spacing: 0.09em;
+      text-transform: uppercase; margin-bottom: 16px;
+      color: var(--n600);
+    }
+    .m-card.feat .m-tag { color: var(--n500); }
+
+    .m-company-badge {
+      display: inline-block;
+      font-family: var(--fm); font-size: 0.58rem; letter-spacing: 0.09em;
+      text-transform: uppercase; color: var(--a400);
+      border: 1px solid var(--a600); padding: 2px 8px; border-radius: 3px;
+      margin-bottom: 16px;
+    }
+
+    .m-num {
+      font-family: var(--fd); font-weight: 300; letter-spacing: -0.02em;
+      line-height: 1; margin-bottom: 12px;
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      color: var(--p900);
+    }
+    .m-card.feat .m-num { color: var(--a400); font-size: clamp(2.4rem, 6vw, 3.6rem); }
+
+    .m-title {
+      font-family: var(--fb); font-size: 0.95rem; font-weight: 500;
+      line-height: 1.4; margin-bottom: 12px; color: var(--p900);
+    }
+    .m-card.feat .m-title { color: var(--n0); font-size: 1rem; }
+
+    .m-detail {
+      font-family: var(--fb); font-size: 0.82rem; font-weight: 300;
+      line-height: 1.7; color: var(--n600); margin-bottom: 16px;
+    }
+    .m-card.feat .m-detail { color: var(--n500); }
+
+    .m-pain {
+      font-family: var(--fm); font-size: 0.58rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--a700);
+      border-top: 1px solid var(--n200); padding-top: 14px; margin-top: 4px;
+    }
+    .m-card.feat .m-pain {
+      color: var(--n500); border-top-color: var(--p700);
+    }
+    .m-pain strong { color: var(--a500); font-weight: 500; }
+    .m-card.feat .m-pain strong { color: var(--a400); }
+
+    /* No results */
+    .no-results {
+      grid-column: 1 / -1; text-align: center; padding: 64px 0;
+      font-family: var(--fb); color: var(--n500); font-size: 0.9rem;
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       PROOF BAR
+    ───────────────────────────────────────────────────────────────────── */
+    .proof-section {
+      background: var(--s200); border-top: 1px solid var(--n200);
+      border-bottom: 1px solid var(--n200);
+      padding: 32px 20px;
+    }
+    @media (min-width: 768px) { .proof-section { padding: 32px 48px; } }
+
+    .proof-inner {
+      max-width: 1280px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; align-items: center; gap: 24px;
+    }
+    .proof-label {
+      font-family: var(--fm); font-size: 0.64rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--n400); flex-shrink: 0;
+    }
+    .proof-items { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+    .proof-item {
+      font-family: var(--fb); font-size: 0.85rem; font-weight: 500; color: var(--n600);
+    }
+    .proof-dot { color: var(--n300); font-size: 0.7rem; }
+    .proof-note {
+      margin-left: auto;
+      font-family: var(--fb); font-size: 0.8rem; font-weight: 300; color: var(--n500);
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       CLOSING CTA
+    ───────────────────────────────────────────────────────────────────── */
+    .closing {
+      background: var(--p950); color: var(--n0);
+      padding: 64px 20px; text-align: center; position: relative; overflow: hidden;
+    }
+    @media (min-width: 768px) { .closing { padding: 96px 48px; } }
+
+    .closing-glow {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      width: 600px; height: 400px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,76,0.10) 0%, transparent 70%);
+      animation: pulseGlow 5s ease-in-out infinite;
+      pointer-events: none;
+    }
+    .closing-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+
+    .closing-eyebrow {
+      font-family: var(--fm); font-size: 0.64rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--n500); margin-bottom: 20px;
+    }
+    .closing-headline {
+      font-family: var(--fd); font-weight: 300; letter-spacing: -0.02em;
+      line-height: 1.08; font-size: clamp(2rem, 6vw, 3.5rem);
+      color: var(--n0); margin-bottom: 20px;
+    }
+    .closing-headline em { font-style: italic; color: var(--a400); }
+    .closing-sub {
+      font-family: var(--fb); font-size: 1rem; font-weight: 300;
+      color: var(--n500); line-height: 1.7; margin-bottom: 40px;
+    }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       BUTTONS
+    ───────────────────────────────────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      font-family: var(--fb); font-weight: 500; letter-spacing: 0.06em;
+      text-transform: uppercase; white-space: nowrap;
+      border: 1px solid; border-radius: 3px; cursor: pointer;
+      transition: all 300ms var(--ease);
+    }
+    .btn-lg { padding: 0 32px; height: 54px; font-size: 0.8rem; }
+    .btn-accent { background: var(--a700); color: var(--n0); border-color: var(--a700); }
+    .btn-accent:hover { background: var(--a600); border-color: var(--a600); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(129,100,24,0.30); }
+    .btn-ghost-dark { background: transparent; color: var(--n400); border-color: var(--p700); }
+    .btn-ghost-dark:hover { background: var(--p800); color: var(--n0); transform: translateY(-1px); }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────────────────────────────────────── */
+    .footer {
+      background: var(--p900); border-top: 1px solid var(--p800);
+      padding: 24px 20px;
+      display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-between; gap: 20px;
+    }
+    @media (min-width: 768px) { .footer { padding: 24px 48px; } }
+    .footer-copy { font-family: var(--fm); font-size: 0.64rem; letter-spacing: 0.09em; color: var(--n400); }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+    .footer-link {
+      font-family: var(--fm); font-size: 0.64rem; letter-spacing: 0.09em;
+      text-transform: uppercase; color: var(--n400);
+      min-height: 44px; display: inline-flex; align-items: center;
+      transition: color 200ms var(--ease);
+    }
+    .footer-link:hover { color: var(--n200); }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── NAVBAR ──────────────────────────────────────────────────────────── -->
+  <nav class="nav" id="main-nav" aria-label="Main navigation">
+    <a href="/" class="nav-brand" aria-label="Eren Kumcuoglu — home">Eren Kumcuoglu</a>
+    <a href="/" class="nav-back" aria-label="Back to main site">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M10 12L6 8l4-4"/>
+      </svg>
+      Back to main site
+    </a>
+  </nav>
+
+  <!-- ── MAIN ──────────────────────────────────────────────────────────────── -->
+  <main id="main-content" tabindex="-1">
+
+    <!-- HERO ──────────────────────────────────────────────────────────────── -->
+    <section class="page-hero" aria-label="Professional Milestones">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="page-hero-inner">
+        <p class="page-hero-eyebrow">19 Years · 9 Companies · Verified at Scale</p>
+        <h1 class="page-hero-title">
+          Professional<br><em>Milestones.</em>
+        </h1>
+        <p class="page-hero-lead">
+          This is the complete record — not a highlight reel, but a comprehensive account of outcomes built
+          across fintech, cryptocurrency, gaming, consumer electronics, and beyond. Every entry is a
+          problem that was real, a solution that was built, and a result that was measured.
+        </p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <p class="hero-stat-val">₺20B+</p>
+            <p class="hero-stat-lbl">Monthly TPV (Ozan)</p>
+          </div>
+          <div class="hero-stat">
+            <p class="hero-stat-val">€55M+</p>
+            <p class="hero-stat-lbl">Fan tokens raised</p>
+          </div>
+          <div class="hero-stat">
+            <p class="hero-stat-val">35M+</p>
+            <p class="hero-stat-lbl">Game users (Zula)</p>
+          </div>
+          <div class="hero-stat">
+            <p class="hero-stat-val">30+</p>
+            <p class="hero-stat-lbl">Landmark milestones</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTER BAR ──────────────────────────────────────────────────────── -->
+    <div class="filter-bar" role="navigation" aria-label="Filter milestones">
+      <div class="filter-inner">
+        <button class="filter-btn active" data-filter="all" onclick="filterCards('all', this)">All</button>
+        <button class="filter-btn" data-filter="ozan" onclick="filterCards('ozan', this)">Ozan</button>
+        <button class="filter-btn" data-filter="bitci" onclick="filterCards('bitci', this)">Bitci</button>
+        <button class="filter-btn" data-filter="ingame" onclick="filterCards('ingame', this)">InGame</button>
+        <button class="filter-btn" data-filter="pure" onclick="filterCards('pure', this)">Pure</button>
+        <button class="filter-btn" data-filter="ininal" onclick="filterCards('ininal', this)">Ininal</button>
+        <button class="filter-btn" data-filter="marti" onclick="filterCards('marti', this)">Martı</button>
+        <button class="filter-btn" data-filter="samsung" onclick="filterCards('samsung', this)">Samsung</button>
+        <button class="filter-btn" data-filter="philips" onclick="filterCards('philips', this)">Philips</button>
+        <button class="filter-btn" data-filter="ulker" onclick="filterCards('ulker', this)">Ülker</button>
+      </div>
+    </div>
+
+    <!-- GALLERY ──────────────────────────────────────────────────────────── -->
+    <section class="gallery" aria-label="Milestone gallery">
+      <div class="gallery-inner">
+        <div class="gallery-grid" id="gallery-grid">
+
+          <!-- ── OZAN ──────────────────────────────────── -->
+          <article class="m-card feat wide reveal" data-company="ozan">
+            <p class="m-tag">Business Growth · Ozan · Fintech · 2021–2026</p>
+            <p class="m-company-badge">Ozan · COO / Chairman</p>
+            <p class="m-num">₺20+ Billion Monthly TPV</p>
+            <h2 class="m-title">Elevated Ozan to one of Turkey's top payment acquirers</h2>
+            <p class="m-detail">By realigning cross-functional teams and optimizing operations, sales, and product
+              strategies simultaneously, I drove sustainable growth in both transaction volume and revenue,
+              strengthening Ozan's position as a dominant force in Turkish fintech.</p>
+            <p class="m-pain"><strong>Business problem solved:</strong> Fragmented operations and limited scalability constrained growth — streamlining processes created the infrastructure to confidently manage high-volume transactions.</p>
+          </article>
+
+          <article class="m-card reveal" data-company="ozan" style="transition-delay:60ms">
+            <p class="m-tag">Market Position · Ozan · Fintech · 2024</p>
+            <p class="m-company-badge">Ozan · COO</p>
+            <p class="m-num">Issuer #22→#5 · Acquirer #12→#2</p>
+            <h2 class="m-title">Dramatic ranking leap — top 5 issuer, top 2 acquirer in Turkey</h2>
+            <p class="m-detail">Leveraging market analysis and data-driven decisions, expanded sales channels,
+              strengthened partner ecosystems, and accelerated both user growth and transaction volume.</p>
+            <p class="m-pain"><strong>↳</strong> Limited market visibility and fragmented growth channels</p>
+          </article>
+
+          <article class="m-card reveal" data-company="ozan" style="transition-delay:120ms">
+            <p class="m-tag">Business Development · Ozan · Fintech · 2025</p>
+            <p class="m-company-badge">Ozan · COO</p>
+            <p class="m-num">+₺500M Monthly TPV</p>
+            <h2 class="m-title">Pazar POS partnership — taxis and street merchants unlocked</h2>
+            <p class="m-detail">In response to regulatory shifts, structured a strategic partnership enabling rapid deployment
+              of payment acceptance infrastructure across an entirely untapped merchant segment.</p>
+            <p class="m-pain"><strong>↳</strong> Highly competitive, conventional market with limited growth opportunities</p>
+          </article>
+
+          <article class="m-card reveal" data-company="ozan" style="transition-delay:180ms">
+            <p class="m-tag">Payments Infrastructure · Ozan · Fintech · 2022</p>
+            <p class="m-company-badge">Ozan · COO</p>
+            <p class="m-num">PSP Economics Restructured</p>
+            <h2 class="m-title">Renegotiated acquiring economics to transform payments into a profit centre</h2>
+            <p class="m-detail">Identified and eliminated structural inefficiencies in scheme fees and PSP routing, delivering
+              meaningful unit economics improvement that directly impacted P&L margins.</p>
+            <p class="m-pain"><strong>↳</strong> Payment costs eroding otherwise healthy margins across the business</p>
+          </article>
+
+          <article class="m-card reveal" data-company="ozan" style="transition-delay:240ms">
+            <p class="m-tag">Governance · Ozan · Fintech · 2023</p>
+            <p class="m-company-badge">Ozan · Chairman</p>
+            <p class="m-num">Board Restructured</p>
+            <h2 class="m-title">Built governance infrastructure from the ground up as Chairman</h2>
+            <p class="m-detail">Designed and implemented board-level governance processes — committee structures,
+              reporting cadences, and decision frameworks — enabling the company to operate with institutional
+              discipline at scale.</p>
+            <p class="m-pain"><strong>↳</strong> Governance gaps creating execution bottlenecks at leadership level</p>
+          </article>
+
+          <article class="m-card reveal" data-company="ozan" style="transition-delay:300ms">
+            <p class="m-tag">Compliance · Ozan · Fintech · 2022–2024</p>
+            <p class="m-company-badge">Ozan · COO</p>
+            <p class="m-num">100% Audit Pass Rate</p>
+            <h2 class="m-title">Clean sweeps across Visa, Mastercard, TCMB, and MASAK audits</h2>
+            <p class="m-detail">Led the company through multiple major regulatory audits simultaneously — passing
+              every one cleanly, converting compliance from a perceived liability into a competitive institutional moat.</p>
+            <p class="m-pain"><strong>↳</strong> Regulatory uncertainty threatening operational continuity and partner relationships</p>
+          </article>
+
+          <!-- ── BITCI ──────────────────────────────────── -->
+          <article class="m-card feat reveal" data-company="bitci" style="transition-delay:60ms">
+            <p class="m-tag">Token Launch · Bitci · Cryptocurrency · 2021</p>
+            <p class="m-company-badge">Bitci · CMO / Acting COO</p>
+            <p class="m-num">€15M in 19 Minutes</p>
+            <h2 class="m-title">Brazil National Team Fan Token — the fastest raise ever recorded</h2>
+            <p class="m-detail">Designed, positioned, and executed the token offering end-to-end. Closed €15M in
+              19 minutes flat — at the time the fastest fan token raise in history. Not an accident: a
+              repeatable system executed with precision.</p>
+            <p class="m-pain"><strong>Business problem solved:</strong> How do you monetise a global fanbase instantly, without diluting equity, at zero reliance on traditional capital markets?</p>
+          </article>
+
+          <article class="m-card reveal" data-company="bitci" style="transition-delay:120ms">
+            <p class="m-tag">Capital Activation · Bitci · Cryptocurrency · 2021</p>
+            <p class="m-company-badge">Bitci · CMO</p>
+            <p class="m-num">€12.5M in 4 Hours</p>
+            <h2 class="m-title">Spain National Team Fan Token — proving the model scales globally</h2>
+            <p class="m-detail">Back-to-back mega raises aren't luck — they're system design. Repeated the playbook
+              across geographies and sports leagues, proving repeatable demand spikes at global scale.</p>
+            <p class="m-pain"><strong>↳</strong> Engineered a framework to create repeatable demand spikes across markets</p>
+          </article>
+
+          <article class="m-card reveal" data-company="bitci" style="transition-delay:180ms">
+            <p class="m-tag">Token Programme · Bitci · Cryptocurrency · 2021</p>
+            <p class="m-company-badge">Bitci · CMO</p>
+            <p class="m-num">€55M+ Total Raised</p>
+            <h2 class="m-title">Multi-federation fan token programme — scalable across 6+ sports organisations</h2>
+            <p class="m-detail">Extended the fan token framework beyond individual raises into a structured programme
+              across multiple federations and sports, creating a repeatable commercial model in crypto.</p>
+            <p class="m-pain"><strong>↳</strong> Absence of a scalable, compliant commercial model in the fan token category</p>
+          </article>
+
+          <article class="m-card reveal" data-company="bitci" style="transition-delay:240ms">
+            <p class="m-tag">Operations · Bitci · Cryptocurrency · 2021</p>
+            <p class="m-company-badge">Bitci · Acting COO</p>
+            <p class="m-num">Operational Overhaul</p>
+            <h2 class="m-title">Stepped into Acting COO role mid-scale — rebuilt operational infrastructure under pressure</h2>
+            <p class="m-detail">With the company scaling rapidly, assumed COO responsibilities to impose process discipline,
+              team structure, and reporting rigour while maintaining commercial momentum.</p>
+            <p class="m-pain"><strong>↳</strong> Hypergrowth outpacing operational capacity — classic scale trap</p>
+          </article>
+
+          <!-- ── INGAME ──────────────────────────────────── -->
+          <article class="m-card feat reveal" data-company="ingame">
+            <p class="m-tag">Product Launch · InGame Group · Gaming · 2020</p>
+            <p class="m-company-badge">InGame · Marketing Director</p>
+            <p class="m-num">#1 App Store (All Platforms)</p>
+            <h2 class="m-title">Zula Mobile — top of every major chart within 24 hours of launch</h2>
+            <p class="m-detail">Most product launches fade inside a week. Zula Mobile hit #1 across every major app
+              store chart within its first day — the result of a precision go-to-market built and executed months before launch.</p>
+            <p class="m-pain"><strong>Business problem solved:</strong> Product launches with no commercial momentum or distribution leverage — solved with months of coordinated pre-launch infrastructure.</p>
+          </article>
+
+          <article class="m-card reveal" data-company="ingame" style="transition-delay:80ms">
+            <p class="m-tag">User Growth · InGame Group · Gaming · 2019–2020</p>
+            <p class="m-company-badge">InGame · Marketing Director</p>
+            <p class="m-num">35M+ Total Users</p>
+            <h2 class="m-title">Built Zula into one of Turkey's most played games — 35M registered users</h2>
+            <p class="m-detail">Scaled user acquisition and retention programmes across Zula's PC and mobile platforms,
+              combining performance marketing with community-building to create sustainable DAU growth.</p>
+            <p class="m-pain"><strong>↳</strong> User growth plateau — broke through with cross-platform acquisition strategy</p>
+          </article>
+
+          <article class="m-card reveal" data-company="ingame" style="transition-delay:160ms">
+            <p class="m-tag">Business Development · InGame · Gaming · 2019</p>
+            <p class="m-company-badge">InGame · BD Director</p>
+            <p class="m-num">Strategic Partnerships</p>
+            <h2 class="m-title">Closed multi-brand sponsorship and distribution partnerships to fuel Zula growth</h2>
+            <p class="m-detail">Structured commercial deals with FMCG brands, telcos, and gaming periphery companies —
+              creating non-dilutive revenue streams while expanding Zula's distribution reach.</p>
+            <p class="m-pain"><strong>↳</strong> Over-reliance on paid acquisition — diversified with partnership-driven growth channels</p>
+          </article>
+
+          <!-- ── PURE ──────────────────────────────────── -->
+          <article class="m-card feat reveal" data-company="pure">
+            <p class="m-tag">Brand Growth · Pure Agency · Marcom · 2018</p>
+            <p class="m-company-badge">Pure · Managing Director</p>
+            <p class="m-num">2.8% → 32% Market Share</p>
+            <h2 class="m-title">Huawei Turkey — from negligible to category leader in 18 months</h2>
+            <p class="m-detail">Huawei entered Turkey as an afterthought. Eighteen months later, they owned nearly a third
+              of the smartphone market — and the campaign took home a Gold Effie Award for marketing effectiveness.</p>
+            <p class="m-pain"><strong>Business problem solved:</strong> Brand invisibility in a crowded market costing real sales volume — solved through precision positioning and performance-integrated campaign architecture.</p>
+          </article>
+
+          <article class="m-card reveal" data-company="pure" style="transition-delay:80ms">
+            <p class="m-tag">Awards · Pure Agency · Marcom · 2018</p>
+            <p class="m-company-badge">Pure · Managing Director</p>
+            <p class="m-num">Gold Effie Award</p>
+            <h2 class="m-title">Effie Gold — most rigorous effectiveness award in marketing</h2>
+            <p class="m-detail">The Effie is judged purely on measurable results, not creative executions. Winning Gold
+              is independent verification that the work actually moved the market — not just the jury.</p>
+            <p class="m-pain"><strong>↳</strong> Marketing spend with no clear attribution to commercial outcome — built and proved direct connection</p>
+          </article>
+
+          <article class="m-card reveal" data-company="pure" style="transition-delay:160ms">
+            <p class="m-tag">Agency Growth · Pure Agency · Marcom · 2017–2019</p>
+            <p class="m-company-badge">Pure · Managing Director</p>
+            <p class="m-num">Revenue & Portfolio Scaled</p>
+            <h2 class="m-title">Grew agency revenue and account portfolio while maintaining margin discipline</h2>
+            <p class="m-detail">As Managing Director, balanced new business development with client retention — scaling
+              the agency's top-line while protecting profitability through rigorous project and resource management.</p>
+            <p class="m-pain"><strong>↳</strong> Agency growth without margin control — imposed P&L discipline across all accounts</p>
+          </article>
+
+          <!-- ── ININAL ──────────────────────────────────── -->
+          <article class="m-card feat reveal" data-company="ininal">
+            <p class="m-tag">User Growth · Ininal · Fintech · 2016–2017</p>
+            <p class="m-company-badge">Ininal · CMO</p>
+            <p class="m-num">600K → 1.2M KYC Users</p>
+            <h2 class="m-title">Doubled verified user base — CAC cut in half simultaneously</h2>
+            <p class="m-detail">In a regulated fintech environment where every active user requires full KYC, doubling
+              the verified user base while simultaneously cutting CAC by 50% changes a company's valuation story entirely.</p>
+            <p class="m-pain"><strong>Business problem solved:</strong> High CAC, low LTV, and a compliance burden that stunts growth — solved by redesigning the acquisition funnel end to end.</p>
+          </article>
+
+          <article class="m-card reveal" data-company="ininal" style="transition-delay:80ms">
+            <p class="m-tag">Revenue Growth · Ininal · Fintech · 2016–2017</p>
+            <p class="m-company-badge">Ininal · CMO</p>
+            <p class="m-num">4× Merchant Revenue</p>
+            <h2 class="m-title">Merchant revenue quadrupled — on-us transaction volume transformed</h2>
+            <p class="m-detail">Built and executed the merchant acquisition and activation programme that turned
+              Ininal's merchant network from a feature into a primary revenue driver.</p>
+            <p class="m-pain"><strong>↳</strong> Merchant network underutilised — activated it as a distinct commercial engine</p>
+          </article>
+
+          <!-- ── MARTI ──────────────────────────────────── -->
+          <article class="m-card reveal" data-company="marti">
+            <p class="m-tag">Revenue · Martı · Micromobility · 2020–2021</p>
+            <p class="m-company-badge">Martı · VP Growth & Marketing</p>
+            <p class="m-num">+20% Incremental Turnover</p>
+            <h2 class="m-title">PSP optimisation unlocked a hidden 20% revenue improvement</h2>
+            <p class="m-detail">Identified and restructured the payment service provider framework — a move that
+              generated meaningful incremental turnover without additional marketing investment.</p>
+            <p class="m-pain"><strong>↳</strong> Payment infrastructure treated as cost centre — converted it into revenue lever</p>
+          </article>
+
+          <article class="m-card reveal" data-company="marti" style="transition-delay:80ms">
+            <p class="m-tag">Growth · Martı · Micromobility · 2020</p>
+            <p class="m-company-badge">Martı · VP Growth</p>
+            <p class="m-num">City Expansion</p>
+            <h2 class="m-title">Led multi-city growth rollout during COVID — critical moment for scooter economics</h2>
+            <p class="m-detail">Scaled Martı's geographic footprint during a turbulent period, building sustainable unit economics in each new market while adapting to pandemic-era mobility shifts.</p>
+            <p class="m-pain"><strong>↳</strong> Expansion without proven unit economics in new markets — built the model first, then scaled</p>
+          </article>
+
+          <!-- ── SAMSUNG ──────────────────────────────────── -->
+          <article class="m-card feat reveal" data-company="samsung">
+            <p class="m-tag">Brand Building · Samsung · Consumer Electronics · 2009–2014</p>
+            <p class="m-company-badge">Samsung · Head of Digital</p>
+            <p class="m-num">Negligible → $3B+ Annual Turnover</p>
+            <h2 class="m-title">Built Samsung Turkey's digital presence from nothing — across its peak growth decade</h2>
+            <p class="m-detail">Joined Samsung when it was a footnote in the Turkish market. Five years later, the
+              brand had become a dominant consumer electronics force with a multi-billion dollar annual turnover.
+              I led the digital marketing function through the entire arc.</p>
+            <p class="m-pain"><strong>Business problem solved:</strong> No digital presence, no brand equity, no consumer preference — built all three simultaneously across Samsung's most consequential growth decade.</p>
+          </article>
+
+          <article class="m-card reveal" data-company="samsung" style="transition-delay:80ms">
+            <p class="m-tag">Digital Infrastructure · Samsung · Consumer Electronics · 2010–2014</p>
+            <p class="m-company-badge">Samsung · Head of Digital</p>
+            <p class="m-num">Digital Function Built</p>
+            <h2 class="m-title">Built Samsung Turkey's entire digital marketing capability from zero</h2>
+            <p class="m-detail">Created the team, technology stack, content infrastructure, and performance marketing
+              frameworks that would power Samsung's digital presence through its explosive Turkish growth phase.</p>
+            <p class="m-pain"><strong>↳</strong> No internal digital capability — greenfield build across talent, tools, and strategy</p>
+          </article>
+
+          <!-- ── PHILIPS ──────────────────────────────────── -->
+          <article class="m-card reveal" data-company="philips">
+            <p class="m-tag">Efficiency · Philips · Consumer Electronics · 2014–2016</p>
+            <p class="m-company-badge">Philips · Digital & CRM Manager</p>
+            <p class="m-num">€200K Saved Per Quarter</p>
+            <h2 class="m-title">Restructured digital marketing spend — €200K quarterly budget savings</h2>
+            <p class="m-detail">Identified systematic inefficiencies across digital channels and CRM operations,
+              implementing a restructured approach that delivered significant savings without sacrificing performance.</p>
+            <p class="m-pain"><strong>↳</strong> Marketing budget allocation based on habit, not performance data — rebuilt on evidence</p>
+          </article>
+
+          <article class="m-card reveal" data-company="philips" style="transition-delay:80ms">
+            <p class="m-tag">CRM · Philips · Consumer Electronics · 2014–2016</p>
+            <p class="m-company-badge">Philips · CRM Manager</p>
+            <p class="m-num">CRM Programme Built</p>
+            <h2 class="m-title">Designed and deployed Philips Turkey's customer relationship management programme</h2>
+            <p class="m-detail">Created the segmentation, communication, and retention infrastructure that transformed
+              Philips' customer data into a structured commercial asset with measurable LTV impact.</p>
+            <p class="m-pain"><strong>↳</strong> Customer data collected but unused — built the system to activate it commercially</p>
+          </article>
+
+          <!-- ── ÜLKER ──────────────────────────────────── -->
+          <article class="m-card reveal" data-company="ulker">
+            <p class="m-tag">Brand Ambassadors · Ülker · FMCG · 2007–2009</p>
+            <p class="m-company-badge">Ülker · PR & Digital Specialist</p>
+            <p class="m-num">120 Brand Ambassadors</p>
+            <h2 class="m-title">Built Ülker's brand ambassador network — 120 advocates across key markets</h2>
+            <p class="m-detail">Designed and executed Ülker's first structured brand ambassador programme — identifying,
+              recruiting, and activating 120 representatives across target demographic segments. An early lesson in
+              scalable word-of-mouth as a commercial system.</p>
+            <p class="m-pain"><strong>↳</strong> No structured approach to community-driven brand building — built the infrastructure from scratch</p>
+          </article>
+
+          <article class="m-card reveal" data-company="ulker" style="transition-delay:80ms">
+            <p class="m-tag">Digital · Ülker · FMCG · 2007–2009</p>
+            <p class="m-company-badge">Ülker · Digital Specialist</p>
+            <p class="m-num">Early Digital Foundation</p>
+            <h2 class="m-title">Among the first digital marketing practitioners at a major Turkish FMCG brand</h2>
+            <p class="m-detail">In 2007, digital marketing in Turkish FMCG was nascent. Built Ülker's early digital
+              presence, establishing frameworks and instincts that would define the next 17 years of my career.</p>
+            <p class="m-pain"><strong>↳</strong> No digital marketing playbook existed — learned by doing at the frontier of the discipline</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROOF BAR ────────────────────────────────────────────────────────── -->
+    <div class="proof-section">
+      <div class="proof-inner reveal">
+        <p class="proof-label">Audited &amp; Verified By</p>
+        <div class="proof-items">
+          <span class="proof-item">Visa</span><span class="proof-dot">·</span>
+          <span class="proof-item">Mastercard</span><span class="proof-dot">·</span>
+          <span class="proof-item">TCMB</span><span class="proof-dot">·</span>
+          <span class="proof-item">MASAK</span><span class="proof-dot">·</span>
+          <span class="proof-item">Gold Effie Award</span>
+        </div>
+        <p class="proof-note">All results independently verifiable</p>
+      </div>
+    </div>
+
+    <!-- CLOSING CTA ──────────────────────────────────────────────────────── -->
+    <section class="closing" aria-label="Contact">
+      <div class="closing-glow" aria-hidden="true"></div>
+      <div class="closing-inner reveal">
+        <p class="closing-eyebrow">Let's Connect</p>
+        <h2 class="closing-headline">Seen enough?<br>Let's <em>talk.</em></h2>
+        <p class="closing-sub">
+          If this track record maps to a challenge you're facing, I'd welcome the conversation.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-accent btn-lg" href="mailto:erenkumcuoglu@gmail.com">Send a Message</a>
+          <a class="btn btn-ghost-dark btn-lg" href="https://linkedin.com/in/erenkumcuoglu" target="_blank" rel="noopener noreferrer">View LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <p class="footer-copy">© 2026 Eren Kumcuoglu. All rights reserved.</p>
+    <nav aria-label="Footer navigation">
+      <ul class="footer-links" role="list">
+        <li><a class="footer-link" href="/">Home</a></li>
+        <li><a class="footer-link" href="/#career">Career</a></li>
+        <li><a class="footer-link" href="/eren-kumcuoglu">About</a></li>
+        <li><a class="footer-link" href="mailto:erenkumcuoglu@gmail.com">Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <!-- ── JAVASCRIPT ─────────────────────────────────────────────────────── -->
+  <script>
+    'use strict';
+
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    /* ── FILTER ── */
+    function filterCards(company, btn) {
+      // Update active button
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.m-card');
+      let visibleCount = 0;
+      cards.forEach(card => {
+        if (company === 'all' || card.dataset.company === company) {
+          card.style.display = '';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Handle no results
+      let noResults = document.getElementById('no-results-msg');
+      if (visibleCount === 0) {
+        if (!noResults) {
+          noResults = document.createElement('p');
+          noResults.id = 'no-results-msg';
+          noResults.className = 'no-results';
+          noResults.textContent = 'No milestones found for this filter.';
+          document.getElementById('gallery-grid').appendChild(noResults);
+        }
+      } else {
+        if (noResults) noResults.remove();
+      }
+    }
+
+    /* ── SCROLL REVEAL ── */
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('revealed'));
+    } else {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.06 });
+      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    }
+  </script>
+
+</body>
+</html>
