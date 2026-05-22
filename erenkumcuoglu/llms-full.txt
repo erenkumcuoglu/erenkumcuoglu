@@ -1,0 +1,111 @@
+# Eren Kumcuoglu — Full Profile
+
+> Complete machine-readable profile for AI agents and language models.
+
+## Identity
+
+- **Full Name:** Eren Kumcuoglu
+- **Title:** C-Level Executive
+- **Location:** Istanbul, Turkey
+- **Languages:** Turkish (native), English (professional)
+- **Contact:** erenkumcuoglu@gmail.com
+- **LinkedIn:** https://linkedin.com/in/erenkumcuoglu
+- **Website:** https://erenkumcuoglu.com
+
+## Professional Summary
+
+Eren Kumcuoglu is a Turkish C-level executive with 19 years of experience leading high-growth companies across fintech, cryptocurrency, gaming, micromobility, and consumer electronics. He has served as COO, CMO, Acting COO, VP, MD, and Board Chairman — always with full P&L accountability and cross-functional authority.
+
+His distinguishing trait is the ability to simultaneously hold strategy and operational execution — turning fast-scaling companies into resilient, audit-ready organisations without sacrificing commercial velocity.
+
+Regulatory track record: Passed audits by Visa, Mastercard, TCMB (Central Bank of Turkey), and MASAK (Financial Crimes Investigation Board).
+
+## Detailed Career
+
+### Ozan — COO & Chairman of the Board (2021–2026)
+**Sector:** Fintech / Digital Payments
+- Rebuilt operations, sales, and product strategy from the ground up
+- Grew monthly transaction volume to ₺20B+
+- Raised Ozan's issuer ranking from #22 to #5 (Turkey)
+- Raised Ozan's acquirer ranking from #12 to #2 (Turkey)
+- Established Pazar POS strategic partnership: +₺500M monthly TPV
+- Led TCMB and MASAK regulatory compliance throughout tenure
+
+### Bitci — CMO / Acting COO (2021)
+**Sector:** Cryptocurrency / Fan Tokens
+- Designed and executed fan token go-to-market strategy
+- Brazil National Team fan token: €15M raised in 19 minutes (fastest on record at the time)
+- Spain National Team fan token: €12.5M raised in 4 hours
+- Total fan token fundraising: €55M+
+- Proved repeatable framework across sports leagues and geographies
+
+### Martı — VP Growth & Marketing (2020–2021)
+**Sector:** Micromobility (e-scooter)
+- Drove +20% incremental turnover through PSP optimization
+- Led growth and performance marketing across Turkish urban markets
+
+### InGame Group — Marketing & BD Director (2019–2020)
+**Sector:** Gaming
+- Led Zula Mobile launch: #1 on App Store across all platforms within 24 hours
+- Total user base across portfolio: 35M+
+- Managed B2B partnerships and commercial development
+
+### Pure — Managing Director (2017–2019)
+**Sector:** Marketing Communications Agency
+- Led Huawei Turkey account: market share grew from 2.8% to 32% in 18 months
+- Gold Effie Award recipient
+- Full agency P&L and team leadership
+
+### Ininal — CMO (2016–2017)
+**Sector:** Fintech / Prepaid Cards
+- Grew KYC-verified users from 600K to 1.2M
+- Reduced customer acquisition cost by 50%
+- Quadrupled on-us merchant revenue
+- Operated in BDDK-regulated environment
+
+### Philips — Digital Marketing & CRM Manager (2014–2016)
+**Sector:** Consumer Electronics
+- Saved €200K per quarter in marketing budget through channel optimization
+- Led CRM strategy and digital performance
+
+### Samsung — Head of Digital (2009–2014)
+**Sector:** Consumer Electronics
+- Contributed to Samsung Turkey growth from negligible to $3B+ annual turnover
+- Led digital transformation of marketing and retail operations
+
+### Ülker — PR & Digital Marketing Specialist (2007–2009)
+**Sector:** FMCG
+- Built and managed network of 120 brand ambassadors
+- Early career focus on PR, digital, and community management
+
+## Core Competencies
+
+1. **Executive Leadership & Governance** — Board-level decision architecture, C-suite alignment, accountability frameworks
+2. **Business Strategy & P&L** — Multi-business-unit P&L, growth strategy, margin management
+3. **Operational Excellence** — Operating systems, KPIs, reporting cadences, cross-functional alignment
+4. **Regulatory Compliance** — Visa, Mastercard, TCMB, MASAK, BDDK audit management
+5. **Payments & Treasury** — PSP economics, acquiring/issuing strategy, treasury optimization
+6. **Sales & Partnerships** — Multi-million EUR/TL commercial deals with banks, telcos, card schemes, sports federations
+7. **Product & Platform Strategy** — Commercial-to-product translation, roadmap governance
+8. **People & Culture** — Team restructuring, compensation benchmarking, performance culture
+
+## Sectors
+
+Fintech · Cryptocurrency · Gaming · Micromobility · Consumer Electronics · FMCG · Marcom
+
+## Awards & Verification
+
+- **Gold Effie Award** — Huawei Turkey campaign (Pure, 2019)
+- **Regulatory audits passed:** Visa, Mastercard, TCMB, MASAK
+
+## Site Structure
+
+| URL | Description |
+|-----|-------------|
+| https://erenkumcuoglu.com/ | Homepage with career overview, achievements, competencies |
+| https://erenkumcuoglu.com/eren-kumcuoglu | Full biographical profile |
+| https://erenkumcuoglu.com/career-journey | Chronological career story · 9 chapters · 26 milestones |
+| https://erenkumcuoglu.com/blog/ | Thought leadership articles |
+| https://erenkumcuoglu.com/llms.txt | Concise LLM summary |
+| https://erenkumcuoglu.com/llms-full.txt | This full profile |
+| https://erenkumcuoglu.com/sitemap.xml | XML sitemap |

@@ -1,3 +1,17 @@
+# Permanent redirect: old URL → new URL (preserves SEO juice)
+[[redirects]]
+  from = "/professional-milestones"
+  to = "/career-journey"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/professional-milestones/*"
+  to = "/career-journey/:splat"
+  status = 301
+  force = true
+
+# Existing blog redirects
 [[redirects]]
   from = "/blog"
   to = "https://erenkumcuoglublog.netlify.app/blog/"
