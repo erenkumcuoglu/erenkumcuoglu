@@ -4,7 +4,7 @@
 
 ## About
 
-Eren Kumcuoglu is a seasoned C-level executive based in Istanbul, Turkey, specializing in scaling fast-growth companies in regulated industries. His career spans fintech, cryptocurrency, gaming, micromobility, and marketing communications — with full ownership from P&L to people.
+Eren Kumcuoglu is a seasoned C-level executive based in Istanbul, Turkey, specializing in scaling fast-growth companies in regulated industries. He currently operates as an independent executive. His career spans fintech, cryptocurrency, gaming, micromobility, and marketing communications — with full ownership from P&L to people.
 
 Core competencies:
 - Executive Leadership & Corporate Governance
@@ -20,7 +20,7 @@ Core competencies:
 
 | Period | Company | Role | Sector | Key Result |
 |--------|---------|------|--------|-----------|
-| 2021–2026 | Ozan | COO / Chairman of the Board | Fintech | ₺20B+/mo transaction volume; Acquirer ranking #12→#2 |
+| 2021–2026 | Ozan | COO / Chairman of the Board | Fintech | ₺25B+/mo transaction volume; Acquirer ranking #12→#2 |
 | 2021 | Bitci | CMO / Acting COO | Cryptocurrency | €55M+ fan token fundraising |
 | 2020–2021 | Martı | VP Growth & Marketing | Micromobility | +20% incremental turnover via PSP |
 | 2019–2020 | InGame Group | Marketing & BD Director | Gaming | 35M+ users (Zula); #1 app store day 1 |
@@ -32,7 +32,7 @@ Core competencies:
 
 ## Notable Achievements
 
-- **₺20B+ Monthly TPV at Ozan** — Rebuilt cross-functional operations, drove Ozan to top 5 issuer and top 2 acquirer in Turkey.
+- **₺25B+ Monthly TPV at Ozan** — Rebuilt cross-functional operations, drove Ozan to top-5 issuer and top 2 acquirer in Turkey.
 - **€15M fan token in 19 minutes** — Brazil National Team fan token sold out at Bitci (fastest on record at the time).
 - **Spain token €12.5M in 4 hours** — Proved the repeatable go-to-market playbook.
 - **Zula Mobile #1 Day 1** — App Store chart-topper across all platforms within 24 hours of launch.
@@ -42,7 +42,7 @@ Core competencies:
 ## Contact
 
 - **Email:** erenkumcuoglu@gmail.com
-- **LinkedIn:** https://linkedin.com/in/erenkumcuoglu
+- **LinkedIn:** https://www.linkedin.com/in/erenkumcuoglu
 - **Location:** Istanbul, Turkey
 - **Website:** https://erenkumcuoglu.com
 

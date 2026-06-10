@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <meta http-equiv="refresh" content="3; url=/" />
+  <title>404 — Eren Kumcuoglu</title>
+
+  <!-- Fonts (siteyle aynı) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Geist+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    :root {
+      --p950: #0A0909;
+      --p900: #111010;
+      --p800: #1C1B1B;
+      --s100: #F7F6F3;
+      --s300: #DDD9D0;
+      --a400: #C9A84C;
+      --a500: #B8922E;
+      --n400: #B0ABA2;
+      --n500: #888380;
+      --fd: "Cormorant Garamond", Georgia, serif;
+      --fb: "Outfit", sans-serif;
+      --fm: "Geist Mono", monospace;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      background: var(--p950);
+      color: var(--s100);
+      font-family: var(--fb);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .wrap {
+      max-width: 34rem;
+    }
+
+    .code {
+      font-family: var(--fm);
+      font-weight: 300;
+      font-size: clamp(4.5rem, 14vw, 8rem);
+      letter-spacing: 0.08em;
+      color: var(--a400);
+      line-height: 1;
+    }
+
+    .rule {
+      width: 3.5rem;
+      height: 1px;
+      background: var(--a500);
+      margin: 1.75rem auto;
+      opacity: 0.7;
+    }
+
+    h1 {
+      font-family: var(--fd);
+      font-weight: 400;
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      color: var(--s100);
+      letter-spacing: 0.01em;
+    }
+
+    p {
+      margin-top: 1rem;
+      color: var(--n400);
+      font-weight: 300;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .count {
+      font-family: var(--fm);
+      color: var(--a400);
+    }
+
+    a.home {
+      display: inline-block;
+      margin-top: 2rem;
+      font-family: var(--fm);
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--s300);
+      text-decoration: none;
+      border: 1px solid var(--p800);
+      padding: 0.85rem 1.6rem;
+      transition: border-color 0.3s, color 0.3s;
+    }
+
+    a.home:hover {
+      border-color: var(--a500);
+      color: var(--a400);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .wrap {
+        animation: fadeUp 0.7s cubic-bezier(0, 0, 0.2, 1) both;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <div class="code">404</div>
+    <div class="rule"></div>
+    <h1>This page doesn&rsquo;t exist.</h1>
+    <p>You&rsquo;ll be redirected to the homepage in <span class="count" id="count">3</span>&nbsp;seconds.</p>
+    <a class="home" href="/">Go home now</a>
+  </main>
+
+  <script>
+    (function () {
+      var s = 3;
+      var el = document.getElementById("count");
+      var t = setInterval(function () {
+        s -= 1;
+        if (el) el.textContent = s;
+        if (s <= 0) {
+          clearInterval(t);
+          window.location.replace("/");
+        }
+      }, 1000);
+    })();
+  </script>
+
+</body>
+
+</html>

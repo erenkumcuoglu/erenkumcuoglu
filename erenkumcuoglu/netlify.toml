@@ -1,4 +1,10 @@
-# Permanent redirect: old URL → new URL (preserves SEO juice)
+# ── Professional Milestones → Career Journey (301, SEO korunur) ──
+[[redirects]]
+  from = "/professional-milestones.html"
+  to = "/career-journey"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/professional-milestones"
   to = "/career-journey"
@@ -11,7 +17,32 @@
   status = 301
   force = true
 
-# Existing blog redirects
+# ── Eski (WordPress) site URL'leri → yeni sayfalar ──
+[[redirects]]
+  from = "/en/about/*"
+  to = "/eren-kumcuoglu"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/news/*"
+  to = "/career-journey"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tr/*"
+  to = "/"
+  status = 301
+  force = true
+
+# ── Blog (harici Netlify sitesine proxy) ──
 [[redirects]]
   from = "/blog"
   to = "https://erenkumcuoglublog.netlify.app/blog/"

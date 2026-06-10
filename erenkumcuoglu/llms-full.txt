@@ -6,10 +6,11 @@
 
 - **Full Name:** Eren Kumcuoglu
 - **Title:** C-Level Executive
+- **Current Status:** Independent Executive (Ozan tenure concluded in 2026)
 - **Location:** Istanbul, Turkey
 - **Languages:** Turkish (native), English (professional)
 - **Contact:** erenkumcuoglu@gmail.com
-- **LinkedIn:** https://linkedin.com/in/erenkumcuoglu
+- **LinkedIn:** https://www.linkedin.com/in/erenkumcuoglu
 - **Website:** https://erenkumcuoglu.com
 
 ## Professional Summary
@@ -24,8 +25,9 @@ Regulatory track record: Passed audits by Visa, Mastercard, TCMB (Central Bank o
 
 ### Ozan — COO & Chairman of the Board (2021–2026)
 **Sector:** Fintech / Digital Payments
+**Status:** Tenure concluded
 - Rebuilt operations, sales, and product strategy from the ground up
-- Grew monthly transaction volume to ₺20B+
+- Grew monthly transaction volume to ₺25B+
 - Raised Ozan's issuer ranking from #22 to #5 (Turkey)
 - Raised Ozan's acquirer ranking from #12 to #2 (Turkey)
 - Established Pazar POS strategic partnership: +₺500M monthly TPV
