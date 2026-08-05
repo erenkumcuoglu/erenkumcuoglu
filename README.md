@@ -1,14 +1,18 @@
 # 👋 Eren Kumcuoğlu
 
+**C-Level Executive · Growth & Operations · Fintech, Gaming, Mobility, Web3**
 
+Ben **Eren Kumcuoğlu** — Samsung, Philips ve Ülker'de edindiğim kurumsal deneyimi; fintech, oyun, mobilite ve Web3'teki C-level liderlik rollerimle birleştiren bir yöneticiyim. Hızlı büyüyen şirketleri dayanıklı, denetime hazır organizasyonlara dönüştürür; strateji, operasyon, yönetişim ve insanı hizalayarak büyüme ve gelir yaratırım.
 
-> **"I didn't write a single line of code until AI democratized it."** 🤙🏻
+I'm **Eren Kumcuoğlu**, a C-level executive with a track record of scaling fintech and digital businesses — aligning strategy, operations, governance, and people. I now build independently and write about leadership, growth, and unfiltered marketing.
 
 > *Bridging the gap between high-level business strategy and AI-driven execution.*
 
 ---
 
 ### 🛠 Core Competencies & Skillset
+
+Executive Leadership & Governance · Business Strategy & P&L Ownership · Operational Excellence · Regulatory Compliance & Risk · Payments & Treasury Infrastructure · Sales, Partnerships & Growth · Product, Data & Strategy · People, Culture & Design · Marketing & Growth
 
 <table>
   <tr>
@@ -36,20 +40,24 @@
 
 ---
 
-### 🚀 Executive Focus & Technical Evolution
+### 🚀 Executive Focus
 
-*   🔭 **Active Ventures:** Currently focusing on the architecture and scaling of three distinct **AI projects**.
-*   🌱 **Tech Evolution:** Deepening in **Software Architecture** and **Modern Tech Stacks** to strengthen technical leadership.
-*   💬 **Think Tank:** Always open to exchanging ideas on **Business Strategy, Monetization, Growth**, and **People Management**.
+*   🔭 **Active Ventures:** Üç ayrı **AI projesinin** mimarisi ve ölçeklenmesi üzerine çalışıyorum.
+*   ✍️ **Yazıyorum:** 15 yıl aradan sonra yeniden — yönetici perspektifi, kurucunun günlüğü, filtresiz deneyimler.
+*   💬 **Think Tank:** Business Strategy, Monetization, Growth ve People Management üzerine fikir alışverişine her zaman açığım.
 
 ---
 
 ### 🌍 Digital Footprint
 
-| Category | Information |
+| Category | Link |
 | :--- | :--- |
-| 🌐 **Personal Info** | [erenkumcuoglu.com](https://erenkumcuoglu.com) |
-| 💼 **Connection** | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Eren_Kumcuoğlu-00509d?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/erenkumcuoglu/) |
-| 👤 **Identity** | He / Him |
+| 🌐 **Website** | [erenkumcuoglu.com](https://erenkumcuoglu.com) |
+| ✍️ **Newsletter / Blog** | [erenkumcuoglu.substack.com](https://erenkumcuoglu.substack.com) |
+| 💼 **LinkedIn** | [in/erenkumcuoglu](https://www.linkedin.com/in/erenkumcuoglu/) |
+| 📺 **YouTube** | [@Eren.Kumcuoglu](https://youtube.com/@Eren.Kumcuoglu) |
+| 🐦 **X** | [@erenkumcuoglu](https://x.com/erenkumcuoglu) |
 
 ---
+
+*Eren Kumcuoğlu — C-Level Executive, Türkiye.*
