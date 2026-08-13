@@ -4,6 +4,7 @@ Disallow: /private/
 
 # Sitemap
 Sitemap: https://erenkumcuoglu.com/sitemap.xml
+Sitemap: https://erenkumcuoglu.com/blog/sitemap.xml
 
 # AI Crawlers — explicitly welcome
 User-agent: GPTBot
