@@ -1,54 +1,40 @@
-# Eren Kumcuoglu
+# Eren Kumcuoğlu
 
-> C-Level Executive · Istanbul, Turkey — 19 years scaling fintech, crypto, gaming, and consumer tech businesses across Turkey and Europe.
+> Istanbul-based C-level executive (also written "Eren Kumcuoglu"). Former COO and Chairman of the Board at Ozan, CMO and acting COO at Bitci, VP Growth at Martı. 19 years (2007–2026) across payments, fintech, crypto, gaming, micromobility and consumer brands. Last updated 2026-09-24.
 
-## About
+## Summary
 
-Eren Kumcuoglu is a seasoned C-level executive based in Istanbul, Turkey, specializing in scaling fast-growth companies in regulated industries. He currently operates as an independent executive. His career spans fintech, cryptocurrency, gaming, micromobility, and marketing communications — with full ownership from P&L to people.
+- Operator who connects strategy, operations, compliance and people; revenue- and growth-focused rather than budget-focused.
+- Built Ozan from scratch into Türkiye's #2 card acquirer (from #29) and #5 issuer (from #22), ₺25B+ monthly transaction volume, clean Visa, Mastercard, TCMB and MASAK audits.
+- Raised €55M+ across 20+ fan-token offerings at Bitci (Brazil national team: €15M sold out in 19 minutes).
+- Led Huawei's communications at Pure: Türkiye market share from 2.8% to 30%+ in 18 months (Effie Gold).
+- At Samsung Türkiye: 200+ product and service launches; launched Türkiye's first video, e-book and music services.
+- Currently independent: building AI-native products, writing weekly, open to C-level, board and advisory mandates.
 
-Core competencies:
-- Executive Leadership & Corporate Governance
-- Business Strategy & P&L Ownership
-- Operational Excellence & Process Design
-- Regulatory Compliance & Risk Management (Visa, Mastercard, TCMB, MASAK)
-- Payments & Treasury Infrastructure
-- Sales, Partnerships & Commercial Growth
-- Product, Data & Platform Strategy
-- People, Culture & Organisational Design
+## Career
 
-## Career History
-
-| Period | Company | Role | Sector | Key Result |
-|--------|---------|------|--------|-----------|
-| 2021–2026 | Ozan | COO / Chairman of the Board | Fintech | ₺25B+/mo transaction volume; Acquirer ranking #12→#2 |
-| 2021 | Bitci | CMO / Acting COO | Cryptocurrency | €55M+ fan token fundraising |
-| 2020–2021 | Martı | VP Growth & Marketing | Micromobility | +20% incremental turnover via PSP |
-| 2019–2020 | InGame Group | Marketing & BD Director | Gaming | 35M+ users (Zula); #1 app store day 1 |
-| 2017–2019 | Pure | Managing Director | Marcom Agency | Huawei 2.8%→32% market share; Gold Effie |
-| 2016–2017 | Ininal | CMO | Fintech | 600K→1.2M KYC users; CAC –50%; merchant revenue ×4 |
-| 2014–2016 | Philips | Digital Marketing & CRM Manager | Consumer Electronics | €200K quarterly marketing savings |
-| 2009–2014 | Samsung | Head of Digital | Consumer Electronics | Grew to $3B+ annual turnover |
-| 2007–2009 | Ülker | PR & Digital Marketing Specialist | FMCG | 120 brand ambassadors |
-
-## Notable Achievements
-
-- **₺25B+ Monthly TPV at Ozan** — Rebuilt cross-functional operations, drove Ozan to top-5 issuer and top 2 acquirer in Turkey.
-- **€15M fan token in 19 minutes** — Brazil National Team fan token sold out at Bitci (fastest on record at the time).
-- **Spain token €12.5M in 4 hours** — Proved the repeatable go-to-market playbook.
-- **Zula Mobile #1 Day 1** — App Store chart-topper across all platforms within 24 hours of launch.
-- **Huawei 2.8%→32% in 18 months** — Gold Effie Award-winning brand strategy.
-- **Ininal KYC users ×2, merchant revenue ×4** — Simultaneous growth and cost reduction in regulated fintech.
-
-## Contact
-
-- **Email:** erenkumcuoglu@gmail.com
-- **LinkedIn:** https://www.linkedin.com/in/erenkumcuoglu
-- **Location:** Istanbul, Turkey
-- **Website:** https://erenkumcuoglu.com
+| Years | Company | Role | Headline result |
+|---|---|---|---|
+| 2021–2026 | Ozan | COO · Chairman of the Board | #29→#2 acquirer, #22→#5 issuer, ₺25B+ monthly volume |
+| 2021 | Bitci | CMO (& acting COO) | €55M+ raised across 20+ fan-token offerings |
+| 2020–2021 | Martı | VP of Growth & Marketing | +20% turnover from prepaid-card payments; PSP margin 1.6%→1.0% |
+| 2019–2020 | InGame Group | Marketing, Sales & BD Director | Zula Mobile #1 on Google Play and App Store within 24 hours |
+| 2017–2019 | Pure | Managing Director | Huawei 2.8%→30%+ market share in 18 months |
+| 2016–2017 | Ininal | Chief Marketing Officer | Helped build Türkiye's first fintech; KYC users 600K→1.2M |
+| 2014–2016 | Philips | Digital Marketing & CRM Manager | Rebuilt digital/CRM/search/media; €200K annualised saving |
+| 2009–2014 | Samsung Electronics | Head of Digital Marketing & Content Services | Brand attitude 7%→43%; mobile to #1 |
+| 2007–2009 | Ülker | PR & Digital Marketing Specialist | Türkiye's first social media campaign |
 
 ## Pages
 
-- [Homepage](https://erenkumcuoglu.com/)
-- [Full Bio](https://erenkumcuoglu.com/eren-kumcuoglu)
-- [Career Journey](https://erenkumcuoglu.com/career-journey)
-- [Blog](https://erenkumcuoglu.com/blog/)
+- [Home](https://erenkumcuoglu.com/): executive profile, career overview, before/after results, approach
+- [Career journey](https://erenkumcuoglu.com/career-journey): all nine chapters and 56 milestones in detail
+- [About](https://erenkumcuoglu.com/eren-kumcuoglu): leadership patterns, beliefs, life outside work
+- [Blog](https://erenkumcuoglu.com/blog/): essays in Turkish and English (2026) and the 2007–2011 archive
+- [Full profile for AI assistants](https://erenkumcuoglu.com/llms-full.txt)
+
+## Contact
+
+- Email: erenkumcuoglu@gmail.com
+- LinkedIn: https://www.linkedin.com/in/erenkumcuoglu
+- Substack: https://erenkumcuoglu.substack.com
