@@ -1,2836 +1,410 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Eren Kumcuoglu — C-Level Executive. Scaling fintech and digital businesses by aligning strategy, operations, compliance, and people." />
-  <title>Eren Kumcuoglu — C-Level Executive</title>
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://erenkumcuoglu.com/" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="profile" />
-  <meta property="og:title" content="Eren Kumcuoglu — C-Level Executive" />
-  <meta property="og:description" content="Scaling fintech and digital businesses by aligning strategy, operations, compliance, and people. 19 years across fintech, crypto, gaming & consumer." />
-  <meta property="og:url" content="https://erenkumcuoglu.com/" />
-  <meta property="og:image" content="https://erenkumcuoglu.com/erenkumcuoglu.jpg" />
-  <meta property="og:site_name" content="Eren Kumcuoglu" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Eren Kumcuoglu — C-Level Executive" />
-  <meta name="twitter:description" content="Scaling fintech and digital businesses by aligning strategy, operations, compliance, and people." />
-  <meta name="twitter:image" content="https://erenkumcuoglu.com/erenkumcuoglu.jpg" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Geist+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap"
-    rel="stylesheet" />
-
-  <style>
-    /* ─────────────────────────────────────────────────────────────────────
-       DESIGN TOKENS
-    ───────────────────────────────────────────────────────────────────── */
-    :root {
-      --p950: #0A0909;
-      --p900: #111010;
-      --p800: #1C1B1B;
-      --p700: #2E2C2C;
-      --p600: #413E3E;
-      --p500: #5C5858;
-      --s100: #F7F6F3;
-      --s200: #EDEBE5;
-      --s300: #DDD9D0;
-      --a400: #C9A84C;
-      --a500: #B8922E;
-      --a600: #9E7A1A;
-      --a700: #816418;
-      --n0: #FFFFFF;
-      --n100: #F4F3F0;
-      --n200: #E8E6E1;
-      --n300: #D2CFC8;
-      --n400: #B0ABA2;
-      --n500: #888380;
-      --n600: #605D59;
-      --n700: #3E3C39;
-      --n800: #252320;
-      --fd: "Cormorant Garamond", Georgia, serif;
-      --fb: "Outfit", sans-serif;
-      --fm: "Geist Mono", monospace;
-      --ease: cubic-bezier(0, 0, 0.2, 1);
-    }
-
-    /* ─────────────────────────────────────────────────────────────────────
-       RESET & BASE
-    ───────────────────────────────────────────────────────────────────── */
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      -webkit-text-size-adjust: 100%;
-    }
-
-    body {
-      font-family: var(--fb);
-      background: var(--s100);
-      color: var(--p900);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    button {
-      font-family: inherit;
-      cursor: pointer;
-      border: none;
-      background: none;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-
-      *,
-      *::before,
-      *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-    }
-
-    /* ─────────────────────────────────────────────────────────────────────
-       KEYFRAMES
-    ───────────────────────────────────────────────────────────────────── */
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes expandLine {
-      from {
-        transform: scaleX(0);
-        transform-origin: left;
-      }
-
-      to {
-        transform: scaleX(1);
-        transform-origin: left;
-      }
-    }
-
-    @keyframes pulseGlow {
-
-      0%,
-      100% {
-        opacity: 0.12;
-      }
-
-      50% {
-        opacity: 0.22;
-      }
-    }
-
-    /* ─────────────────────────────────────────────────────────────────────
-       SCROLL REVEAL — JS adds .revealed when IntersectionObserver fires
-    ───────────────────────────────────────────────────────────────────── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 700ms var(--ease), transform 700ms var(--ease);
-    }
-
-    .reveal.revealed {
-      opacity: 1;
-      transform: none;
-    }
-
-    .reveal-x {
-      opacity: 0;
-      transform: translateX(20px);
-      transition: opacity 600ms var(--ease), transform 600ms var(--ease);
-    }
-
-    .reveal-x.revealed {
-      opacity: 1;
-      transform: none;
-    }
-
-    .reveal-scale {
-      opacity: 0;
-      transform: scale(0.95);
-      transition: opacity 500ms var(--ease), transform 500ms var(--ease);
-    }
-
-    .reveal-scale.revealed {
-      opacity: 1;
-      transform: none;
-    }
-
-    /* ─────────────────────────────────────────────────────────────────────
-       SKIP LINK
-    ───────────────────────────────────────────────────────────────────── */
-    .skip-link {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-
-    .skip-link:focus {
-      position: fixed;
-      top: 8px;
-      left: 8px;
-      z-index: 9999;
-      width: auto;
-      height: auto;
-      clip: auto;
-      white-space: normal;
-      overflow: visible;
-      background: var(--a700);
-      color: #fff;
-      padding: 8px 16px;
-      border-radius: 3px;
-      font-family: var(--fm);
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    /* ─────────────────────────────────────────────────────────────────────
-       NAVBAR
-    ───────────────────────────────────────────────────────────────────── */
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 48px;
-      height: 68px;
-      background: rgba(247, 246, 243, 0.88);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--n200);
-      transition: box-shadow 300ms var(--ease);
-    }
-
-    .nav.scrolled {
-      box-shadow: 0 2px 16px rgba(10, 9, 9, 0.08);
-    }
-
-    .nav-brand {
-      position: relative;
-      font-family: var(--fm);
-      font-size: 0.64rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--p900);
-      transition: color 300ms var(--ease);
-    }
-
-    .nav-brand::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background: var(--a700);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 300ms var(--ease);
-    }
-
-    .nav-brand:hover,
-    .nav-brand:focus-visible {
-      color: var(--a700);
-      outline: none;
-    }
-
-    .nav-brand:hover::after,
-    .nav-brand:focus-visible::after {
-      transform: scaleX(1);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-    }
-
-    .nav-link {
-      position: relative;
-      padding-bottom: 3px;
-      font-family: var(--fb);
-      font-size: 0.8rem;
-      font-weight: 400;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--n600);
-      transition: color 300ms var(--ease);
-    }
-
-    .nav-link::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: var(--n200);
-      opacity: 0;
-      transition: opacity 300ms var(--ease);
-    }
-
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      border-radius: 0 1px 1px 0;
-      background: linear-gradient(90deg, var(--a700), var(--a600), var(--a700));
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 300ms var(--ease);
-    }
-
-    .nav-link:hover,
-    .nav-link:focus-visible {
-      color: var(--a700);
-      outline: none;
-    }
-
-    .nav-link:hover::before {
-      opacity: 1;
-    }
-
-    .nav-link:hover::after,
-    .nav-link:focus-visible::after {
-      transform: scaleX(1);
-    }
-
-    .nav-link[aria-current="page"] {
-      color: var(--a700);
-      font-weight: 600;
-    }
-
-    .nav-link[aria-current="page"]::after {
-      transform: scaleX(1);
-    }
-
-    /* Hamburger */
-    .hamburger {
-      display: none;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 3px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      transition: background 150ms var(--ease);
-    }
-
-    .hamburger:hover {
-      background: var(--n100);
-    }
-
-    .hamburger:focus-visible {
-      outline: 2px solid var(--a400);
-      outline-offset: 2px;
-    }
-
-    .ham-bars {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      width: 22px;
-    }
-
-    .ham-bar {
-      display: block;
-      height: 1.5px;
-      background: var(--p900);
-      border-radius: 1px;
-      transition: transform 300ms var(--ease), opacity 300ms var(--ease);
-    }
-
-    .hamburger[aria-expanded="true"] .ham-bar:nth-child(1) {
-      transform: translateY(6.5px) rotate(45deg);
-    }
-
-    .hamburger[aria-expanded="true"] .ham-bar:nth-child(2) {
-      opacity: 0;
-    }
-
-    .hamburger[aria-expanded="true"] .ham-bar:nth-child(3) {
-      transform: translateY(-6.5px) rotate(-45deg);
-    }
-
-    /* Mobile drawer */
-    .nav-drawer {
-      display: none;
-      position: fixed;
-      top: 60px;
-      left: 0;
-      right: 0;
-      z-index: 40;
-      background: rgba(247, 246, 243, 0.97);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--n200);
-      padding: 24px 24px 32px;
-      transform: translateY(-8px);
-      opacity: 0;
-      transition: transform 300ms var(--ease), opacity 300ms var(--ease);
-      pointer-events: none;
-    }
-
-    .nav-drawer.open {
-      transform: translateY(0);
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .nav-drawer .drawer-link {
-      display: flex;
-      align-items: center;
-      height: 52px;
-      font-family: var(--fb);
-      font-size: 1rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--n700);
-      border-bottom: 1px solid var(--n200);
-      transition: color 200ms var(--ease);
-    }
-
-    .nav-drawer .drawer-link:hover,
-    .nav-drawer .drawer-link:focus-visible {
-      color: var(--a700);
-      outline: none;
-    }
-
-    .drawer-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 30;
-    }
-
-    @media (max-width: 768px) {
-      .nav {
-        padding: 0 20px;
-        height: 60px;
-      }
-
-      .nav-links,
-      .nav-cta-btn {
-        display: none;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-
-      .nav-drawer {
-        display: block;
-      }
-
-      .drawer-overlay {
-        display: block;
-      }
-    }
-
-    /* ─────────────────────────────────────────────────────────────────────
-       BUTTONS
-    ───────────────────────────────────────────────────────────────────── */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      font-family: var(--fb);
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      white-space: nowrap;
-      border: 1px solid;
-      border-radius: 3px;
-      cursor: pointer;
-      transition: all 300ms var(--ease);
-      outline: none;
-    }
-
-    .btn:focus-visible {
-      outline: 2px solid var(--a400);
-      outline-offset: 3px;
-    }
-
-    .btn-sm {
-      padding: 0 20px;
-      height: 44px;
-      font-size: 0.75rem;
-    }
-
-    .btn-md {
-      padding: 0 24px;
-      height: 48px;
-      font-size: 0.8rem;
-    }
-
-    .btn-lg {
-      padding: 0 32px;
-      height: 54px;
-      font-size: 0.8rem;
-    }
-
-    .btn-full {
-      width: 100%;
-      justify-content: center;
-    }
-
-    .btn-primary {
-      background: var(--p900);
-      color: var(--n0);
-      border-color: var(--p900);
-    }
-
-    .btn-primary:hover {
-      background: var(--p700);
-      border-color: var(--p700);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 16px rgba(10, 9, 9, 0.12);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--p900);
-      border-color: var(--p900);
-    }
-
-    .btn-secondary:hover {
-      background: var(--p900);
-      color: var(--n0);
-      transform: translateY(-1px);
-    }
-
-    .btn-accent {
-      background: var(--a700);
-      color: var(--n0);
-      border-color: var(--a700);
-    }
-
-    .btn-accent:hover {
-      background: var(--a600);
-      border-color: var(--a600);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 20px rgba(129, 100, 24, 0.30);
-    }
-
-    .btn-ghost {
-      background: transparent;
-      color: var(--n600);
-      border-color: transparent;
-    }
-
-    .btn-ghost:hover {
-      background: var(--n100);
-      color: var(--p900);
-    }
-
-    .btn-ghost-dark {
-      background: transparent;
-      color: var(--n400);
-      border-color: var(--p700);
-    }
-
-    .btn-ghost-dark:hover {
-      background: var(--p800);
-      color: var(--n0);
-      transform: translateY(-1px);
-    }
-
-    /* Hero white override */
-    .btn-hero-primary {
-      background: var(--n0);
-      color: var(--p900);
-      border-color: var(--n0);
-    }
-
-    .btn-hero-primary:hover {
-      background: var(--n100);
-      border-color: var(--n100);
-      transform: translateY(-1px);
-    }
-
-    .btn-hero-secondary {
-      background: transparent;
-      color: var(--n300);
-      border-color: var(--n500);
-    }
-
-    .btn-hero-secondary:hover {
-      background: var(--n0);
-      color: var(--p900);
-      border-color: var(--n0);
-      transform: translateY(-1px);
-    }
-
-    /* CTA section h-56 override */
-    .btn-h56 {
-      height: 56px !important;
-    }
-
-    /* ─────────────────────────────────────────────────────────────────────
-       TAG CHIPS
-    ───────────────────────────────────────────────────────────────────── */
-    .tag-chip {
-      display: inline-flex;
-      align-items: center;
-      font-family: var(--fm);
-      font-size: 0.64rem;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--n600);
-      border: 1px solid var(--n200);
-      background: var(--n0);
-      padding: 6px 12px;
-      border-radius: 3px;
-      cursor: default;
-      transition: color 150ms var(--ease), border-color 150ms var(--ease);
-    }
-
-    .tag-chip:hover {
-      color: var(--a700);
-      border-color: var(--a600);
-    }
-
-    /* ─────────────────────────────────────────────────────────────────────
-       HERO
-    ───────────────────────────────────────────────────────────────────── */
-    .hero {
-      min-height: 100svh;
-      display: grid;
-      grid-template-columns: 1fr;
-      background: var(--p900);
-      color: var(--n0);
-      overflow: hidden;
-    }
-
-
-    .hero-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 80px 20px 40px;
-      order: 2;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-eyebrow {
-      font-family: var(--fm);
-      font-size: 0.64rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--n500);
-      margin-bottom: 20px;
-      animation: fadeUp 0.8s var(--ease) 0.2s both;
-    }
-
-    .hero-name {
-      font-family: var(--fd);
-      font-weight: 300;
-      letter-spacing: -0.02em;
-      line-height: 1.0;
-      font-size: clamp(3rem, 14vw, 5.96rem);
-      color: var(--n0);
-      margin-bottom: 32px;
-      animation: fadeUp 0.8s var(--ease) 0.35s both;
-    }
-
-    .hero-name em {
-      font-style: italic;
-      color: var(--a400);
-    }
-
-    .hero-divider {
-      width: 40px;
-      height: 1px;
-      background: var(--n600);
-      margin-bottom: 32px;
-      animation: fadeUp 0.8s var(--ease) 0.4s both;
-    }
-
-    .hero-tagline {
-      font-family: var(--fb);
-      font-weight: 300;
-      font-size: clamp(1rem, 2vw, 1.125rem);
-      line-height: 1.65;
-      color: var(--n400);
-      max-width: 540px;
-      margin-bottom: 40px;
-      animation: fadeUp 0.8s var(--ease) 0.5s both;
-    }
-
-    .hero-ctas {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      animation: fadeUp 0.8s var(--ease) 0.65s both;
-    }
-
-    .hero-scroll {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-top: auto;
-      padding-top: 32px;
-      font-family: var(--fm);
-      font-size: 0.64rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--n600);
-      animation: fadeIn 1s var(--ease) 1s both;
-    }
-
-    .hero-scroll-line {
-      width: 40px;
-      height: 1px;
-      background: var(--n600);
-      animation: expandLine 1.2s var(--ease) 1.2s both;
-    }
-
-    .hero-photo {
-      position: relative;
-      overflow: hidden;
-      order: 1;
-      height: 56vw;
-      min-height: 220px;
-      max-height: 400px;
-      animation: fadeIn 1.2s var(--ease) 0.1s both;
-    }
-
-    .hero-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-    }
-
-    .hero-photo-placeholder {
-      width: 100%;
-      height: 100%;
-      background: var(--p800);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
-    @media (min-width: 768px) {
-      .hero {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-      }
-
-      .hero-content {
-        padding: 96px 48px 64px;
-        justify-content: center;
-      }
-
-      .hero-photo {
-        position: relative;
-        height: 100%;
-        max-height: none;
-        order: 2;
-      }
-
-      .hero-photo img {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center 20%;
-      }
-
-      .hero-ctas {
-        flex-direction: row;
-      }
-    }
-
-    @media (min-width: 1200px) {
-      .hero {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    .hero-photo-hatch {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255, 255, 255, 0.015) 20px, rgba(255, 255, 255, 0.015) 21px);
-    }
-
-    .hero-photo-label {
-      position: relative;
-      font-family: var(--fm);
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--n600);
-      border: 1px solid var(--p700);
-      padding: 8px 16px;
-    }
-
-    /* ─────────────────────────────────────────────────────────────────────
-       STATS BAND
-    ───────────────────────────────────────────────────────────────────── */
-    .stats {
-      background: var(--n0);
-      border-bottom: 1px solid var(--n200);
-    }
-
-    .stats-grid {
-      max-width: 1280px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (min-width: 768px) {
-      .stats-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-    .stat-cell {
-      padding: 32px 24px;
-    }
-
-    .stat-cell:nth-child(odd) {
-      border-right: 1px solid var(--n200);
-    }
-
-    .stat-cell:nth-child(1),
-    .stat-cell:nth-child(2) {
-      border-bottom: 1px solid var(--n200);
-    }
-
-    @media (min-width: 768px) {
-      .stat-cell:nth-child(odd) {
-        border-right: 1px solid var(--n200);
-      }
-
-      .stat-cell:nth-child(even) {
-        border-right: 1px solid var(--n200);
-      }
-
-      .stat-cell:nth-child(4) {
-        border-right: none;
-      }
-
-      .stat-cell:nth-child(1),
-      .stat-cell:nth-child(2) {
-        border-bottom: none;
-      }
-    }
-
-    .stat-value {
-      font-family: var(--fd);
-      font-weight: 300;
-      letter-spacing: -0.02em;
-      font-size: clamp(1.8rem, 6vw, 3.05rem);
-      line-height: 1;
-      color: var(--p900);
-      margin-bottom: 8px;
-    }
-
-    .stat-value span {
-      color: var(--a700);
-    }
-
-    .stat-label {
-      font-family: var(--fb);
-      font-size: 0.8rem;
-      color: var(--n600);
-      line-height: 1.5;
-    }
-
-    /* ─────────────────────────────────────────────────────────────────────
-       ABOUT
-    ───────────────────────────────────────────────────────────────────── */
-    .about {
-      background: var(--s100);
-    }
-
-    .about-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 32px;
-      padding: 48px 20px;
-    }
-
-    @media (min-width: 768px) {
-      .about-inner {
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-        padding: 96px 48px;
-      }
-    }
-
-    .eyebrow {
-      font-family: var(--fm);
-      font-size: 0.64rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-
-    .eyebrow-muted {
-      color: var(--n600);
-    }
-
-    .eyebrow-dark {
-      color: var(--n700);
-    }
-
-    .eyebrow-light {
-      color: var(--n300);
-    }
-
-    .section-headline {
-      font-family: var(--fd);
-      font-weight: 300;
-      letter-spacing: -0.02em;
-      line-height: 1.08;
-      font-size: clamp(1.8rem, 5vw, 3.05rem);
-      color: var(--p900);
-    }
-
-    .section-headline.light {
-      color: var(--n0);
-    }
-
-    .section-headline em {
-      font-style: italic;
-    }
-
-    .section-headline.dark em {
-      color: var(--a700);
-    }
-
-    .section-headline.light em {
-      color: var(--a400);
-    }
-
-    .section-headline:not(.dark):not(.light) em {
-      color: var(--a700);
-    }
-
-    .about-body {
-      font-family: var(--fb);
-      font-size: clamp(1rem, 1.5vw, 1.0625rem);
-      font-weight: 300;
-      line-height: 1.7;
-      color: var(--n600);
-      margin-bottom: 32px;
-    }
-
-    .tags-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    /* ─────────────────────────────────────────────────────────────────────
-       CAREER TIMELINE
-    ───────────────────────────────────────────────────────────────────── */
-    .career {
-      background: var(--p950);
-      overflow: hidden;
-      padding: 64px 0 64px 20px;
-    }
-
-    @media (min-width: 768px) {
-      .career {
-        padding: 96px 0 96px 48px;
-      }
-    }
-
-    .career-header {
-      max-width: 1280px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-bottom: 32px;
-      padding-right: 20px;
-    }
-
-    @media (min-width: 768px) {
-      .career-header {
-        padding-right: 48px;
-        margin-bottom: 40px;
-      }
-    }
-
-    .career-nav-btns {
-      display: flex;
-      gap: 8px;
-    }
-
-    .career-nav-btn {
-      width: 48px;
-      height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--p700);
-      border-radius: 3px;
-      background: transparent;
-      color: var(--n400);
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: border-color 200ms var(--ease), color 200ms var(--ease);
-    }
-
-    .career-nav-btn:hover {
-      border-color: var(--a500);
-      color: var(--a400);
-    }
-
-    .career-nav-btn:focus-visible {
-      outline: 2px solid var(--a400);
-      outline-offset: 2px;
-    }
-
-    .career-track {
-      display: flex;
-      gap: 12px;
-      overflow-x: auto;
-      padding-right: 20px;
-      padding-bottom: 8px;
-      scroll-snap-type: x mandatory;
-      cursor: grab;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-
-    .career-track::-webkit-scrollbar {
-      display: none;
-    }
-
-    .career-track:active {
-      cursor: grabbing;
-    }
-
-    @media (min-width: 768px) {
-      .career-track {
-        padding-right: 48px;
-      }
-    }
-
-    .career-card {
-      flex-shrink: 0;
-      width: min(78vw, 300px);
-      background: var(--p800);
-      border: 1px solid var(--p700);
-      border-radius: 8px;
-      padding: 24px 24px 28px;
-      cursor: pointer;
-      scroll-snap-align: start;
-      position: relative;
-      overflow: hidden;
-      transition: border-color 300ms var(--ease), transform 300ms var(--ease);
-      outline: none;
-    }
-
-    .career-card:hover {
-      border-color: var(--p600);
-      transform: translateY(-4px);
-    }
-
-    .career-card:focus-visible {
-      outline: 2px solid var(--a400);
-      outline-offset: 2px;
-    }
-
-    .career-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: var(--a500);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 300ms var(--ease);
-    }
-
-    .career-card:hover::before {
-      transform: scaleX(1);
-    }
-
-    .career-period {
-      font-family: var(--fm);
-      font-size: 0.64rem;
-      letter-spacing: 0.09em;
-      color: var(--n400);
-      margin-bottom: 24px;
-    }
-
-    .career-company {
-      font-family: var(--fd);
-      font-weight: 300;
-      font-size: clamp(1.4rem, 5vw, 2.2rem);
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-      color: var(--n0);
-      margin-bottom: 4px;
-    }
-
-    .career-role {
-      font-family: var(--fb);
-      font-size: 0.8rem;
-      font-weight: 300;
-      color: var(--n500);
-      margin-bottom: 24px;
-    }
-
-    .career-sector {
-      display: inline-block;
-      font-family: var(--fm);
-      font-size: 0.6rem;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--a400);
-      border: 1px solid var(--a600);
-      padding: 2px 8px;
-      border-radius: 3px;
-      margin-bottom: 24px;
-    }
-
-    .career-metric {
-      padding-top: 24px;
-      border-top: 1px solid var(--p700);
-    }
-
-    .career-metric-val {
-      display: block;
-      font-family: var(--fd);
-      font-size: 1.4rem;
-      font-weight: 400;
-      color: var(--a400);
-      letter-spacing: -0.02em;
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-
-    .career-metric-lbl {
-      font-family: var(--fb);
-      font-size: 0.8rem;
-      color: var(--n0);
-    }
-
-    /* ─────────────────────────────────────────────────────────────────────
-       ACHIEVEMENTS
-    ───────────────────────────────────────────────────────────────────── */
-    .ach {
-      background: var(--s100);
-      padding: 48px 20px;
-    }
-
-    @media (min-width: 768px) {
-      .ach {
-        padding: 96px 48px;
-      }
-    }
-
-    .ach-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-    }
-
-    .ach-header {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 20px;
-      margin-bottom: 32px;
-    }
-
-    .ach-lede {
-      font-family: var(--fb);
-      font-size: clamp(1rem, 1.5vw, 1.0625rem);
-      font-weight: 300;
-      color: var(--n600);
-      line-height: 1.7;
-      max-width: 780px;
-      margin-bottom: 40px;
-    }
-
-    .ach-lede em {
-      font-style: italic;
-      color: var(--p900);
-    }
-
-    .ach-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-      margin-bottom: 40px;
-    }
-
-    @media (min-width: 576px) {
-      .ach-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 768px) {
-      .ach-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .ach-feat {
-      background: var(--p900);
-      border: 1px solid var(--p800);
-      border-radius: 8px;
-      padding: 32px;
-    }
-
-    @media (min-width: 576px) {
-      .ach-feat {
-        grid-column: span 2;
-      }
-    }
-
-    @media (min-width: 768px) {
-      .ach-feat {
-        grid-column: span 1;
-        grid-row: span 2;
-      }
-    }
-
-    .ach-card {
-      background: var(--n0);
-      border: 1px solid var(--n200);
-      border-radius: 8px;
-      padding: 28px;
-      transition: box-shadow 300ms var(--ease), transform 300ms var(--ease);
-    }
-
-    .ach-card:hover {
-      box-shadow: 0 8px 32px rgba(10, 9, 9, 0.12);
-      transform: translateY(-2px);
-    }
-
-    .ach-tag {
-      font-family: var(--fm);
-      font-size: 0.6rem;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-
-    .ach-feat .ach-tag {
-      color: var(--n400);
-    }
-
-    .ach-card .ach-tag {
-      color: var(--n600);
-    }
-
-    .ach-feat-val {
-      font-family: var(--fd);
-      font-weight: 300;
-      letter-spacing: -0.02em;
-      font-size: clamp(3rem, 8vw, 4.768rem);
-      color: var(--a400);
-      line-height: 1;
-      margin-bottom: 12px;
-    }
-
-    .ach-card-num {
-      font-family: var(--fd);
-      font-weight: 300;
-      letter-spacing: -0.02em;
-      font-size: clamp(1.8rem, 5vw, 2.4rem);
-      color: var(--p900);
-      line-height: 1;
-      margin-bottom: 12px;
-    }
-
-    .ach-title {
-      font-family: var(--fb);
-      font-size: 0.95rem;
-      font-weight: 500;
-      line-height: 1.4;
-      margin-bottom: 12px;
-    }
-
-    .ach-feat .ach-title {
-      color: var(--n0);
-      font-size: 1rem;
-    }
-
-    .ach-card .ach-title {
-      color: var(--p900);
-    }
-
-    .ach-detail {
-      font-family: var(--fb);
-      font-size: 0.85rem;
-      font-weight: 300;
-      line-height: 1.7;
-    }
-
-    .ach-feat .ach-detail {
-      color: var(--n500);
-    }
-
-    .ach-card .ach-detail {
-      color: var(--n600);
-      margin-bottom: 16px;
-    }
-
-    .ach-pain-lbl {
-      font-family: var(--fb);
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--a400);
-      margin-bottom: 6px;
-    }
-
-    .ach-pain-text {
-      font-family: var(--fb);
-      font-size: 0.85rem;
-      font-weight: 300;
-      color: var(--n400);
-      line-height: 1.65;
-    }
-
-    .ach-feat-pain {
-      margin-top: 24px;
-      padding-top: 24px;
-      border-top: 1px solid var(--p700);
-    }
-
-    .ach-card-pain {
-      font-family: var(--fm);
-      font-size: 0.6rem;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--a700);
-    }
-
-    .proof-bar {
-      padding: 20px 32px;
-      background: var(--n0);
-      border: 1px solid var(--n200);
-      border-radius: 8px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .proof-label {
-      font-family: var(--fm);
-      font-size: 0.64rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--n400);
-      flex-shrink: 0;
-    }
-
-    .proof-items {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      align-items: center;
-    }
-
-    .proof-item {
-      font-family: var(--fb);
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--n600);
-    }
-
-    .proof-dot {
-      color: var(--n300);
-      font-size: 0.7rem;
-    }
-
-    .proof-note {
-      margin-left: auto;
-      font-family: var(--fb);
-      font-size: 0.8rem;
-      font-weight: 300;
-      color: var(--n500);
-    }
-
-    /* ─────────────────────────────────────────────────────────────────────
-       SKILLS
-    ───────────────────────────────────────────────────────────────────── */
-    .skills {
-      background: var(--s200);
-      border-top: 1px solid var(--n200);
-      border-bottom: 1px solid var(--n200);
-      padding: 48px 20px;
-    }
-
-    @media (min-width: 768px) {
-      .skills {
-        padding: 96px 48px;
-      }
-    }
-
-    .skills-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-    }
-
-    .skills-layout {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 32px;
-      margin-bottom: 40px;
-    }
-
-    @media (min-width: 768px) {
-      .skills-layout {
-        grid-template-columns: 420px 1fr;
-        gap: 80px;
-      }
-    }
-
-    .skills-headline {
-      font-size: clamp(1.8rem, 5vw, 3.05rem) !important;
-      margin-bottom: 32px;
-    }
-
-    .skills-body {
-      font-family: var(--fb);
-      font-size: 0.875rem;
-      font-weight: 300;
-      color: var(--n700);
-      line-height: 1.7;
-      margin-bottom: 24px;
-    }
-
-    .skills-matrix {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-
-    @media (min-width: 768px) {
-      .skills-matrix {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    .skill-item {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      padding: 16px 20px;
-      background: var(--n0);
-      border: 1px solid var(--n200);
-      border-radius: 8px;
-      transition: border-color 200ms var(--ease), box-shadow 200ms var(--ease);
-    }
-
-    .skill-item:hover {
-      border-color: var(--a700);
-      box-shadow: 0 2px 12px rgba(10, 9, 9, 0.06);
-    }
-
-    .skill-item-head {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .skill-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--a700);
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .skill-label {
-      font-family: var(--fb);
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--p900);
-      line-height: 1.3;
-    }
-
-    .skill-desc {
-      font-family: var(--fb);
-      font-size: 0.75rem;
-      color: var(--n600);
-      line-height: 1.65;
-      padding-left: 16px;
-    }
-
-    .skill-desc strong {
-      font-weight: 500;
-      color: var(--n700);
-    }
-
-    .skills-conviction {
-      border-top: 1px solid var(--n200);
-      padding-top: 32px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .conviction-quote {
-      font-family: var(--fd);
-      font-weight: 300;
-      font-style: italic;
-      font-size: clamp(1.1rem, 3vw, 1.95rem);
-      color: var(--p900);
-      line-height: 1.35;
-      max-width: 640px;
-    }
-
-    /* ─────────────────────────────────────────────────────────────────────
-       PERSONAL
-    ───────────────────────────────────────────────────────────────────── */
-    .personal {
-      background: var(--p900);
-      border-top: 1px solid var(--p800);
-      border-bottom: 1px solid var(--p800);
-      padding: 40px 20px;
-    }
-
-    @media (min-width: 768px) {
-      .personal {
-        padding: 64px 48px;
-      }
-    }
-
-    .personal-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-    }
-
-    .personal-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-    }
-
-    @media (min-width: 768px) {
-      .personal-grid {
-        grid-template-columns: repeat(6, 1fr);
-      }
-    }
-
-    .personal-card {
-      aspect-ratio: 1/1;
-      min-height: 108px;
-      background: var(--p800);
-      border: 1px solid var(--p700);
-      border-radius: 8px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      cursor: default;
-      transition: background 200ms var(--ease), border-color 200ms var(--ease);
-    }
-
-    .personal-card:hover {
-      background: var(--p700);
-      border-color: var(--a500);
-    }
-
-    .personal-icon {
-      font-size: 2.2rem;
-    }
-
-    .personal-label {
-      font-family: var(--fm);
-      font-size: 0.7rem;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--n400);
-    }
-
-    /* ─────────────────────────────────────────────────────────────────────
-       CTA / CONTACT
-    ───────────────────────────────────────────────────────────────────── */
-    .cta-section {
-      background: var(--p950);
-      color: var(--n0);
-      padding: 64px 20px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    @media (min-width: 768px) {
-      .cta-section {
-        padding: 128px 48px;
-      }
-    }
-
-    .cta-glow {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      width: 600px;
-      height: 600px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(201, 168, 76, 0.12) 0%, transparent 70%);
-      animation: pulseGlow 4s ease-in-out infinite;
-    }
-
-    .cta-inner {
-      position: relative;
-      z-index: 1;
-      max-width: 768px;
-      margin: 0 auto;
-    }
-
-    .cta-headline {
-      margin-bottom: 40px;
-      text-align: left;
-      font-size: clamp(2rem, 9vw, 4.768rem) !important;
-    }
-
-    .cta-contacts {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 32px;
-    }
-
-    .cta-email {
-      font-family: var(--fm);
-      font-size: 0.8rem;
-      color: var(--n400);
-      transition: color 200ms var(--ease);
-    }
-
-    .cta-email:hover {
-      color: var(--a400);
-    }
-
-    .cta-sep {
-      width: 1px;
-      height: 16px;
-      background: var(--p700);
-    }
-
-    .cta-phone {
-      font-family: var(--fm);
-      font-size: 0.8rem;
-      color: var(--n400);
-    }
-
-    .cta-btns {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      align-items: stretch;
-    }
-
-    @media (min-width: 576px) {
-      .cta-btns {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-
-    /* ─────────────────────────────────────────────────────────────────────
-       FOOTER
-    ───────────────────────────────────────────────────────────────────── */
-    .footer {
-      background: var(--p900);
-      border-top: 1px solid var(--p800);
-      padding: 24px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    @media (min-width: 768px) {
-      .footer {
-        padding: 24px 48px;
-      }
-    }
-
-    .footer-copy {
-      font-family: var(--fm);
-      font-size: 0.64rem;
-      letter-spacing: 0.09em;
-      color: var(--n400);
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px 24px;
-    }
-
-    .footer-link {
-      font-family: var(--fm);
-      font-size: 0.64rem;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--n400);
-      min-height: 44px;
-      display: inline-flex;
-      align-items: center;
-      transition: color 200ms var(--ease);
-    }
-
-    .footer-link:hover {
-      color: var(--n200);
-    }
-    /* ─────────────────────────────────────────────────────────────────────
-       CAREER POPUP MODAL
-    ───────────────────────────────────────────────────────────────────── */
-    .career-modal-overlay {
-      position: fixed; inset: 0; z-index: 200;
-      background: rgba(10, 9, 9, 0.72);
-      backdrop-filter: blur(4px);
-      opacity: 0; pointer-events: none;
-      transition: opacity 300ms var(--ease);
-      display: flex; align-items: center; justify-content: center;
-      padding: 20px;
-    }
-    .career-modal-overlay.open {
-      opacity: 1; pointer-events: auto;
-    }
-
-    .career-modal {
-      background: var(--p900);
-      border: 1px solid var(--p700);
-      border-radius: 12px;
-      width: 100%; max-width: 580px;
-      max-height: 88vh;
-      overflow-y: auto;
-      position: relative;
-      transform: translateY(16px) scale(0.97);
-      transition: transform 300ms var(--ease);
-      scrollbar-width: thin;
-      scrollbar-color: var(--p700) transparent;
-    }
-    .career-modal-overlay.open .career-modal {
-      transform: none;
-    }
-
-    .career-modal-header {
-      padding: 28px 28px 0;
-      position: relative;
-    }
-    .career-modal-period {
-      font-family: var(--fm); font-size: 0.6rem; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--n500); margin-bottom: 12px;
-    }
-    .career-modal-company {
-      font-family: var(--fd); font-weight: 300; font-size: clamp(2rem, 6vw, 2.8rem);
-      letter-spacing: -0.02em; color: var(--n0); line-height: 1.05; margin-bottom: 4px;
-    }
-    .career-modal-role {
-      font-family: var(--fb); font-size: 0.85rem; font-weight: 300;
-      color: var(--n500); margin-bottom: 16px;
-    }
-    .career-modal-sector {
-      display: inline-block;
-      font-family: var(--fm); font-size: 0.58rem; letter-spacing: 0.09em;
-      text-transform: uppercase; color: var(--a400);
-      border: 1px solid var(--a600); padding: 3px 10px; border-radius: 3px;
-      margin-bottom: 24px;
-    }
-    .career-modal-divider {
-      height: 1px; background: var(--p700); margin-bottom: 24px;
-    }
-
-    .career-modal-body { padding: 0 28px 28px; }
-
-    .career-modal-metric-strip {
-      display: flex; gap: 0; flex-wrap: wrap;
-      background: var(--p800); border: 1px solid var(--p700);
-      border-radius: 8px; padding: 16px 20px;
-      margin-bottom: 24px;
-      align-items: center; gap: 24px;
-    }
-    .cm-metric {
-      display: flex; flex-direction: column; gap: 3px;
-    }
-    .cm-metric-val {
-      font-family: var(--fd); font-weight: 400; font-size: 1.4rem;
-      letter-spacing: -0.02em; line-height: 1; color: var(--a400);
-    }
-    .cm-metric-lbl {
-      font-family: var(--fb); font-size: 0.75rem; color: var(--n500);
-    }
-
-    .career-modal-section-title {
-      font-family: var(--fm); font-size: 0.58rem; letter-spacing: 0.14em;
-      text-transform: uppercase; color: var(--n600); margin-bottom: 10px;
-    }
-
-    .career-modal-bullets {
-      list-style: none; display: flex; flex-direction: column; gap: 10px;
-      margin-bottom: 24px;
-    }
-    .career-modal-bullets li {
-      display: flex; gap: 12px; align-items: flex-start;
-      font-family: var(--fb); font-size: 0.85rem; font-weight: 300;
-      color: var(--n400); line-height: 1.6;
-    }
-    .career-modal-bullets li::before {
-      content: '→'; color: var(--a700); flex-shrink: 0; margin-top: 1px;
-      font-size: 0.8rem;
-    }
-
-    .career-modal-close {
-      position: absolute; top: 20px; right: 20px;
-      width: 36px; height: 36px;
-      display: flex; align-items: center; justify-content: center;
-      border-radius: 50%; background: var(--p800); border: 1px solid var(--p700);
-      color: var(--n500); font-size: 1.1rem; cursor: pointer;
-      transition: background 200ms var(--ease), color 200ms var(--ease);
-      line-height: 1;
-    }
-    .career-modal-close:hover { background: var(--p700); color: var(--n200); }
-    .career-modal-close:focus-visible { outline: 2px solid var(--a400); outline-offset: 2px; }
-  </style>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://erenkumcuoglu.com/#person",
-  "name": "Eren Kumcuoğlu",
-  "alternateName": "Eren Kumcuoglu",
-  "url": "https://erenkumcuoglu.com",
-  "image": "https://erenkumcuoglu.com/erenkumcuoglu.jpg",
-  "jobTitle": "C-Level Executive",
-  "description": "C-level executive with 20 years of experience scaling fintech, crypto, gaming, and digital businesses in Turkey and globally.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Istanbul",
-    "addressCountry": "TR"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/in/erenkumcuoglu",
-    "https://github.com/erenkumcuoglu",
-    "https://twitter.com/erenkumcuoglu",
-    "https://www.reddit.com/user/erenkumcuoglu",
-    "https://erenkumcuoglu.substack.com"
-  ],
-  "knowsAbout": [
-    "Fintech",
-    "Executive Leadership",
-    "Payments Infrastructure",
-    "Growth Strategy",
-    "Regulatory Compliance",
-    "Cryptocurrency",
-    "Product Strategy",
-    "People Management"
-  ],
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Independent Executive"
-  }
-}
-</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eren Kumcuoğlu — COO, Chairman &amp; Fintech Executive</title>
+<meta name="description" content="Eren Kumcuoğlu: Istanbul-based C-level executive. Former COO and Chairman of Ozan, CMO at Bitci, VP Growth at Martı. 19 years across payments, fintech, gaming and consumer brands.">
+<meta name="author" content="Eren Kumcuoğlu">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://erenkumcuoglu.com/">
+<link rel="alternate" hreflang="en" href="https://erenkumcuoglu.com/">
+<link rel="alternate" hreflang="x-default" href="https://erenkumcuoglu.com/">
+<meta name="theme-color" content="#F4F5F2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D1115" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="profile">
+<meta property="profile:first_name" content="Eren">
+<meta property="profile:last_name" content="Kumcuoğlu">
+<meta property="og:site_name" content="Eren Kumcuoğlu">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:title" content="Eren Kumcuoğlu — Executive profile">
+<meta property="og:description" content="Eren Kumcuoğlu: Istanbul-based C-level executive. Former COO and Chairman of Ozan, CMO at Bitci, VP Growth at Martı. 19 years across payments, fintech, gaming and consumer brands.">
+<meta property="og:url" content="https://erenkumcuoglu.com/">
+<meta property="og:image" content="https://erenkumcuoglu.com/erenkumcuoglu.jpg">
+<meta property="og:image:alt" content="Eren Kumcuoğlu">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@erenkumcuoglu">
+<meta name="twitter:title" content="Eren Kumcuoğlu — Executive profile">
+<meta name="twitter:description" content="Eren Kumcuoğlu: Istanbul-based C-level executive. Former COO and Chairman of Ozan, CMO at Bitci, VP Growth at Martı. 19 years across payments, fintech, gaming and consumer brands.">
+<meta name="twitter:image" content="https://erenkumcuoglu.com/erenkumcuoglu.jpg">
+<link rel="alternate" type="text/plain" href="/llms.txt" title="Profile summary for AI assistants">
+<link rel="preload" as="image" href="/erenkumcuoglu.jpg" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap">
 </head>
-
 <body>
-
-  <!-- Skip link -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <!-- ── NAVBAR ──────────────────────────────────────────────────────────── -->
-  <nav class="nav" id="main-nav" aria-label="Main navigation">
-    <a href="#" class="nav-brand" aria-label="Eren Kumcuoglu — home">Eren Kumcuoglu</a>
-
-    <ul class="nav-links" role="list">
-      <li><a class="nav-link" href="#about">About</a></li>
-      <li><a class="nav-link" href="#career">Career</a></li>
-      <li><a class="nav-link" href="#achievements">Achievements</a></li>
-      <li><a class="nav-link" href="#skills">Skills</a></li>
-      <li><a class="nav-link" href="/blog/">Blog</a></li>
-      <li><a class="nav-link" href="#contact">Contact</a></li>
-    </ul>
-
-    <button class="btn btn-accent btn-sm nav-cta-btn" onclick="scrollToSection('contact')">Get In Touch</button>
-
-    <button class="hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false"
-      aria-controls="nav-drawer">
-      <span class="ham-bars" aria-hidden="true">
-        <span class="ham-bar"></span>
-        <span class="ham-bar"></span>
-        <span class="ham-bar"></span>
-      </span>
-    </button>
-  </nav>
-
-  <!-- Mobile drawer -->
-  <div class="nav-drawer" id="nav-drawer" role="dialog" aria-label="Mobile navigation" aria-modal="true"
-    aria-hidden="true">
-    <ul role="list">
-      <li><a class="drawer-link" href="#about" onclick="closeDrawer()">About</a></li>
-      <li><a class="drawer-link" href="#career" onclick="closeDrawer()">Career</a></li>
-      <li><a class="drawer-link" href="#achievements" onclick="closeDrawer()">Achievements</a></li>
-      <li><a class="drawer-link" href="#skills" onclick="closeDrawer()">Skills</a></li>
-      <li><a class="drawer-link" href="/blog/" onclick="closeDrawer()">Blog</a></li>
-      <li><a class="drawer-link" href="#contact" onclick="closeDrawer()">Contact</a></li>
-    </ul>
-    <button class="btn btn-accent btn-lg btn-full" style="margin-top:8px"
-      onclick="closeDrawer(); scrollToSection('contact')">Get In Touch</button>
-  </div>
-  <div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()" aria-hidden="true" style="display:none"></div>
-
-  <!-- ── MAIN ──────────────────────────────────────────────────────────────── -->
-  <main id="main-content" tabindex="-1">
-
-    <!-- HERO ─────────────────────────────────────────────────────────────── -->
-    <section class="hero" aria-label="Introduction">
-      <div class="hero-content">
-        <p class="hero-eyebrow">C-Level Executive&nbsp;·&nbsp;Istanbul, Turkey</p>
-
-        <h1 class="hero-name">
-          Eren<br>
-          <em>Kumcuoglu</em>
-        </h1>
-
-        <div class="hero-divider" aria-hidden="true"></div>
-
-        <p class="hero-tagline">
-          Scaling fintech and digital businesses by aligning strategy, operations, compliance, and people.
-        </p>
-
-        <div class="hero-ctas">
-          <button class="btn btn-hero-primary btn-lg" onclick="scrollToSection('career')">View Full Career</button>
-        </div>
-
-        <div class="hero-scroll" aria-hidden="true">
-          <span class="hero-scroll-line"></span>
-          Scroll to explore
-        </div>
-      </div>
-
-      <div class="hero-photo">
-        <img src="./erenkumcuoglu.jpg" alt="Eren Kumcuoglu — C-Level Executive" loading="eager">
-      </div>
-    </section>
-
-    <!-- STATS ────────────────────────────────────────────────────────────── -->
-    <section class="stats" aria-label="Key statistics">
-      <div class="stats-grid" id="stats-grid">
-        <div class="stat-cell reveal">
-          <p class="stat-value">₺20<span>B+</span></p>
-          <p class="stat-label">Monthly transaction volume at Ozan</p>
-        </div>
-        <div class="stat-cell reveal" style="transition-delay:80ms">
-          <p class="stat-value">€55<span>M+</span></p>
-          <p class="stat-label">Fan token funds raised at Bitci</p>
-        </div>
-        <div class="stat-cell reveal" style="transition-delay:160ms">
-          <p class="stat-value">35<span>M+</span></p>
-          <p class="stat-label">Game users reached (Zula)</p>
-        </div>
-        <div class="stat-cell reveal" style="transition-delay:240ms">
-          <p class="stat-value">19<span>yrs</span></p>
-          <p class="stat-label">Executive experience across 9 companies</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT ────────────────────────────────────────────────────────────── -->
-    <section id="about" class="about" aria-label="About">
-      <div class="about-inner">
-        <div class="reveal">
-          <p class="eyebrow eyebrow-muted">Who I Am</p>
-          <h2 class="section-headline">
-            Executive leader who transforms fast-growing companies into
-            <em>resilient,</em> audit-ready organizations.
-          </h2>
-        </div>
-        <div class="reveal" style="transition-delay:150ms">
-          <p class="about-body">
-            Known for aligning strategy, operations, compliance, and people to accelerate sustainable revenue growth
-            across fintech, crypto, gaming, and consumer tech sectors. Full enterprise ownership from P&amp;L to people.
-          </p>
-          <div class="tags-wrap">
-            <span class="tag-chip">Executive Leadership</span>
-            <span class="tag-chip">P&amp;L Ownership</span>
-            <span class="tag-chip">Regulatory Compliance</span>
-            <span class="tag-chip">Payments &amp; Treasury</span>
-            <span class="tag-chip">Growth Strategy</span>
-            <span class="tag-chip">Product Strategy</span>
-            <span class="tag-chip">People &amp; Culture</span>
-            <span class="tag-chip">Operational Excellence</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CAREER ───────────────────────────────────────────────────────────── -->
-    <section id="career" class="career" aria-label="Career timeline">
-      <div class="career-header">
-        <div class="reveal">
-          <p class="eyebrow eyebrow-light">Where I've Worked</p>
-          <h2 class="section-headline light">
-            19 Years. 9 Companies. <em>One Thread.</em>
-          </h2>
-        </div>
-        <div class="career-nav-btns reveal" style="transition-delay:200ms">
-          <button class="career-nav-btn" aria-label="Scroll left" onclick="careerScroll(-1)">←</button>
-          <button class="career-nav-btn" aria-label="Scroll right" onclick="careerScroll(1)">→</button>
-        </div>
-      </div>
-
-      <div class="career-track" id="career-track" role="region"
-        aria-label="Career history — use arrow buttons to navigate, or drag to scroll">
-
-        <div class="career-card reveal-x" tabindex="0" role="button"
-          aria-label="Ozan — Chief Operating Officer / Chairman of the Board, 2021–2026">
-          <p class="career-period">2021 – 2026</p>
-          <p class="career-company">Ozan</p>
-          <p class="career-role">Chief Operating Officer / Chairman of the Board</p>
-          <span class="career-sector">Fintech</span>
-          <div class="career-metric">
-            <strong class="career-metric-val">₺20B+/mo</strong>
-            <p class="career-metric-lbl">Transaction volume</p>
-          </div>
-        </div>
-
-        <div class="career-card reveal-x" style="transition-delay:80ms" tabindex="0" role="button"
-          aria-label="Bitci — Chief Marketing Officer / Acting COO, 2021">
-          <p class="career-period">2021</p>
-          <p class="career-company">Bitci</p>
-          <p class="career-role">Chief Marketing Officer / Acting COO</p>
-          <span class="career-sector">Cryptocurrency</span>
-          <div class="career-metric">
-            <strong class="career-metric-val">€55M+</strong>
-            <p class="career-metric-lbl">Fan token fundraising</p>
-          </div>
-        </div>
-
-        <div class="career-card reveal-x" style="transition-delay:160ms" tabindex="0" role="button"
-          aria-label="Martı — VP of Growth &amp; Marketing, 2020">
-          <p class="career-period">2020 - 2021</p>
-          <p class="career-company">Martı</p>
-          <p class="career-role">VP of Growth &amp; Marketing</p>
-          <span class="career-sector">Micromobility</span>
-          <div class="career-metric">
-            <strong class="career-metric-val">+20%</strong>
-            <p class="career-metric-lbl">Incremental turnover via PSP</p>
-          </div>
-        </div>
-
-        <div class="career-card reveal-x" style="transition-delay:240ms" tabindex="0" role="button"
-          aria-label="InGame — Marketing &amp; Business Development Director, 2019">
-          <p class="career-period">2019 - 2020</p>
-          <p class="career-company">InGame</p>
-          <p class="career-role">Marketing &amp; Business Development Director</p>
-          <span class="career-sector">Gaming</span>
-          <div class="career-metric">
-            <strong class="career-metric-val">35M+</strong>
-            <p class="career-metric-lbl">Total users — Zula</p>
-          </div>
-        </div>
-
-        <div class="career-card reveal-x" style="transition-delay:320ms" tabindex="0" role="button"
-          aria-label="Pure — Managing Director, 2018">
-          <p class="career-period">2017 - 2019</p>
-          <p class="career-company">Pure</p>
-          <p class="career-role">Managing Director</p>
-          <span class="career-sector">Marcom Agency</span>
-          <div class="career-metric">
-            <strong class="career-metric-val">2.8%→32%</strong>
-            <p class="career-metric-lbl">Huawei market share</p>
-          </div>
-        </div>
-
-        <div class="career-card reveal-x" style="transition-delay:400ms" tabindex="0" role="button"
-          aria-label="Ininal — Chief Marketing Officer, 2016">
-          <p class="career-period">2016 - 2017</p>
-          <p class="career-company">Ininal</p>
-          <p class="career-role">Chief Marketing Officer</p>
-          <span class="career-sector">Fintech</span>
-          <div class="career-metric">
-            <strong class="career-metric-val">600K→1.2M</strong>
-            <p class="career-metric-lbl">KYC users</p>
-          </div>
-        </div>
-
-        <div class="career-card reveal-x" style="transition-delay:480ms" tabindex="0" role="button"
-          aria-label="Philips — CRM Manager, 2014">
-          <p class="career-period">2014 – 2016</p>
-          <p class="career-company">Philips</p>
-          <p class="career-role">Digital Marketing & CRM Manager</p>
-          <span class="career-sector">Consumer Electronics</span>
-          <div class="career-metric">
-            <strong class="career-metric-val">€200K</strong>
-            <p class="career-metric-lbl">Quarterly saved marketing budget</p>
-          </div>
-        </div>
-
-        <div class="career-card reveal-x" style="transition-delay:560ms" tabindex="0" role="button"
-          aria-label="Samsung — Head of Digital Marketing, 2009–2014">
-          <p class="career-period">2009 – 2014</p>
-          <p class="career-company">Samsung</p>
-          <p class="career-role">Head of Digital</p>
-          <span class="career-sector">Consumer Electronics</span>
-          <div class="career-metric">
-            <strong class="career-metric-val">$3B+</strong>
-            <p class="career-metric-lbl">From a negligible company to annual turnover</p>
-          </div>
-        </div>
-
-        <div class="career-card reveal-x" style="transition-delay:640ms" tabindex="0" role="button"
-          aria-label="Ülker — Specialist, 2007">
-          <p class="career-period">2007 – 2009</p>
-          <p class="career-company">Ülker</p>
-          <p class="career-role">PR & Digital Marketing Specialist</p>
-          <span class="career-sector">FMCG</span>
-          <div class="career-metric">
-            <strong class="career-metric-val">120</strong>
-            <p class="career-metric-lbl">Brand Ambassadors acquired</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ACHIEVEMENTS ─────────────────────────────────────────────────────── -->
-    <section id="achievements" class="ach" aria-label="Achievements">
-      <div class="ach-inner">
-        <div class="ach-header">
-          <div class="reveal">
-            <p class="eyebrow eyebrow-muted">Proven at Scale · Results That Compound</p>
-            <h2 class="section-headline">Not Promises.<em>Track Record.</em></h2>
-          </div>
-          <a href="/career-journey" class="btn btn-accent btn-md reveal" style="transition-delay:100ms">View Full Honor Gallery →</a>
-        </div>
-
-        <p class="ach-lede reveal">
-          Most executive CVs list responsibilities. These are <em>outcomes</em> — verified, quantified, and repeatable
-          across fintech, crypto, gaming, and consumer markets.
-        </p>
-
-        <div class="ach-grid">
-          <!-- Featured (Ozan 1) -->
-          <article class="ach-feat reveal">
-            <p class="ach-tag">Business Growth · Ozan · Fintech · 2025</p>
-            <p class="ach-feat-val">₺20+ Billion Monthly Turnover</p>
-            <h3 class="ach-title">Elevated Ozan to one of the most top acquirers in Turkey</h3>
-            <p class="ach-detail">By realigning cross-functional teams and optimizing operations, sales, and product
-              strategies, I drove sustainable growth in both transaction volume and revenue, strenghtening Ozan's market
-              position.</p>
-            <div class="ach-feat-pain">
-              <p class="ach-pain-lbl">The business problem solved:</p>
-              <p class="ach-pain-text">Previously fragmented operations and limited scalability constrained growth;
-                streamlining processes created the infrastructure and culture to confidently manage high-volume
-                transactions.</p>
-            </div>
-          </article>
-
-          <!-- Card 1 (Ozan 2) -->
-          <article class="ach-card reveal" style="transition-delay:90ms">
-            <p class="ach-tag">Business Growth · Ozan · Fintech · 2025</p>
-            <p class="ach-card-num">Issuer & Acquirer Ranking Leap</p>
-            <h3 class="ach-title">Dramatic jump in rankings: Issuer from #22 --> #5, Acquirer from #12 --> #2</h3>
-            <p class="ach-detail">Leveraging market analysis and data-driven decisions, expanded sales channels,
-              strengthened partner ecosystems, and accelerated both user growth and transaction volume, making Ozan a
-              visible industry leader.
-            </p>
-            <p class="ach-card-pain">↳ Pain point addressed: Limited market visibility and fragmented growth channels
-            </p>
-          </article>
-
-          <!-- Card 2 (Ozan 3) -->
-          <article class="ach-card reveal" style="transition-delay:180ms">
-            <p class="ach-tag">Business Development · Ozan · Fintech · 2025</p>
-            <p class="ach-card-num">Monthly Incremental ₺500M TPV</p>
-            <h3 class="ach-title">Established strategic partnership for merchant acquisition in an untapped market</h3>
-            <p class="ach-detail">In response to regulatory shifts and emerging potential of underserved segments,
-              structured a partnership with Pazar POS to enable rapid deployment of payment acceptance infra across
-              taxis and street merchants.
-            </p>
-            <p class="ach-card-pain">↳ Pain point addressed: Highly competitive and conventional market with limited
-              growth opportunities</p>
-          </article>
-
-          <!-- Card 3 (Bitci 15M) -->
-          <article class="ach-card reveal" style="transition-delay:270ms">
-            <p class="ach-tag">Token Launch Strategy · Bitci · Crypto · 2021</p>
-            <p class="ach-card-num">€15M Token Sale</p>
-            <h3 class="ach-title">Sold out in 19 Minutes — Brazil National Team Fan Token</h3>
-            <p class="ach-detail">This token offering — designed, positioned, and executed end-to-end — closed €15
-              million in 19 minutes flat, at the time the fastest fan token raise ever recorded.</p>
-            <p class="ach-card-pain">↳ Pain point addressed: How do you monetise a global fanbase instantly, without
-              diluting equity, at zero reliance on traditional capital markets?</p>
-          </article>
-
-          <!-- Card 4 (Bitci 12.5M) -->
-          <article class="ach-card reveal" style="transition-delay:360ms">
-            <p class="ach-tag">Capital Activation · Bitci · Crypto · 2021</p>
-            <p class="ach-card-num">€12.5M Token Sale</p>
-            <h3 class="ach-title">Spain National Team Fan Token — €12.5M in 4 Hours</h3>
-            <p class="ach-detail">Back-to-back mega raises aren't luck — they're system design. Repeated the playbook
-              across geographies and sports leagues, proving the model scales globally.</p>
-            <p class="ach-card-pain">↳ Pain point addressed: Engineered a framework to create the hype for repeatable
-              demand spikes.</p>
-          </article>
-
-          <!-- Card 5 (Huawei) -->
-          <article class="ach-card reveal" style="transition-delay:450ms">
-            <p class="ach-tag">Brand &amp; Market Share · Pure · Marcom · 2019</p>
-            <p class="ach-card-num">2.8%→32% Market Share Leap</p>
-            <h3 class="ach-title">Huawei Market Share — From Negligible to Category Leader in 18 Months</h3>
-            <p class="ach-detail">Huawei entered Turkey as an afterthought. Eighteen months later, they owned nearly a
-              third of the smartphone market — and the campaign took home a Gold Effie.</p>
-            <p class="ach-card-pain">↳ Pain point addressed: Brand invisibility in a crowded market costing real sales
-              volume.</p>
-          </article>
-
-          <!-- Card 6 (Zula) -->
-          <article class="ach-card reveal" style="transition-delay:540ms">
-            <p class="ach-tag">Product Launch · InGame Group · Gaming · 2020</p>
-            <p class="ach-card-num">#1 Mobile Game</p>
-            <h3 class="ach-title">Zula Mobile — App Store's #1 Across All Platforms Within 24 Hours</h3>
-            <p class="ach-detail">Most product launches fade inside a week. Zula Mobile hit the top of every major app
-              store chart within its first day — the result of a precision go-to-market built months before launch.</p>
-            <p class="ach-card-pain">↳ Pain point addressed: Product launches with no commercial momentum or
-              distribution leverage.</p>
-          </article>
-
-          <!-- Card 7 (Ininal) -->
-          <article class="ach-card reveal" style="transition-delay:630ms">
-            <p class="ach-tag">User Growth &amp; Revenue · Ininal · Fintech · 2018</p>
-            <p class="ach-card-num">4× Merchant Revenue Growth</p>
-            <h3 class="ach-title">Merchant Revenue Quadrupled, KYC'd User Growth 600K to 1.2M, CAC Cut by 50%</h3>
-            <p class="ach-detail">In a regulated fintech environment where every active user requires full KYC, doubling
-              the verified user base while simultaneously quadrupling on-us merchant revenues changes a company's
-              valuation story entirely.</p>
-            <p class="ach-card-pain">↳ Pain point addressed: High CAC, low LTV, and a compliance burden that stunts
-              growth.</p>
-          </article>
-        </div>
-
-        <!-- Proof bar -->
-        <div class="proof-bar reveal">
-          <p class="proof-label">Audited &amp; Verified By</p>
-          <div class="proof-items">
-            <span class="proof-item">Visa</span><span class="proof-dot">·</span>
-            <span class="proof-item">Mastercard</span><span class="proof-dot">·</span>
-            <span class="proof-item">TCMB</span><span class="proof-dot">·</span>
-            <span class="proof-item">MASAK</span><span class="proof-dot">·</span>
-            <span class="proof-item">Gold Effie Award</span>
-          </div>
-          <p class="proof-note">All results independently verifiable</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS ───────────────────────────────────────────────────────────── -->
-    <section id="skills" class="skills" aria-label="Skills and expertise">
-      <div class="skills-inner">
-        <div class="skills-layout">
-          <!-- Left column -->
-          <div class="reveal">
-            <p class="eyebrow eyebrow-muted">Executive Competencies · Built for High-Stakes Environments</p>
-            <h2 class="section-headline skills-headline">The Gaps That <em>Cost You Most</em></h2>
-            <p class="skills-body">
-              Fast-scaling companies don't fail because of bad ideas. They fail because strategy, operations,
-              compliance, and people move in different directions. Each competency maps directly to a category of
-              failure I've spent nineteen years preventing — and reversing.
-            </p>
-            <button class="btn btn-accent btn-md" onclick="scrollToSection('contact')">Discuss your challenge →</button>
-          </div>
-
-          <!-- Skills matrix -->
-          <div class="skills-matrix">
-            <div class="skill-item reveal" style="transition-delay:0ms">
-              <div class="skill-item-head"><span class="skill-dot" aria-hidden="true"></span>
-                <h3 class="skill-label">Executive Leadership &amp; Governance</h3>
-              </div>
-              <p class="skill-desc"><strong>If your board lacks alignment and decisions stall:</strong> I build
-                governance structures that accelerate decisions, create accountability, and turn leadership teams into
-                execution machines — not consensus committees.</p>
-            </div>
-            <div class="skill-item reveal" style="transition-delay:70ms">
-              <div class="skill-item-head"><span class="skill-dot" aria-hidden="true"></span>
-                <h3 class="skill-label">Business Strategy &amp; P&amp;L Ownership</h3>
-              </div>
-              <p class="skill-desc"><strong>If revenue grows but margins erode:</strong> Full P&amp;L accountability
-                across multiple business units. I turn growth-at-any-cost cultures into sustainable, margin-positive
-                operations without sacrificing velocity.</p>
-            </div>
-            <div class="skill-item reveal" style="transition-delay:140ms">
-              <div class="skill-item-head"><span class="skill-dot" aria-hidden="true"></span>
-                <h3 class="skill-label">Operational Excellence</h3>
-              </div>
-              <p class="skill-desc"><strong>If your ops can't keep pace with your ambitions:</strong> I design operating
-                systems that scale. Processes, KPIs, reporting cadences, and cross-functional alignment so your
-                organisation moves as fast as your market demands.</p>
-            </div>
-            <div class="skill-item reveal" style="transition-delay:210ms">
-              <div class="skill-item-head"><span class="skill-dot" aria-hidden="true"></span>
-                <h3 class="skill-label">Regulatory Compliance &amp; Risk Management</h3>
-              </div>
-              <p class="skill-desc"><strong>If a regulator audit is a threat, not a formality:</strong> I've led
-                companies through Visa, Mastercard, TCMB, and MASAK audits — passing every one. Compliance isn't a
-                constraint; it's a competitive moat when done right.</p>
-            </div>
-            <div class="skill-item reveal" style="transition-delay:280ms">
-              <div class="skill-item-head"><span class="skill-dot" aria-hidden="true"></span>
-                <h3 class="skill-label">Payments &amp; Treasury Infrastructure</h3>
-              </div>
-              <p class="skill-desc"><strong>If your payment margins are eating your business model:</strong> I optimised
-                PSP economics in all my C-suite roles — moves that restructured the entire unit economics model.
-                Payments should be a profit centre, not a cost line.</p>
-            </div>
-            <div class="skill-item reveal" style="transition-delay:350ms">
-              <div class="skill-item-head"><span class="skill-dot" aria-hidden="true"></span>
-                <h3 class="skill-label">Sales, Partnerships &amp; Commercial Growth</h3>
-              </div>
-              <p class="skill-desc"><strong>If your partnership pipeline is light on revenue:</strong> I've closed
-                multi-million TL and Euro commercial deals across banks, telcos, FMCG brands, global card schemes, and
-                sports federations. Partnerships that generate real P&amp;L lines.</p>
-            </div>
-            <div class="skill-item reveal" style="transition-delay:420ms">
-              <div class="skill-item-head"><span class="skill-dot" aria-hidden="true"></span>
-                <h3 class="skill-label">Product, Data &amp; Platform Strategy</h3>
-              </div>
-              <p class="skill-desc"><strong>If your product roadmap is disconnected from commercial reality:</strong> I
-                bridge product and business — translating market signals and revenue targets into platform decisions
-                that ship and generate return, not features that land quietly.</p>
-            </div>
-            <div class="skill-item reveal" style="transition-delay:490ms">
-              <div class="skill-item-head"><span class="skill-dot" aria-hidden="true"></span>
-                <h3 class="skill-label">People, Culture &amp; Organisational Design</h3>
-              </div>
-              <p class="skill-desc"><strong>If your top talent is leaving and no one will say why:</strong> I've
-                restructured teams from the ground up — clarifying roles, benchmarking salaries, setting performance
-                cultures, and creating environments where exceptional people choose to stay.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Conviction -->
-        <div class="skills-conviction reveal">
-          <p class="conviction-quote">
-            "The rarest executive capability isn't specialisation. It's the ability to hold strategy and execution in
-            the same hand, simultaneously."
-          </p>
-          <button class="btn btn-primary btn-lg" onclick="scrollToSection('contact')">Let's Talk</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- PERSONAL ─────────────────────────────────────────────────────────── -->
-    <section class="personal" aria-label="Personal interests">
-      <div class="personal-inner">
-        <p class="eyebrow eyebrow-light">How I Stay Fresh</p>
-        <div class="personal-grid">
-          <div class="personal-card reveal-scale">
-            <span class="personal-icon" role="img" aria-label="My Boy">👦</span>
-            <span class="personal-label">My Family</span>
-          </div>
-          <div class="personal-card reveal-scale" style="transition-delay:60ms">
-            <span class="personal-icon" role="img" aria-label="Gym">🏋️</span>
-            <span class="personal-label">Gym</span>
-          </div>
-          <div class="personal-card reveal-scale" style="transition-delay:120ms">
-            <span class="personal-icon" role="img" aria-label="Motorbiking">🏍️</span>
-            <span class="personal-label">Motorbiking</span>
-          </div>
-          <div class="personal-card reveal-scale" style="transition-delay:180ms">
-            <span class="personal-icon" role="img" aria-label="Camping">⛺</span>
-            <span class="personal-label">Camping</span>
-          </div>
-          <div class="personal-card reveal-scale" style="transition-delay:240ms">
-            <span class="personal-icon" role="img" aria-label="Traveling">✈️</span>
-            <span class="personal-label">Traveling</span>
-          </div>
-          <div class="personal-card reveal-scale" style="transition-delay:300ms">
-            <span class="personal-icon" role="img" aria-label="DIY Projects">🔧</span>
-            <span class="personal-label">DIY Projects</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA / CONTACT ────────────────────────────────────────────────────── -->
-    <section id="contact" class="cta-section" aria-label="Contact">
-      <div class="cta-glow" aria-hidden="true"></div>
-      <div class="cta-inner reveal">
-        <p class="eyebrow eyebrow-light">Let's Connect</p>
-        <h2 class="section-headline light cta-headline">Let's build <em>something significant.</em></h2>
-        <div class="cta-contacts">
-          <a class="cta-email" href="mailto:erenkumcuoglu@gmail.com">erenkumcuoglu@gmail.com</a>
-          <span class="cta-sep" aria-hidden="true"></span>
-          <span class="cta-phone">Istanbul, Türkiye</span>
-        </div>
-        <div class="cta-btns">
-          <a class="btn btn-accent btn-lg btn-h56" href="mailto:erenkumcuoglu@gmail.com">Send a Message</a>
-          <a class="btn btn-ghost-dark btn-lg btn-h56" href="https://linkedin.com/in/erenkumcuoglu" target="_blank"
-            rel="noopener noreferrer">View LinkedIn</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ── CAREER POPUP MODAL ────────────────────────────────────────────── -->
-  <div class="career-modal-overlay" id="career-modal-overlay" role="dialog" aria-modal="true" aria-label="Career details" aria-hidden="true">
-    <div class="career-modal" id="career-modal" tabindex="-1">
-      <div class="career-modal-header">
-        <p class="career-modal-period" id="cm-period"></p>
-        <p class="career-modal-company" id="cm-company"></p>
-        <p class="career-modal-role" id="cm-role"></p>
-        <span class="career-modal-sector" id="cm-sector"></span>
-        <button class="career-modal-close" id="career-modal-close" aria-label="Close">✕</button>
-        <div class="career-modal-divider"></div>
-      </div>
-      <div class="career-modal-body">
-        <div class="career-modal-metric-strip" id="cm-metrics"></div>
-        <p class="career-modal-section-title">What I did</p>
-        <ul class="career-modal-bullets" id="cm-bullets"></ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
-  <footer class="footer" role="contentinfo">
-    <p class="footer-copy">© 2026 Eren Kumcuoglu. All rights reserved.</p>
-    <nav aria-label="Footer navigation">
-      <ul class="footer-links" role="list">
-        <li><a class="footer-link" href="#about">About</a></li>
-        <li><a class="footer-link" href="/eren-kumcuoglu">Full Bio</a></li>
-        <li><a class="footer-link" href="#career">Career</a></li>
-        <li><a class="footer-link" href="#achievements">Achievements</a></li>
-        <li><a class="footer-link" href="/career-journey">Milestones</a></li>
-        <li><a class="footer-link" href="#skills">Skills</a></li>
-        <li><a class="footer-link" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </footer>
-
-  <!-- ── JAVASCRIPT ─────────────────────────────────────────────────────── -->
-  <script>
-    'use strict';
-
-    /* ── SCROLL TO ─────────────────────────────────────────────────────── */
-    function scrollToSection(id) {
-      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-
-    /* ── NAVBAR: scroll shadow ─────────────────────────────────────────── */
-    const nav = document.getElementById('main-nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 10);
-    }, { passive: true });
-
-    /* ── NAVBAR: active section highlight ─────────────────────────────── */
-    const navLinks = document.querySelectorAll('.nav-link');
-    const sectionIds = ['about', 'career', 'achievements', 'skills', 'contact'];
-
-    const sectionObs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navLinks.forEach(l => l.removeAttribute('aria-current'));
-          const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
-          if (active) active.setAttribute('aria-current', 'page');
-        }
-      });
-    }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
-
-    sectionIds.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) sectionObs.observe(el);
-    });
-
-    /* ── MOBILE DRAWER ─────────────────────────────────────────────────── */
-    const hamburger = document.getElementById('hamburger');
-    const drawer = document.getElementById('nav-drawer');
-    const overlay = document.getElementById('drawer-overlay');
-    let drawerOpen = false;
-    let drawerTrigger = null;
-
-    function openDrawer() {
-      drawerTrigger = document.activeElement;
-      drawerOpen = true;
-      hamburger.setAttribute('aria-expanded', 'true');
-      hamburger.setAttribute('aria-label', 'Close navigation');
-      drawer.classList.add('open');
-      drawer.removeAttribute('aria-hidden');
-      drawer.removeAttribute('inert');
-      overlay.style.display = 'block';
-      document.body.style.overflow = 'hidden';
-      // Focus first focusable element in drawer
-      const first = drawer.querySelector('a, button');
-      if (first) first.focus();
-      trapFocus(drawer);
-    }
-
-    function closeDrawer() {
-      drawerOpen = false;
-      hamburger.setAttribute('aria-expanded', 'false');
-      hamburger.setAttribute('aria-label', 'Open navigation');
-      drawer.classList.remove('open');
-      drawer.setAttribute('aria-hidden', 'true');
-      drawer.setAttribute('inert', '');
-      overlay.style.display = 'none';
-      document.body.style.overflow = '';
-      removeFocusTrap();
-      if (drawerTrigger) { drawerTrigger.focus(); drawerTrigger = null; }
-    }
-
-    hamburger.addEventListener('click', () => drawerOpen ? closeDrawer() : openDrawer());
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && drawerOpen) closeDrawer(); });
-
-    /* Focus trap ─── */
-    let _trapHandler = null;
-    function trapFocus(container) {
-      removeFocusTrap();
-      _trapHandler = (e) => {
-        if (e.key !== 'Tab') return;
-        const focusable = Array.from(container.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'));
-        if (!focusable.length) return;
-        const first = focusable[0], last = focusable[focusable.length - 1];
-        if (e.shiftKey) { if (document.activeElement === first) { e.preventDefault(); last.focus(); } }
-        else { if (document.activeElement === last) { e.preventDefault(); first.focus(); } }
-      };
-      document.addEventListener('keydown', _trapHandler);
-    }
-    function removeFocusTrap() {
-      if (_trapHandler) { document.removeEventListener('keydown', _trapHandler); _trapHandler = null; }
-    }
-
-    // Set initial inert state on drawer
-    drawer.setAttribute('inert', '');
-
-    /* ── CAREER TRACK: drag scroll ──────────────────────────────────────── */
-    const track = document.getElementById('career-track');
-    let drag = { on: false, startX: 0, left: 0 };
-
-    track.addEventListener('mousedown', (e) => {
-      drag = { on: true, startX: e.pageX - track.offsetLeft, left: track.scrollLeft };
-      track.style.cursor = 'grabbing'; track.style.userSelect = 'none';
-    });
-    track.addEventListener('mousemove', (e) => {
-      if (!drag.on) return;
-      track.scrollLeft = drag.left - (e.pageX - track.offsetLeft - drag.startX) * 1.4;
-    });
-    ['mouseleave', 'mouseup'].forEach(ev => track.addEventListener(ev, () => {
-      drag.on = false; track.style.cursor = 'grab'; track.style.userSelect = '';
-    }));
-
-    function careerScroll(dir) {
-      track.scrollBy({ left: dir * 316, behavior: 'smooth' });
-    }
-
-    /* ── SCROLL REVEAL ──────────────────────────────────────────────────── */
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    if (prefersReduced) {
-      // Instantly show everything
-      document.querySelectorAll('.reveal, .reveal-x, .reveal-scale').forEach(el => el.classList.add('revealed'));
-    } else {
-      const revealObs = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObs.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.08 });
-
-      document.querySelectorAll('.reveal, .reveal-x, .reveal-scale').forEach(el => revealObs.observe(el));
-    }
-    /* ── CAREER POPUP ────────────────────────────────────────────────────── */
-    const careerData = {
-      ozan: {
-        period: '2021 – 2026',
-        company: 'Ozan',
-        role: 'Chief Operating Officer / Chairman of the Board',
-        sector: 'Fintech',
-        metrics: [
-          { val: '₺20B+/mo', lbl: 'Transaction volume' },
-          { val: '#2', lbl: 'Acquirer ranking' },
-        ],
-        bullets: [
-          'Led full operational restructuring across product, compliance, sales, and people — aligning all functions to a single growth strategy.',
-          'Drove Ozan from Issuer #22 to #5 and Acquirer #12 to #2 within Turkey through data-driven channel expansion and partner ecosystem development.',
-          'Established Pazar POS partnership generating incremental ₺500M monthly TPV in the untapped taxi and street merchant segment.',
-          'Restructured PSP economics, converting the payments function from a cost centre into a profit-generating infrastructure.',
-          'Served concurrently as Chairman of the Board — designed governance frameworks, committee structures, and reporting cadences for institutional-grade oversight.',
-          'Led the company through Visa, Mastercard, TCMB, and MASAK audits — passing all cleanly.',
-        ]
-      },
-      bitci: {
-        period: '2021',
-        company: 'Bitci',
-        role: 'Chief Marketing Officer / Acting COO',
-        sector: 'Cryptocurrency',
-        metrics: [
-          { val: '€55M+', lbl: 'Fan tokens raised' },
-          { val: '19 min', lbl: 'Fastest raise ever' },
-        ],
-        bullets: [
-          'Designed and executed the Brazil National Team Fan Token offering end-to-end — closed €15M in 19 minutes, at the time the fastest fan token raise ever recorded.',
-          'Repeated the playbook for Spain National Team Fan Token — €12.5M raised in 4 hours, proving the model scales across geographies and sports.',
-          'Built a multi-federation fan token framework deployed across 6+ sports organisations, creating a repeatable and compliant commercial model.',
-          'Assumed Acting COO responsibilities mid-scale — imposed operational discipline, team structure, and reporting rigour during a period of hypergrowth.',
-          'Managed relationships with major sports federations and regulatory bodies across multiple jurisdictions.',
-        ]
-      },
-      marti: {
-        period: '2020 – 2021',
-        company: 'Martı',
-        role: 'VP of Growth & Marketing',
-        sector: 'Micromobility',
-        metrics: [
-          { val: '+20%', lbl: 'Incremental turnover via PSP' },
-        ],
-        bullets: [
-          'Identified and restructured payment service provider framework, generating a 20% incremental turnover improvement without additional marketing spend.',
-          'Led multi-city geographic expansion during COVID — built unit economics models for each new market before committing capital.',
-          'Scaled growth and marketing function across performance, brand, and community channels.',
-          'Managed the marketing P&L and adapted acquisition strategy to the dramatic shifts in mobility behaviour during the pandemic period.',
-        ]
-      },
-      ingame: {
-        period: '2019 – 2020',
-        company: 'InGame Group',
-        role: 'Marketing & Business Development Director',
-        sector: 'Gaming',
-        metrics: [
-          { val: '#1', lbl: 'App Store — all platforms' },
-          { val: '35M+', lbl: 'Total users — Zula' },
-        ],
-        bullets: [
-          'Architected Zula Mobile\'s go-to-market strategy months before launch — executed precisely enough to hit #1 across all major app store charts within 24 hours.',
-          'Scaled Zula\'s registered user base to 35M+ through combined performance marketing, community, and partnership channels.',
-          'Closed multi-brand commercial partnerships with FMCG companies, telcos, and gaming peripheral brands — creating non-dilutive revenue streams.',
-          'Managed both marketing and business development functions simultaneously, bridging product positioning with commercial deal-making.',
-        ]
-      },
-      pure: {
-        period: '2017 – 2019',
-        company: 'Pure',
-        role: 'Managing Director',
-        sector: 'Marcom Agency',
-        metrics: [
-          { val: '2.8%→32%', lbl: 'Huawei market share' },
-          { val: 'Gold', lbl: 'Effie Award' },
-        ],
-        bullets: [
-          'Directed the Huawei Turkey account — brand went from near-invisibility to 32% smartphone market share in 18 months.',
-          'Campaign recognised with a Gold Effie Award — the most rigorous effectiveness award in marketing, judged purely on measurable commercial results.',
-          'Scaled agency revenue and account portfolio while maintaining margin discipline across all client engagements.',
-          'Managed cross-functional teams across strategy, creative, media, and performance — maintaining senior client relationships at board level.',
-        ]
-      },
-      ininal: {
-        period: '2016 – 2017',
-        company: 'Ininal',
-        role: 'Chief Marketing Officer',
-        sector: 'Fintech',
-        metrics: [
-          { val: '600K→1.2M', lbl: 'KYC users' },
-          { val: '4×', lbl: 'Merchant revenue growth' },
-        ],
-        bullets: [
-          'Doubled Ininal\'s KYC-verified user base from 600K to 1.2M while simultaneously cutting customer acquisition cost by 50%.',
-          'Quadrupled on-us merchant revenues — transforming the merchant network from a feature into a primary commercial engine.',
-          'Redesigned the full acquisition funnel end-to-end, optimising every stage from awareness through to KYC completion.',
-          'Managed marketing P&L under the regulatory constraints of a licensed e-money institution.',
-        ]
-      },
-      philips: {
-        period: '2014 – 2016',
-        company: 'Philips',
-        role: 'Digital Marketing & CRM Manager',
-        sector: 'Consumer Electronics',
-        metrics: [
-          { val: '€200K', lbl: 'Quarterly budget savings' },
-        ],
-        bullets: [
-          'Identified systematic inefficiencies across digital channels — restructured spend to deliver €200K in quarterly savings without performance loss.',
-          'Designed and deployed Philips Turkey\'s first structured CRM programme — segmentation, communication cadences, and retention infrastructure.',
-          'Transformed customer data from a passive asset into an active commercial tool with measurable LTV impact.',
-          'Managed agency relationships and digital media buying across all Philips product categories.',
-        ]
-      },
-      samsung: {
-        period: '2009 – 2014',
-        company: 'Samsung',
-        role: 'Head of Digital',
-        sector: 'Consumer Electronics',
-        metrics: [
-          { val: '$3B+', lbl: 'Annual turnover (at exit)' },
-        ],
-        bullets: [
-          'Built Samsung Turkey\'s entire digital marketing capability from zero — team, technology stack, content, and performance frameworks.',
-          'Led digital function through Samsung\'s most consequential five-year growth arc in Turkey, from negligible to $3B+ annual turnover.',
-          'Developed and managed digital campaigns across the full Samsung product portfolio — mobile, TV, home appliances, and beyond.',
-          'One of the first digital marketing practitioners at a major consumer electronics brand in Turkey — built the playbook that others later followed.',
-        ]
-      },
-      ulker: {
-        period: '2007 – 2009',
-        company: 'Ülker',
-        role: 'PR & Digital Marketing Specialist',
-        sector: 'FMCG',
-        metrics: [
-          { val: '120', lbl: 'Brand ambassadors acquired' },
-        ],
-        bullets: [
-          'Built Ülker\'s first structured brand ambassador programme — identified, recruited, and activated 120 representatives across key demographic segments.',
-          'Among the first digital marketing practitioners at a major Turkish FMCG brand — learned by doing at the frontier of the discipline in 2007.',
-          'Managed PR and digital communications across Ülker\'s product portfolio during the early era of social media marketing.',
-        ]
-      },
-    };
-
-    // Map aria-label prefix to data key
-    const labelMap = {
-      'Ozan': 'ozan', 'Bitci': 'bitci', 'Martı': 'marti', 'InGame': 'ingame',
-      'Pure': 'pure', 'Ininal': 'ininal', 'Philips': 'philips', 'Samsung': 'samsung', 'Ülker': 'ulker'
-    };
-
-    const careerOverlay = document.getElementById('career-modal-overlay');
-    const modal = document.getElementById('career-modal');
-    const closeBtn = document.getElementById('career-modal-close');
-    let modalTrigger = null;
-
-    function openCareerModal(key) {
-      const d = careerData[key];
-      if (!d) return;
-
-      document.getElementById('cm-period').textContent = d.period;
-      document.getElementById('cm-company').textContent = d.company;
-      document.getElementById('cm-role').textContent = d.role;
-      document.getElementById('cm-sector').textContent = d.sector;
-
-      const metricsEl = document.getElementById('cm-metrics');
-      metricsEl.innerHTML = d.metrics.map(m =>
-        `<div class="cm-metric"><span class="cm-metric-val">${m.val}</span><span class="cm-metric-lbl">${m.lbl}</span></div>`
-      ).join('');
-
-      const bulletsEl = document.getElementById('cm-bullets');
-      bulletsEl.innerHTML = d.bullets.map(b => `<li>${b}</li>`).join('');
-
-      careerOverlay.setAttribute('aria-hidden', 'false');
-      careerOverlay.classList.add('open');
-      document.body.style.overflow = 'hidden';
-      modal.focus();
-    }
-
-    function closeCareerModal() {
-      careerOverlay.classList.remove('open');
-      careerOverlay.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-      if (modalTrigger) { modalTrigger.focus(); modalTrigger = null; }
-    }
-
-    // Attach click to career cards
-    document.querySelectorAll('.career-card').forEach(card => {
-      card.addEventListener('click', () => {
-        const label = card.getAttribute('aria-label') || '';
-        const company = label.split('—')[0].trim();
-        const key = labelMap[company];
-        modalTrigger = card;
-        if (key) openCareerModal(key);
-      });
-      card.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          card.click();
-        }
-      });
-    });
-
-    closeBtn.addEventListener('click', closeCareerModal);
-    careerOverlay.addEventListener('click', e => { if (e.target === careerOverlay) closeCareerModal(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape' && careerOverlay.classList.contains('open')) closeCareerModal(); });
-  </script>
-
+<link rel="stylesheet" href="/css/site.css?v=2">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+<div class="wrap">
+<a class="brand" href="/" aria-label="Eren Kumcuoğlu, home"><b>Eren Kumcuoğlu</b><span class="mono">Executive profile</span></a>
+<nav class="nav" aria-label="Sections">
+<a href="#story">Story</a>
+<a href="/career-journey">Career</a>
+<a href="/eren-kumcuoglu">About</a>
+<a href="/blog/">Blog</a>
+<a href="#tr" hreflang="tr" lang="tr">Türkçe</a>
+</nav>
+<a class="cta" href="#contact">Start a conversation</a>
+</div>
+</header>
+<main id="main">
+<section class="hero" id="top">
+<div class="wrap">
+<div class="hero-top">
+<span class="mono">C-level executive · Istanbul, Türkiye</span>
+<span class="mono">2007 — 2026 · 9 companies · 5 sectors</span>
+</div>
+<div class="hero-grid">
+<div>
+<h1 class="name"><span>Eren</span><span class="ln2">Kumcuoğlu</span></h1>
+<p class="lead">Most business failures are alignment failures. For nineteen years I have worked in the gap between what a company decides and <em>what it actually does</em>, as a marketer, a growth lead, a COO and a board chairman.</p>
+</div>
+<figure class="portrait">
+<img src="erenkumcuoglu.jpg" width="3505" height="2813" alt="Eren Kumcuoğlu, portrait, Istanbul" fetchpriority="high">
+<figcaption><span class="mono">Eren Kumcuoğlu</span><span class="mono">Istanbul, 2026</span></figcaption>
+</figure>
+</div>
+<div class="figs" aria-label="Selected figures">
+<div class="fig"><strong data-count>₺25B<i>+</i></strong><p>monthly transaction volume enabled at Ozan</p></div>
+<div class="fig"><strong>#29<i>→</i>2</strong><p>Ozan's rank among Türkiye's card acquirers</p></div>
+<div class="fig"><strong data-count>€55M<i>+</i></strong><p>raised across 20+ fan-token offerings at Bitci</p></div>
+<div class="fig"><strong>2.8<i>→</i>30%</strong><p>Huawei's Türkiye market share in 18 months</p></div>
+</div>
+</div>
+</section>
+<section class="block" aria-labelledby="thesis-h">
+<div class="wrap thesis">
+<div><h2 id="thesis-h" class="mono">The work</h2></div>
+<div>
+<blockquote>The rarest executive skill is holding <em>strategy and execution</em> in the same hand, at the same time.</blockquote>
+<div class="cols">
+<p>Fast companies break in predictable places. Sales promises what operations can't deliver. Compliance arrives as a brake instead of a design input. Product builds for a market the finance team has stopped funding. Nobody is wrong, and the company still stalls.</p>
+<p>My job has been to close those gaps: to set the operating system, the governance and the economics so that growth survives contact with auditors, card schemes and a board. I have done it in brands, in an agency, in gaming, in mobility and in regulated payments.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="block" id="story" aria-labelledby="story-h">
+<div class="wrap">
+<div class="sec-head">
+<span class="mono">The story</span>
+<div>
+<h2 id="story-h">Nineteen years. Three things learned in order.</h2>
+<p>First growth inside the giants, then the P&amp;L, then the institution. Below, the short version: one line per company and the result that mattered most.</p>
+</div>
+</div>
+<div class="spine" aria-label="Career timeline, 2007 to 2026, to scale">
+<div class="spine-bar">
+<a class="a1" href="#ulker" style="flex:2" title="Ülker, 2007–2009">Ülker</a>
+<a class="a1" href="#samsung" style="flex:5" title="Samsung, 2009–2014">Samsung</a>
+<a class="a1" href="#philips" style="flex:2" title="Philips, 2014–2016">Philips</a>
+<a class="a2" href="#ininal" style="flex:1" title="Ininal, 2016–2017">Ininal</a>
+<a class="a2" href="#pure" style="flex:2" title="Pure, 2017–2019">Pure</a>
+<a class="a2" href="#ingame" style="flex:1" title="InGame, 2019–2020">InGame</a>
+<a class="a2" href="#marti" style="flex:1" title="Martı, 2020–2021">Martı</a>
+<a class="a3" href="#bitci" style="flex:.5" title="Bitci, 2021">B</a>
+<a class="a3" href="#ozan" style="flex:4.5" title="Ozan, 2021–2026">Ozan</a>
+</div>
+<div class="spine-axis" aria-hidden="true">
+<span style="left:0">2007</span><span style="left:36.8%">2014</span><span style="left:47.4%">2016</span><span style="left:73.7%">2021</span><span style="left:100%">2026</span>
+</div>
+<div class="spine-legend">
+<span><i style="background:var(--paper-2);outline:1px solid var(--rule)"></i>Act I · Growth inside the giants</span>
+<span><i style="background:var(--accent-soft)"></i>Act II · The P&amp;L</span>
+<span><i style="background:var(--accent)"></i>Act III · The institution</span>
+</div>
+</div>
+<div class="act">
+<div class="act-head">
+<div><span class="mono">Act I · 2007–2016</span><h3>Growth inside the giants</h3></div>
+<p>I was never the marketer who wants the budget. I asked what the spend would earn, and without revenue behind it the money stayed in the account. Inside these giants I learned to build systems a global company can run on, and to do unusual work with multi-million-dollar budgets. From 2016 on, I took both into every startup.</p>
+</div>
+<div class="tl">
+<div class="tl-row" id="ulker"><span class="tl-y">2007–2009</span><div class="tl-co"><b>Ülker</b><span>PR &amp; Digital Marketing Specialist</span></div><p class="tl-win">Ran Türkiye's first social media campaign and its first integrated online–offline campaign.</p></div>
+<div class="tl-row" id="samsung"><span class="tl-y">2009–2014</span><div class="tl-co"><b>Samsung Electronics</b><span>Head of Digital Marketing &amp; Content Services</span></div><p class="tl-win">200+ product and service launches. Türkiye's first video, e-book and music services. Mobile went from challenger to #1.</p></div>
+<div class="tl-row" id="philips"><span class="tl-y">2014–2016</span><div class="tl-co"><b>Philips</b><span>Digital Marketing &amp; CRM Manager</span></div><p class="tl-win">Rebuilt the digital, CRM, search and media operating model; €200K annualised saving within three months.</p></div>
+</div>
+</div>
+<div class="act">
+<div class="act-head">
+<div><span class="mono">Act II · 2016–2021</span><h3>Learning the P&amp;L</h3></div>
+<p>Growth with a number attached. A young fintech, an agency's full P&amp;L, a gaming company's revenue lines and a mobility app's payment stack.</p>
+</div>
+<div class="tl">
+<div class="tl-row" id="ininal"><span class="tl-y">2016–2017</span><div class="tl-co"><b>Ininal</b><span>Chief Marketing Officer</span></div><p class="tl-win">Helped build Türkiye's first fintech and the prepaid-card wallet category. Fully KYC'd users 600K → 1.2M.</p></div>
+<div class="tl-row" id="pure"><span class="tl-y">2017–2019</span><div class="tl-co"><b>Pure</b><span>Managing Director</span></div><p class="tl-win">Led Huawei's communications: market share from 2.8% to 30%+ in 18 months, Effie Gold.</p></div>
+<div class="tl-row" id="ingame"><span class="tl-y">2019–2020</span><div class="tl-co"><b>InGame Group</b><span>Marketing, Sales &amp; BD Director</span></div><p class="tl-win">Zula Mobile to #1 on Google Play and the App Store within 24 hours, with zero paid media.</p></div>
+<div class="tl-row" id="marti"><span class="tl-y">2020–2021</span><div class="tl-co"><b>Martı</b><span>VP of Growth &amp; Marketing</span></div><p class="tl-win">Prepaid-card payments added 20% to turnover in five months; payment margin cut from 1.6% to 1.0%.</p></div>
+</div>
+</div>
+<div class="act">
+<div class="act-head">
+<div><span class="mono">Act III · 2021–2026</span><h3>Learning the institution</h3></div>
+<p>Regulated money at scale. Card schemes, the central bank and a board: the work of making a fast company auditable without making it slow.</p>
+</div>
+<div class="tl">
+<div class="tl-row" id="bitci"><span class="tl-y">2021</span><div class="tl-co"><b>Bitci</b><span>CMO (&amp; acting COO)</span></div><p class="tl-win">€55M+ raised across 20+ fan-token offerings, including Brazil's €15M sell-out in 19 minutes.</p></div>
+<div class="tl-row" id="ozan"><span class="tl-y">2021–2026</span><div class="tl-co"><b>Ozan</b><span>COO &amp; Chairman of the Board</span></div><p class="tl-win">Built from scratch to Türkiye's #2 acquirer and #5 issuer; ₺25B+ monthly volume; clean Visa, Mastercard, TCMB and MASAK audits.</p></div>
+</div>
+</div>
+<a class="full-story" href="/career-journey">
+<span class="mono">The full story</span>
+<span class="fs-t">Nine chapters with the problems, the campaigns and the people behind every number.</span>
+<span class="fs-go">Read the career journey →</span>
+</a>
+</div>
+</section>
+<section class="block" id="record" aria-labelledby="record-h">
+<div class="wrap">
+<div class="sec-head">
+<span class="mono">The record</span>
+<div>
+<h2 id="record-h">Before and after.</h2>
+<p>The starting point, the end point and the distance between them. Each line is drawn on its own scale, shown under the bar.</p>
+</div>
+</div>
+<div class="record">
+<div class="rec">
+<div><h4>Huawei market share, Türkiye</h4><span class="mono">Pure · 2017–2019</span></div>
+<svg role="img" aria-label="Huawei market share, Türkiye: from 2.8% to 30%">
+<line class="track" x1="3%" y1="22" x2="97%" y2="22"/>
+<line class="tick" x1="3%" y1="17" x2="3%" y2="27"/><line class="tick" x1="97%" y1="17" x2="97%" y2="27"/>
+<text class="tl" x="0%" y="42">0</text><text class="tl" x="100%" y="42" text-anchor="end">40%</text>
+<line class="span" x1="9.58%" y1="22" x2="73.50%" y2="22"/>
+<circle class="from" cx="9.58%" cy="22" r="6"/><circle class="to" cx="73.50%" cy="22" r="7"/>
+<text class="tl" x="9.58%" y="9" text-anchor="middle">2.8%</text>
+<text class="tl" x="73.50%" y="9" text-anchor="middle" style="fill:var(--ink);font-weight:500">30%</text>
+</svg>
+<div class="delta">+27 pts<small>in 18 months</small></div>
+</div>
+<div class="rec">
+<div><h4>Samsung brand attitude</h4><span class="mono">Samsung · 2009–2014</span></div>
+<svg role="img" aria-label="Samsung brand attitude: from 7% to 43%">
+<line class="track" x1="3%" y1="22" x2="97%" y2="22"/>
+<line class="tick" x1="3%" y1="17" x2="3%" y2="27"/><line class="tick" x1="97%" y1="17" x2="97%" y2="27"/>
+<text class="tl" x="0%" y="42">0</text><text class="tl" x="100%" y="42" text-anchor="end">50%</text>
+<line class="span" x1="16.16%" y1="22" x2="83.84%" y2="22"/>
+<circle class="from" cx="16.16%" cy="22" r="6"/><circle class="to" cx="83.84%" cy="22" r="7"/>
+<text class="tl" x="16.16%" y="9" text-anchor="middle">7%</text>
+<text class="tl" x="83.84%" y="9" text-anchor="middle" style="fill:var(--ink);font-weight:500">43%</text>
+</svg>
+<div class="delta">+36 pts<small>in 5 years</small></div>
+</div>
+<div class="rec">
+<div><h4>Acquirer ranking, Türkiye</h4><span class="mono">Ozan · 2021–2024</span></div>
+<svg role="img" aria-label="Acquirer ranking, Türkiye: from #29 to #2">
+<line class="track" x1="3%" y1="22" x2="97%" y2="22"/>
+<line class="tick" x1="3%" y1="17" x2="3%" y2="27"/><line class="tick" x1="97%" y1="17" x2="97%" y2="27"/>
+<text class="tl" x="0%" y="42">#30</text><text class="tl" x="100%" y="42" text-anchor="end">#1</text>
+<line class="span" x1="6.24%" y1="22" x2="93.76%" y2="22"/>
+<circle class="from" cx="6.24%" cy="22" r="6"/><circle class="to" cx="93.76%" cy="22" r="7"/>
+<text class="tl" x="6.24%" y="9" text-anchor="middle">#29</text>
+<text class="tl" x="93.76%" y="9" text-anchor="middle" style="fill:var(--ink);font-weight:500">#2</text>
+</svg>
+<div class="delta">27 places<small>up</small></div>
+</div>
+<div class="rec">
+<div><h4>Issuer ranking, Türkiye</h4><span class="mono">Ozan · 2021–2024</span></div>
+<svg role="img" aria-label="Issuer ranking, Türkiye: from #22 to #5">
+<line class="track" x1="3%" y1="22" x2="97%" y2="22"/>
+<line class="tick" x1="3%" y1="17" x2="3%" y2="27"/><line class="tick" x1="97%" y1="17" x2="97%" y2="27"/>
+<text class="tl" x="0%" y="42">#30</text><text class="tl" x="100%" y="42" text-anchor="end">#1</text>
+<line class="span" x1="28.93%" y1="22" x2="84.03%" y2="22"/>
+<circle class="from" cx="28.93%" cy="22" r="6"/><circle class="to" cx="84.03%" cy="22" r="7"/>
+<text class="tl" x="28.93%" y="9" text-anchor="middle">#22</text>
+<text class="tl" x="84.03%" y="9" text-anchor="middle" style="fill:var(--ink);font-weight:500">#5</text>
+</svg>
+<div class="delta">17 places<small>up</small></div>
+</div>
+<div class="rec">
+<div><h4>Fully KYC-verified users</h4><span class="mono">Ininal · 2016–2017</span></div>
+<svg role="img" aria-label="Fully KYC-verified users: from 0.6M to 1.2M">
+<line class="track" x1="3%" y1="22" x2="97%" y2="22"/>
+<line class="tick" x1="3%" y1="17" x2="3%" y2="27"/><line class="tick" x1="97%" y1="17" x2="97%" y2="27"/>
+<text class="tl" x="0%" y="42">0</text><text class="tl" x="100%" y="42" text-anchor="end">1.5M</text>
+<line class="span" x1="40.60%" y1="22" x2="78.20%" y2="22"/>
+<circle class="from" cx="40.60%" cy="22" r="6"/><circle class="to" cx="78.20%" cy="22" r="7"/>
+<text class="tl" x="40.60%" y="9" text-anchor="middle">0.6M</text>
+<text class="tl" x="78.20%" y="9" text-anchor="middle" style="fill:var(--ink);font-weight:500">1.2M</text>
+</svg>
+<div class="delta">2×<small>users</small></div>
+</div>
+<div class="rec">
+<div><h4>Monthly active users</h4><span class="mono">Ininal · 2016–2017</span></div>
+<svg role="img" aria-label="Monthly active users: from 300K to 650K">
+<line class="track" x1="3%" y1="22" x2="97%" y2="22"/>
+<line class="tick" x1="3%" y1="17" x2="3%" y2="27"/><line class="tick" x1="97%" y1="17" x2="97%" y2="27"/>
+<text class="tl" x="0%" y="42">0</text><text class="tl" x="100%" y="42" text-anchor="end">800K</text>
+<line class="span" x1="38.25%" y1="22" x2="79.38%" y2="22"/>
+<circle class="from" cx="38.25%" cy="22" r="6"/><circle class="to" cx="79.38%" cy="22" r="7"/>
+<text class="tl" x="38.25%" y="9" text-anchor="middle">300K</text>
+<text class="tl" x="79.38%" y="9" text-anchor="middle" style="fill:var(--ink);font-weight:500">650K</text>
+</svg>
+<div class="delta">2.2×<small>MAU</small></div>
+</div>
+<div class="rec">
+<div><h4>Brand awareness</h4><span class="mono">Ininal · 2016–2017</span></div>
+<svg role="img" aria-label="Brand awareness: from 4% to 8%">
+<line class="track" x1="3%" y1="22" x2="97%" y2="22"/>
+<line class="tick" x1="3%" y1="17" x2="3%" y2="27"/><line class="tick" x1="97%" y1="17" x2="97%" y2="27"/>
+<text class="tl" x="0%" y="42">0</text><text class="tl" x="100%" y="42" text-anchor="end">10%</text>
+<line class="span" x1="40.60%" y1="22" x2="78.20%" y2="22"/>
+<circle class="from" cx="40.60%" cy="22" r="6"/><circle class="to" cx="78.20%" cy="22" r="7"/>
+<text class="tl" x="40.60%" y="9" text-anchor="middle">4%</text>
+<text class="tl" x="78.20%" y="9" text-anchor="middle" style="fill:var(--ink);font-weight:500">8%</text>
+</svg>
+<div class="delta">2×<small>year on year</small></div>
+</div>
+<div class="rec">
+<div><h4>Profitability per sales channel</h4><span class="mono">InGame · 2019–2020</span></div>
+<svg role="img" aria-label="Profitability per sales channel: from 3% to 8%">
+<line class="track" x1="3%" y1="22" x2="97%" y2="22"/>
+<line class="tick" x1="3%" y1="17" x2="3%" y2="27"/><line class="tick" x1="97%" y1="17" x2="97%" y2="27"/>
+<text class="tl" x="0%" y="42">0</text><text class="tl" x="100%" y="42" text-anchor="end">10%</text>
+<line class="span" x1="31.20%" y1="22" x2="78.20%" y2="22"/>
+<circle class="from" cx="31.20%" cy="22" r="6"/><circle class="to" cx="78.20%" cy="22" r="7"/>
+<text class="tl" x="31.20%" y="9" text-anchor="middle">3%</text>
+<text class="tl" x="78.20%" y="9" text-anchor="middle" style="fill:var(--ink);font-weight:500">8%</text>
+</svg>
+<div class="delta">+5 pts<small>margin</small></div>
+</div>
+<div class="rec">
+<div><h4>Payment provider margin</h4><span class="mono">Martı · 2020–2021</span></div>
+<svg role="img" aria-label="Payment provider margin: from 1.6% to 1%">
+<line class="track" x1="3%" y1="22" x2="97%" y2="22"/>
+<line class="tick" x1="3%" y1="17" x2="3%" y2="27"/><line class="tick" x1="97%" y1="17" x2="97%" y2="27"/>
+<text class="tl" x="0%" y="42">2%</text><text class="tl" x="100%" y="42" text-anchor="end">0</text>
+<line class="span" x1="21.80%" y1="22" x2="50.00%" y2="22"/>
+<circle class="from" cx="21.80%" cy="22" r="6"/><circle class="to" cx="50.00%" cy="22" r="7"/>
+<text class="tl" x="21.80%" y="9" text-anchor="middle">1.6%</text>
+<text class="tl" x="50.00%" y="9" text-anchor="middle" style="fill:var(--ink);font-weight:500">1%</text>
+</svg>
+<div class="delta">−0.6 pts<small>per transaction</small></div>
+</div>
+</div>
+<p class="rec-note">Hollow dot: position when I arrived. Solid dot: position when I left or at the milestone date.</p>
+</div>
+</section>
+<section class="block" id="approach" aria-labelledby="approach-h">
+<div class="wrap">
+<div class="sec-head">
+<span class="mono">Approach</span>
+<div>
+<h2 id="approach-h">How I run a company.</h2>
+<p>Five beliefs I have paid for. None of them came from a book.</p>
+</div>
+</div>
+<ol class="beliefs">
+<li><span class="k">On culture</span><h4>Culture is an operating system.</h4><p>It is installed by what leaders reward and tolerate on an ordinary Tuesday, not by the values poster.</p></li>
+<li><span class="k">On compliance</span><h4>A clean audit is a competitive advantage.</h4><p>In regulated markets, the company that treats compliance as design input moves faster than the one that treats it as a brake.</p></li>
+<li><span class="k">On growth</span><h4>Growth only counts if it makes money.</h4><p>I check what each sale earns before I look at the growth chart. A company that grows while losing money on every sale is only losing money faster. In payments, a tenth of a percent of margin is real money.</p></li>
+<li><span class="k">On operations</span><h4>Everyone sees the same numbers.</h4><p>I build companies where every unit talks to the others, KPIs are clear, and the company goal is known by everyone. When everything is visible, teams pull in the same direction without being told.</p></li>
+<li><span class="k">On hiring</span><h4>Hire character. Train skill.</h4><p>Skills can be taught in a quarter. Integrity and ownership can't be taught at all.</p></li>
+</ol>
+</div>
+</section>
+<section class="block" id="writing" aria-labelledby="now-h">
+<div class="wrap now-grid">
+<div id="now">
+<span class="mono">Now · September 2026</span>
+<h2 id="now-h" class="sec-title" style="margin:12px 0 24px;font-weight:700;font-stretch:75%;font-size:clamp(40px,5vw,72px);line-height:.95;letter-spacing:-.02em">What I'm doing now.</h2>
+<ul class="now-list">
+<li><b>Building AI-native products</b><span>Hands-on, from architecture to go-to-market.</span></li>
+<li><b>Writing again, after fifteen years</b><span>Weekly essays on leadership, growth and unfiltered marketing, in Turkish and English. I blogged from 2007 to 2011; the archive is still online.</span></li>
+<li><b>Open to a small number of mandates</b><span>C-level roles, board seats and advisory work where growth and regulation meet.</span></li>
+</ul>
+</div>
+<div>
+<span class="mono">Latest writing</span>
+<ul class="posts" style="margin-top:16px">
+<li><a href="https://erenkumcuoglu.com/blog/kariyeri-belirleyen-iki-yetenek-dayaniklilik-ve-yilmazlik/" lang="tr"><span class="d">07.09.2026</span><span class="t">Kariyeri Belirleyen İki Yetenek: Dayanıklılık ve Yılmazlık</span><span class="l">TR</span></a></li>
+<li><a href="https://erenkumcuoglu.com/blog/aia-ragmen-mi-ai-sayesinde-mi-tarafini-sec/" lang="tr"><span class="d">01.09.2026</span><span class="t">“AI'a Rağmen” mi “AI Sayesinde” mi? Tarafını Seç!</span><span class="l">TR</span></a></li>
+<li><a href="https://erenkumcuoglu.com/blog/kariyerimi-degistiren-tek-soru-en-kotu-ne-olabilir/" lang="tr"><span class="d">17.08.2026</span><span class="t">Kariyerimi Değiştiren Tek Soru: En Kötü Ne Olabilir?</span><span class="l">TR</span></a></li>
+<li><a href="https://erenkumcuoglu.com/blog/sirketlerde-bu-olmamis-diyebilen-insan-eksikligi/" lang="tr"><span class="d">10.08.2026</span><span class="t">Şirketlerde “bu olmamış” diyebilen insan eksikliği</span><span class="l">TR</span></a></li>
+<li><a href="https://erenkumcuoglu.com/blog/ai-donusumu-bir-teknoloji-projesi-degildir-nokta/" lang="tr"><span class="d">06.08.2026</span><span class="t">AI Dönüşümü Bir Teknoloji Projesi Değildir. Nokta.</span><span class="l">TR</span></a></li>
+</ul>
+<a class="more" href="https://erenkumcuoglu.com/blog/">All essays and the 2007–2011 archive →</a>
+</div>
+</div>
+</section>
+<section class="block tr" id="tr" lang="tr" aria-labelledby="tr-h">
+<div class="wrap tr-grid">
+<div><span class="mono">Türkçe</span><h2 id="tr-h" style="margin-top:12px">Eren Kumcuoğlu kimdir?</h2></div>
+<div class="tr-body">
+<p>Eren Kumcuoğlu, fintech, ödeme sistemleri, kripto, oyun, mobilite ve tüketici elektroniği alanlarında 19 yıllık deneyime sahip, İstanbul merkezli bir üst düzey yöneticidir. Kariyerine 2007'de Ülker'de başladı; Türkiye'nin ilk sosyal medya kampanyasını ve ilk online-offline entegre kampanyasını hayata geçirdi.</p>
+<p>Samsung Electronics Türkiye'de dijital pazarlama ve içerik servislerini yönetti; 5 yıllık görevi boyunca 200'ün üzerinde ürün ve hizmet lansmanı gerçekleştirdi, Türkiye'nin ilk video, e-kitap ve müzik servislerini yayına aldı. Philips'te dijital ve CRM operasyonunu yeniden kurdu. Ininal'de CMO olarak Türkiye'nin ilk fintech'inin ve ön ödemeli kartla cüzdan servisleri kategorisinin inşa edilmesinde rol oynadı. Pure'da genel müdür olarak görev yaptığı sürede Huawei iletişim çalışmalarının sorumluluğunu üstlenerek markanın kısa sürede pazar liderliğine yaklaşan stratejisini ve işlerini oluşturdu. InGame Group'ta pazarlama, satış ve iş geliştirme direktörü, Martı'da büyüme ve pazarlamadan sorumlu başkan yardımcısı olarak görev yaparak şirketlerin kârlılıklarında önemli rol oynadı.</p>
+<p>2021'de Bitci'de CMO ve vekâleten COO olarak 20'den fazla fan token satışıyla 55 milyon Euro'nun üzerinde kaynak yaratılmasını yönetti. 2021–2026 arasında Ozan'da COO ve Yönetim Kurulu Başkanı olarak şirketi Türkiye'nin en büyük ikinci üye işyeri (acquirer) ve beşinci kart çıkaran (issuer) kuruluşu konumuna taşıdı; Visa, Mastercard, TCMB ve MASAK denetimlerinden temiz geçti.</p>
+<p>Bugün yapay zekâ tabanlı ürünler geliştiriyor, liderlik ve büyüme üzerine Türkçe ve İngilizce yazıyor ve seçili C-level, yönetim kurulu ve danışmanlık görevlerine açık.</p>
+</div>
+</div>
+</section>
+<section class="block contact" id="contact" aria-labelledby="contact-h">
+<div class="wrap">
+<span class="mono">Contact</span>
+<div class="contact-grid">
+<h2 id="contact-h">If this maps to your problem, let's talk.</h2>
+<div>
+<p class="lede">I read every message myself. The most useful first note says what is growing, what is breaking, and who is on the board.</p>
+<div class="channels">
+<div><span class="v" id="email">erenkumcuoglu@gmail.com</span><button class="copy" id="copy-email" type="button">Copy</button></div>
+<div><a class="v" href="https://www.linkedin.com/in/erenkumcuoglu/" rel="me">LinkedIn · in/erenkumcuoglu</a><span class="mono">↗</span></div>
+<div><a class="v" href="https://erenkumcuoglu.substack.com" rel="me">Substack · Filtresiz Tecrübeler</a><span class="mono">↗</span></div>
+</div>
+</div>
+</div>
+<p class="offduty">Off the clock: family, the gym, motorbikes, camping, travel and DIY builds.</p>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<span>© 2026 Eren Kumcuoğlu · Istanbul</span>
+<nav aria-label="Profiles">
+<a href="https://www.linkedin.com/in/erenkumcuoglu/" rel="me">LinkedIn</a>
+<a href="https://erenkumcuoglu.substack.com" rel="me">Substack</a>
+<a href="https://github.com/erenkumcuoglu" rel="me">GitHub</a>
+<a href="https://x.com/erenkumcuoglu" rel="me">X</a>
+<a href="https://youtube.com/@Eren.Kumcuoglu" rel="me">YouTube</a>
+<a href="https://erenkumcuoglu.com/blog/">Blog</a>
+<a href="/career-journey">Full career record</a>
+<a href="/eren-kumcuoglu">About</a>
+</nav>
+</div>
+</footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://erenkumcuoglu.com/#website","url":"https://erenkumcuoglu.com/","name":"Eren Kumcuoğlu","alternateName":"Eren Kumcuoglu","inLanguage":["en","tr"],"publisher":{"@id":"https://erenkumcuoglu.com/#person"}},{"@type":"ProfilePage","@id":"https://erenkumcuoglu.com/#profilepage","url":"https://erenkumcuoglu.com/","name":"Eren Kumcuoğlu — Executive profile","isPartOf":{"@id":"https://erenkumcuoglu.com/#website"},"mainEntity":{"@id":"https://erenkumcuoglu.com/#person"},"dateModified":"2026-09-24","inLanguage":"en","primaryImageOfPage":{"@id":"https://erenkumcuoglu.com/#portrait"}},{"@type":"Person","@id":"https://erenkumcuoglu.com/#person","name":"Eren Kumcuoğlu","alternateName":["Eren Kumcuoglu"],"givenName":"Eren","familyName":"Kumcuoğlu","url":"https://erenkumcuoglu.com/","image":{"@type":"ImageObject","@id":"https://erenkumcuoglu.com/#portrait","url":"https://erenkumcuoglu.com/erenkumcuoglu.jpg","width":3505,"height":2813,"caption":"Eren Kumcuoğlu"},"jobTitle":"C-level executive (COO, Chairman, CMO)","description":"Istanbul-based C-level executive with 19 years across fintech, payments, crypto, gaming, micromobility and consumer electronics. Former COO and Chairman of Ozan.","homeLocation":{"@type":"Place","name":"Istanbul, Türkiye"},"knowsLanguage":["tr","en"],"knowsAbout":["Payments","Card acquiring and issuing","Fintech","Regulatory compliance","Corporate governance","Growth strategy","Digital marketing","Operational excellence","P&L management","Fan tokens"],"award":["Effie Türkiye Gold — Huawei campaign (Pure, 2019)","Samsung Global Best Practice (5×)"],"alumniOf":[{"@type":"OrganizationRole","roleName":"Chief Operating Officer; Chairman of the Board","startDate":"2021","endDate":"2026","alumniOf":{"@type":"Organization","name":"Ozan"}},{"@type":"OrganizationRole","roleName":"Chief Marketing Officer; Acting Chief Operating Officer","startDate":"2021","endDate":"2021","alumniOf":{"@type":"Organization","name":"Bitci"}},{"@type":"OrganizationRole","roleName":"VP of Growth & Marketing","startDate":"2020","endDate":"2021","alumniOf":{"@type":"Organization","name":"Martı"}},{"@type":"OrganizationRole","roleName":"Marketing, Sales & Business Development Director","startDate":"2019","endDate":"2020","alumniOf":{"@type":"Organization","name":"InGame Group"}},{"@type":"OrganizationRole","roleName":"Managing Director","startDate":"2017","endDate":"2019","alumniOf":{"@type":"Organization","name":"Pure"}},{"@type":"OrganizationRole","roleName":"Chief Marketing Officer","startDate":"2016","endDate":"2017","alumniOf":{"@type":"Organization","name":"Ininal"}},{"@type":"OrganizationRole","roleName":"Digital Marketing & CRM Manager","startDate":"2014","endDate":"2016","alumniOf":{"@type":"Organization","name":"Philips"}},{"@type":"OrganizationRole","roleName":"Head of Digital Marketing & Content Services","startDate":"2009","endDate":"2014","alumniOf":{"@type":"Organization","name":"Samsung Electronics"}},{"@type":"OrganizationRole","roleName":"PR & Digital Marketing Specialist","startDate":"2007","endDate":"2009","alumniOf":{"@type":"Organization","name":"Ülker"}}],"sameAs":["https://www.linkedin.com/in/erenkumcuoglu","https://erenkumcuoglu.substack.com","https://github.com/erenkumcuoglu","https://x.com/erenkumcuoglu","https://www.youtube.com/@Eren.Kumcuoglu","https://www.reddit.com/user/erenkumcuoglu"]}]}</script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="/js/site.js?v=2" defer></script>
+<script>
+(function(){
+var h=document.querySelector('h1.name'); if(!h) return;
+var box=h.parentElement;
+function fit(){
+h.style.fontSize='100px';
+var w=0; h.querySelectorAll('span').forEach(function(s){w=Math.max(w,s.getBoundingClientRect().width)});
+if(!w) return;
+var size=Math.min(200,Math.max(40,100*box.clientWidth/w));
+h.style.fontSize=(Math.floor(size*10)/10)+'px';
+}
+fit();
+if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
+if(window.ResizeObserver) new ResizeObserver(fit).observe(box); else window.addEventListener('resize',fit);
+})();
+</script>
+<script>
+(function(){
+var b=document.getElementById('copy-email');
+if(!b) return;
+b.addEventListener('click',function(){
+var t=document.getElementById('email').textContent.trim();
+var done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1800)};
+try{
+navigator.clipboard.writeText(t).then(done,function(){sel()});
+}catch(e){sel()}
+function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=window.getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected';}
+});
+})();
+</script>
 </body>
-
 </html>
