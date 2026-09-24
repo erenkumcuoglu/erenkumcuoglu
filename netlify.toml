@@ -1,0 +1,61 @@
+# Site files live in erenkumcuoglu/. This root config tells Netlify to publish that folder
+# and carries the redirects (kept in sync with erenkumcuoglu/netlify.toml).
+[build]
+  publish = "erenkumcuoglu"
+
+# ── Professional Milestones → Career Journey (301, SEO korunur) ──
+[[redirects]]
+  from = "/professional-milestones.html"
+  to = "/career-journey"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/professional-milestones"
+  to = "/career-journey"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/professional-milestones/*"
+  to = "/career-journey/:splat"
+  status = 301
+  force = true
+
+# ── Eski (WordPress) site URL'leri → yeni sayfalar ──
+[[redirects]]
+  from = "/en/about/*"
+  to = "/eren-kumcuoglu"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/news/*"
+  to = "/career-journey"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tr/*"
+  to = "/"
+  status = 301
+  force = true
+
+# ── Blog (harici Netlify sitesine proxy) ──
+[[redirects]]
+  from = "/blog"
+  to = "https://erenkumcuoglublog.netlify.app/blog/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/blog/*"
+  to = "https://erenkumcuoglublog.netlify.app/blog/:splat"
+  status = 200
+  force = true
