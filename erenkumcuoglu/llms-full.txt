@@ -1,11 +1,11 @@
 # Eren Kumcuoğlu — full profile
 
-> Istanbul-based C-level executive (also written "Eren Kumcuoglu"). Former COO and Chairman of the Board at Ozan, CMO and acting COO at Bitci, VP Growth at Martı. 19 years (2007–2026) across payments, fintech, crypto, gaming, micromobility and consumer brands. Last updated 2026-09-24.
+> Istanbul-based C-level executive (also written "Eren Kumcuoglu"). Former COO and Chairman of the Board at Ozan, CMO and acting COO at Bitci, VP Growth at Martı. 20 years (2007–2026) across payments, fintech, crypto, gaming, micromobility and consumer brands. Last updated 2026-09-24.
 
 ## Summary
 
 - Operator who connects strategy, operations, compliance and people; revenue- and growth-focused rather than budget-focused.
-- Built Ozan from scratch into Türkiye's #2 card acquirer (from #29) and #5 issuer (from #22), ₺25B+ monthly transaction volume, clean Visa, Mastercard, TCMB and MASAK audits.
+- Built Ozan from scratch into Türkiye's #2 card acquirer (from #29) and #5 issuer (from #22), ₺25B+ (~$500M+) monthly transaction volume, clean Visa, Mastercard, TCMB and MASAK audits.
 - Raised €55M+ across 20+ fan-token offerings at Bitci (Brazil national team: €15M sold out in 19 minutes).
 - Led Huawei's communications at Pure: Türkiye market share from 2.8% to 30%+ in 18 months (Effie Gold).
 - At Samsung Türkiye: 200+ product and service launches; launched Türkiye's first video, e-book and music services.
@@ -28,7 +28,7 @@
 ## Pages
 
 - [Home](https://erenkumcuoglu.com/): executive profile, career overview, before/after results, approach
-- [Career journey](https://erenkumcuoglu.com/career-journey): all nine chapters and 56 milestones in detail
+- [Career journey](https://erenkumcuoglu.com/career-journey): all nine companies and 56 milestones in detail
 - [About](https://erenkumcuoglu.com/eren-kumcuoglu): leadership patterns, beliefs, life outside work
 - [Blog](https://erenkumcuoglu.com/blog/): essays in Turkish and English (2026) and the 2007–2011 archive
 - [Full profile for AI assistants](https://erenkumcuoglu.com/llms-full.txt)
@@ -43,9 +43,9 @@
 
 ### Ozan — Chief Operating Officer · Chairman of the Board (2021–2026)
 
-Started from scratch. Designed the company to become a leading acquirer and issuer in a highly competitive, highly regulated market. Five years of compounding wins — ₺25B+ monthly transaction volume enabled, top-5 issuer, top-2 acquirer, profit-positive payments, board-level governance built from zero.
+Started from scratch. Designed the company to become a leading acquirer and issuer in a highly competitive, highly regulated market. Five years of compounding wins — ₺25B+ (~$500M+) monthly transaction volume enabled, top-5 issuer, top-2 acquirer, profit-positive payments, board-level governance built from zero.
 
-- **₺25B+ monthly transaction volume enabled** — From scratch to Türkiye's top tier of acquirers and issuers. Realigned cross-functional teams, optimised operations, sales and product in parallel — driving sustainable growth in both volume and revenue across a highly competitive and regulated market. Problem solved: Fragmented operations and limited scalability constrained growth. Streamlining created the infrastructure to confidently manage high-volume transactions.
+- **₺25B+ (~$500M+) monthly transaction volume enabled** — From scratch to Türkiye's top tier of acquirers and issuers. Realigned cross-functional teams, optimised operations, sales and product in parallel — driving sustainable growth in both volume and revenue across a highly competitive and regulated market. Problem solved: Fragmented operations and limited scalability constrained growth. Streamlining created the infrastructure to confidently manage high-volume transactions.
 - **Issuer #22 → #5 · Acquirer #29 → #2** — Became the 2nd biggest acquirer and 5th biggest issuer in Türkiye. Market analysis and data-driven decisions expanded sales channels, strengthened partner ecosystems, and accelerated user and transaction growth — moving Ozan from #22 to #5 issuer ranking, and #29 to #2 to acquirer ranking.
 - **+₺500M monthly TPV** — Pazar POS partnership — taxis and street merchants unlocked. Structured a strategic partnership enabling rapid deployment of payment acceptance infrastructure across an entirely untapped merchant segment.
 - **PSP re-engineered** — Renegotiated acquiring economics — payments became a profit centre. Eliminated structural inefficiencies in scheme fees and PSP routing, delivering meaningful unit-economics improvement directly to P&L margins.
@@ -102,7 +102,7 @@ Stepped into the MD seat at one of Türkiye's largest independent agencies. Brou
 
 ### Ininal — Chief Marketing Officer (2016–2017)
 
-Türkiye's first fintech. Wrote the rules of a category that didn't exist — built brand and audience with zero budget, with pure growth-craft. The foundations of the Turkish fintech ecosystem trace back to this chapter, and so do its early playbooks.
+Türkiye's first fintech. Wrote the rules of a category that didn't exist — built brand and audience with zero budget, with pure growth-craft. The foundations of the Turkish fintech ecosystem trace back to Ininal, and so do its early playbooks.
 
 - **2× KYC · 2× MAU · 4× merchant revenue** — Doubled the full-KYC user base from 600K to 1.2M — and doubled MAU alongside. Doubled fully-KYC'd registered users from 600K to 1.2M, more than doubled monthly active users — the company's primary revenue source — from 300K to 650K. Together, these moves quadrupled On-Us merchant revenue. Problem solved: High CAC, regulatory friction, no awareness in a category Türkiye didn't yet understand. Solved with growth-hack rigour and zero-budget brand craft.
 - **#epichaziran · ran until 2021** — Long-term gamer-audience activation. Designed #epichaziran for the company's long-term gamer audience. Acquisition and retention figures spiked. The campaign worked so well the company kept running it every year — through 2021.

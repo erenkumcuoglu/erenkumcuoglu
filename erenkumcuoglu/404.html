@@ -1,175 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex" />
-  <meta http-equiv="refresh" content="3; url=/" />
-  <title>404 — Eren Kumcuoglu</title>
-
-  <!-- Fonts (siteyle aynı) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Geist+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap"
-    rel="stylesheet" />
-
-  <style>
-    :root {
-      --p950: #0A0909;
-      --p900: #111010;
-      --p800: #1C1B1B;
-      --s100: #F7F6F3;
-      --s300: #DDD9D0;
-      --a400: #C9A84C;
-      --a500: #B8922E;
-      --n400: #B0ABA2;
-      --n500: #888380;
-      --fd: "Cormorant Garamond", Georgia, serif;
-      --fb: "Outfit", sans-serif;
-      --fm: "Geist Mono", monospace;
-    }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html,
-    body {
-      height: 100%;
-    }
-
-    body {
-      background: var(--p950);
-      color: var(--s100);
-      font-family: var(--fb);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .wrap {
-      max-width: 34rem;
-    }
-
-    .code {
-      font-family: var(--fm);
-      font-weight: 300;
-      font-size: clamp(4.5rem, 14vw, 8rem);
-      letter-spacing: 0.08em;
-      color: var(--a400);
-      line-height: 1;
-    }
-
-    .err-img {
-      display: block;
-      max-width: 240px;
-      width: 90%;
-      margin: 2rem auto 1.5rem;
-      border-radius: 6px;
-      opacity: 0.85;
-    }
-
-    .rule {
-      width: 3.5rem;
-      height: 1px;
-      background: var(--a500);
-      margin: 1.75rem auto;
-      opacity: 0.7;
-    }
-
-    h1 {
-      font-family: var(--fd);
-      font-weight: 400;
-      font-size: clamp(1.5rem, 4vw, 2.1rem);
-      color: var(--s100);
-      letter-spacing: 0.01em;
-    }
-
-    p {
-      margin-top: 1rem;
-      color: var(--n400);
-      font-weight: 300;
-      font-size: 0.95rem;
-      line-height: 1.7;
-    }
-
-    .count {
-      font-family: var(--fm);
-      color: var(--a400);
-    }
-
-    a.home {
-      display: inline-block;
-      margin-top: 2rem;
-      font-family: var(--fm);
-      font-size: 0.8rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--s300);
-      text-decoration: none;
-      border: 1px solid var(--p800);
-      padding: 0.85rem 1.6rem;
-      transition: border-color 0.3s, color 0.3s;
-    }
-
-    a.home:hover {
-      border-color: var(--a500);
-      color: var(--a400);
-    }
-
-    @media (prefers-reduced-motion: no-preference) {
-      .wrap {
-        animation: fadeUp 0.7s cubic-bezier(0, 0, 0.2, 1) both;
-      }
-
-      @keyframes fadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(14px);
-        }
-
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="7; url=/">
+<title>404 · Eren Kumcuoğlu</title>
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..800;1,62..125,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--paper:#0B0F13;--ink:#F4F5F2;--ink-2:#C3C9CF;--muted:#9AA3AC;--rule:#29313A;--accent:#93A4FF;--on-accent:#10151A;color-scheme:dark;
+--f-display:"Archivo","Arial Narrow","Helvetica Neue",Arial,sans-serif;--f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-display);display:flex;align-items:center;justify-content:center;text-align:center;padding:32px max(16px,env(safe-area-inset-right,0px)) 32px max(16px,env(safe-area-inset-left,0px))}
+main{max-width:34rem}
+.code{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.err-img{display:block;width:90%;max-width:300px;height:auto;margin:20px auto 24px;border-radius:6px}
+h1{font-weight:700;font-stretch:75%;font-size:clamp(38px,6vw,56px);line-height:.96;letter-spacing:-.02em}
+p{margin-top:14px;font-size:17px;line-height:1.55;color:var(--ink-2)}
+.count{font-family:var(--f-mono);font-weight:500;color:var(--accent)}
+a.home{display:inline-flex;align-items:center;gap:10px;min-height:48px;margin-top:28px;padding:12px 22px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;font-size:16px;border-radius:2px;transition:background .2s,color .2s}
+a.home:hover,a.home:focus-visible{background:var(--accent);color:var(--on-accent)}
+@media (prefers-reduced-motion:no-preference){main{animation:up .7s cubic-bezier(.2,.7,.1,1) both}@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}}
+</style>
 </head>
-
 <body>
-  <main class="wrap">
-    <div class="code">404</div>
-    <img src="404-eren-kumcuoglu.png" alt="404 illustration" class="err-img" />
-    <div class="rule"></div>
-    <h1>This page doesn&rsquo;t exist.</h1>
-    <p>You&rsquo;ll be redirected to the homepage in <span class="count" id="count">3</span>&nbsp;seconds.</p>
-    <a class="home" href="/">Go home now</a>
-  </main>
-
-  <script>
-    (function () {
-      var s = 3;
-      var el = document.getElementById("count");
-      var t = setInterval(function () {
-        s -= 1;
-        if (el) el.textContent = s;
-        if (s <= 0) {
-          clearInterval(t);
-          window.location.replace("/");
-        }
-      }, 1000);
-    })();
-  </script>
-
+<main>
+<div class="code">Error 404</div>
+<img src="/404-eren-kumcuoglu.png" alt="An astronaut floating in space" class="err-img" width="850" height="620">
+<h1>This page doesn&rsquo;t exist.</h1>
+<p>You&rsquo;ll be taken to the homepage in <span class="count" id="count">7</span>&nbsp;seconds.</p>
+<a class="home" href="/">Go home now <span aria-hidden="true">→</span></a>
+</main>
+<script>
+(function(){var s=7,el=document.getElementById("count");var t=setInterval(function(){s-=1;if(el)el.textContent=s;if(s<=0){clearInterval(t);window.location.replace("/")}},1000)})();
+</script>
 </body>
-
 </html>

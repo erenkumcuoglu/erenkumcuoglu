@@ -1,11 +1,11 @@
 # Eren Kumcuoğlu
 
-> Istanbul-based C-level executive (also written "Eren Kumcuoglu"). Former COO and Chairman of the Board at Ozan, CMO and acting COO at Bitci, VP Growth at Martı. 19 years (2007–2026) across payments, fintech, crypto, gaming, micromobility and consumer brands. Last updated 2026-09-24.
+> Istanbul-based C-level executive (also written "Eren Kumcuoglu"). Former COO and Chairman of the Board at Ozan, CMO and acting COO at Bitci, VP Growth at Martı. 20 years (2007–2026) across payments, fintech, crypto, gaming, micromobility and consumer brands. Last updated 2026-09-24.
 
 ## Summary
 
 - Operator who connects strategy, operations, compliance and people; revenue- and growth-focused rather than budget-focused.
-- Built Ozan from scratch into Türkiye's #2 card acquirer (from #29) and #5 issuer (from #22), ₺25B+ monthly transaction volume, clean Visa, Mastercard, TCMB and MASAK audits.
+- Built Ozan from scratch into Türkiye's #2 card acquirer (from #29) and #5 issuer (from #22), ₺25B+ (~$500M+) monthly transaction volume, clean Visa, Mastercard, TCMB and MASAK audits.
 - Raised €55M+ across 20+ fan-token offerings at Bitci (Brazil national team: €15M sold out in 19 minutes).
 - Led Huawei's communications at Pure: Türkiye market share from 2.8% to 30%+ in 18 months (Effie Gold).
 - At Samsung Türkiye: 200+ product and service launches; launched Türkiye's first video, e-book and music services.
@@ -28,7 +28,7 @@
 ## Pages
 
 - [Home](https://erenkumcuoglu.com/): executive profile, career overview, before/after results, approach
-- [Career journey](https://erenkumcuoglu.com/career-journey): all nine chapters and 56 milestones in detail
+- [Career journey](https://erenkumcuoglu.com/career-journey): all nine companies and 56 milestones in detail
 - [About](https://erenkumcuoglu.com/eren-kumcuoglu): leadership patterns, beliefs, life outside work
 - [Blog](https://erenkumcuoglu.com/blog/): essays in Turkish and English (2026) and the 2007–2011 archive
 - [Full profile for AI assistants](https://erenkumcuoglu.com/llms-full.txt)
