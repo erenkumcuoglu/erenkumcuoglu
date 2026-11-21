@@ -57,7 +57,7 @@
   });
 
   /* 3. Blocks fade and rise, staggered within their group */
-  var groups=['.cj-head','.case','.card','.pattern','.bl','.life-item','.about-copy p','.quote','.drawn p','.cj-end','.sec-head p','.thesis blockquote','.thesis .cols p','.act-head p','.tl-row','.full-story','.rec','.beliefs li','.now-list li','.posts li','.more','.tr-body p','.contact .lede','.channels > div','.offduty'];
+  var groups=['.cj-head','.case','.card','.pattern','.bl','.life-item','.about-copy p','.quote','.drawn p','.cj-end','.sec-head p','.thesis-short','.act-head p','.tl-row','.full-story','.rec','.beliefs li','.now-list li','.posts li','.more','.tr-body p','.contact .lede','.channels > div','.offduty'];
   groups.forEach(function(sel){
     var last=null,idx=0;
     document.querySelectorAll(sel).forEach(function(el){
@@ -104,4 +104,28 @@
 
   /* 6. Hero figures count up once on load */
   document.querySelectorAll('[data-count]').forEach(function(el,i){countUp(el,1600,500+i*150)});
+})();
+
+/* The work: lines drift into place as the section scrolls by (Nov 2026) */
+(function(){
+  var h=document.querySelector('.thesis-lines'); if(!h) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if(/bot|crawl|spider|slurp|lighthouse/i.test(navigator.userAgent)) return;
+  var sec=h.closest('section')||h, ticking=false;
+  function upd(){ticking=false;
+    var r=sec.getBoundingClientRect(), vh=window.innerHeight;
+    var p=(vh-r.top)/(vh*0.75); p=Math.max(0,Math.min(1,p));
+    h.style.setProperty('--p',p.toFixed(3));}
+  h.classList.add('drift');
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(upd)}},{passive:true});
+  window.addEventListener('resize',upd); upd();
+})();
+/* Full story strip: speed up on hover without jumping (Nov 2026) */
+(function(){
+  var fs=document.querySelector('.full-story'), tr=fs&&fs.querySelector('.fs-track'); if(!tr||!tr.getAnimations) return;
+  function rate(v){tr.getAnimations().forEach(function(a){a.updatePlaybackRate?a.updatePlaybackRate(v):(a.playbackRate=v)})}
+  fs.addEventListener('mouseenter',function(){rate(2.4)});
+  fs.addEventListener('mouseleave',function(){rate(1)});
+  fs.addEventListener('focusin',function(){rate(2.4)});
+  fs.addEventListener('focusout',function(){rate(1)});
 })();

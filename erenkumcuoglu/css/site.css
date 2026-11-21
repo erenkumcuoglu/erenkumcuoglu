@@ -337,3 +337,93 @@ html.lenis,html.lenis body{height:auto}
 @media (max-width:600px){.cards{grid-template-columns:1fr}
 }
 .portrait img{object-position:91% 0}
+
+/* Booking CTA (Nov 2026) */
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(24px,3vw,36px)}
+.btn-book,.btn-mail{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:14px 22px;border-radius:2px;font-size:16px;font-weight:600;text-decoration:none}
+.btn-book{background:var(--ink);color:var(--paper)}
+.btn-book:hover{background:var(--accent);color:var(--on-accent)}
+.btn-mail{border:1px solid var(--ink);color:var(--ink)}
+.btn-mail:hover{border-color:var(--accent);color:var(--accent)}
+.btn-book--dark{background:var(--paper);color:var(--ink);font-size:18px;font-weight:700;min-height:56px;padding:18px 26px;margin:0 0 28px}
+.btn-book--dark:hover{background:var(--accent);color:var(--on-accent)}
+
+.book-note{margin:-16px 0 28px;font-family:var(--f-mono);font-size:12px;letter-spacing:.04em;color:color-mix(in srgb,var(--paper) 65%,var(--ink))}
+.cj-mail{margin:14px 0 0;font-size:15px}.cj-mail a{color:inherit}
+
+/* The work headline (Nov 2026) */
+.thesis-lines{margin:0;font-family:var(--f-display);font-weight:700;font-stretch:75%;letter-spacing:-.02em;line-height:.98;font-size:clamp(34px,4.6vw,64px);container-type:inline-size}
+.thesis-lines span{display:block}
+.thesis-lines span:first-child{white-space:nowrap}
+.thesis-lines span:nth-child(2){color:var(--ink-2)}
+.thesis-lines span:nth-child(3){color:var(--accent)}
+.thesis-short{margin:clamp(24px,3vw,36px) 0 0;max-width:60ch;font-size:18px;line-height:1.55;color:var(--ink-2)}
+@media (max-width:420px){.thesis-lines{font-size:clamp(28px,9.2vw,40px)}}
+
+/* ============ Type system (Nov 2026) ============
+   One family (Archivo) for every heading and paragraph.
+   IBM Plex Mono only for small labels, dates and data.
+   Scale: display (name, page title) > h2 section > h3 sub-section > h4 item > lead > body. */
+:root{--f-voice:var(--f-display);
+  --t-h2:clamp(38px,4.8vw,68px);--t-h3:clamp(24px,2.3vw,32px);--t-h4:clamp(20px,1.7vw,24px);
+  --t-lead:clamp(20px,1.9vw,26px);--t-body-l:18px;--t-body:16.5px}
+body{font-family:var(--f-display)}
+/* h2: every section heading, same size everywhere */
+.sec-head h2,.page-sec h2,.tr h2,.cj-end h2,.contact h2,.cj-name,.sec-title{font-family:var(--f-display);font-weight:700;font-stretch:75%;font-style:normal;font-size:var(--t-h2);line-height:.96;letter-spacing:-.02em;max-width:none}
+.contact h2{max-width:14ch}
+/* h3: sub-sections */
+.act-head h3,.ch-body h4,.beliefs h4,.bl h3,.pattern h3{font-family:var(--f-display);font-weight:700;font-stretch:85%;font-style:normal;font-size:var(--t-h3);line-height:1.1;letter-spacing:-.01em}
+/* h4: items in lists and cards */
+.tl-co b,.mandate h4,.life-item h3,.case h3,.card h4{font-family:var(--f-display);font-weight:700;font-stretch:85%;font-style:normal;font-size:var(--t-h4);line-height:1.15;letter-spacing:-.005em}
+.rec h4{font-size:16px;font-weight:600}
+/* emphasis line in The work: between h2 and h3 */
+.thesis-lines{font-size:clamp(30px,3.8vw,52px)}
+/* lead paragraphs */
+.lead,.page-lead{font-family:var(--f-display);font-weight:400;font-size:var(--t-lead);line-height:1.35;letter-spacing:-.005em}
+.lead em{font-style:normal;font-weight:600;color:var(--accent)}
+/* running text */
+.sec-head p,.ch-body .story,.tr-body,.cj-sub,.about-copy p,.drawn p,.contact p.lede,.cj-end p,.thesis-short{font-family:var(--f-display);font-size:var(--t-body-l);line-height:1.55;font-weight:400}
+.tl-win,.problem p{font-family:var(--f-display);font-size:var(--t-body);line-height:1.5;font-style:normal}
+.posts .t{font-family:var(--f-display);font-size:18px;font-weight:500;line-height:1.3}
+.quote{font-family:var(--f-display);font-weight:500;font-size:clamp(22px,2.4vw,32px);line-height:1.25}
+
+/* ============ Full story banner: moving strip (Nov 2026) ============ */
+.full-story{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:0;align-items:stretch;padding:0;background:#0B0F13;color:#F4F5F2;overflow:hidden;isolation:isolate}
+.full-story:hover{background:#0B0F13;color:#F4F5F2}
+.fs-txt{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;gap:16px;padding:clamp(28px,3.4vw,48px) clamp(20px,3vw,40px);background:#0B0F13}
+.full-story .mono{color:rgba(244,245,242,.72)}
+.full-story .fs-t{font-family:var(--f-display);font-weight:500;font-size:clamp(20px,1.8vw,24px);line-height:1.35;max-width:30ch;text-wrap:balance}
+.full-story .fs-go{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:12px 20px;background:#F4F5F2;color:#10151A;font-weight:700;font-size:16px;border:0;border-radius:2px;white-space:nowrap;transition:background .2s,color .2s}
+.full-story:hover .fs-go,.full-story:focus-visible .fs-go{background:#2536B5;color:#fff}
+.fs-mq{position:relative;overflow:hidden;min-height:260px}
+.fs-mq::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#0B0F13,rgba(11,15,19,0) 18%);pointer-events:none}
+.fs-track{position:absolute;inset:0;display:flex;gap:6px;width:max-content;animation:fs-mq 56s linear infinite}
+.fs-track .fr{position:relative;height:100%;aspect-ratio:4/5;flex:0 0 auto;overflow:hidden}
+.fs-track img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(.4) brightness(.78);transition:filter .5s}
+.fs-track .fr::after{content:"";position:absolute;inset:auto 0 0;height:46%;background:linear-gradient(180deg,rgba(11,15,19,0),rgba(11,15,19,.88))}
+.fs-track i{position:absolute;left:12px;right:12px;bottom:12px;z-index:1;font-style:normal;font-family:var(--f-display);font-weight:700;font-stretch:85%;font-size:17px;line-height:1.1;letter-spacing:.01em;color:#fff}
+.full-story:hover .fs-track img{filter:none}
+@keyframes fs-mq{to{transform:translateX(-50%)}}
+@media (max-width:760px){.full-story{grid-template-columns:1fr}.fs-mq{min-height:170px;order:-1}.fs-mq::before{display:none}.full-story .fs-go{align-self:stretch;justify-content:center}}
+@media (prefers-reduced-motion:reduce){.fs-track{animation:none}}
+
+/* Contact: headline sits under its label (Nov 2026) */
+.contact-grid{align-items:start}
+.contact h2{margin-top:14px}
+/* The work: three lines across the full column, drifting in on scroll (Nov 2026) */
+.thesis-lines{display:flex;flex-direction:column;gap:.06em;width:100%}
+.thesis-lines span:nth-child(1){align-self:flex-start}
+.thesis-lines span:nth-child(2){align-self:center}
+.thesis-lines span:nth-child(3){align-self:flex-end}
+.thesis-lines.drift span{will-change:transform,opacity;transition:none;opacity:calc(.2 + .8 * var(--p,1))}
+.thesis-lines.drift span:nth-child(1){transform:translateX(calc((1 - var(--p,1)) * 22%))}
+.thesis-lines.drift span:nth-child(2){transform:translateX(calc((1 - var(--p,1)) * -30%))}
+.thesis-lines.drift span:nth-child(3){transform:translateX(calc((1 - var(--p,1)) * 40%))}
+.thesis{overflow-x:clip}
+@media (max-width:760px){.thesis-lines span:nth-child(2){align-self:flex-start;padding-left:8%}.thesis-lines span:nth-child(3){align-self:flex-start;padding-left:16%}}
+
+/* The work: centred on the page (Nov 2026) */
+.thesis{grid-template-columns:1fr}
+.thesis-lines{align-items:center;text-align:center}
+.thesis-lines span:nth-child(n){align-self:center;padding-left:0}
+.thesis-short{margin-left:auto;margin-right:auto;text-align:center}
